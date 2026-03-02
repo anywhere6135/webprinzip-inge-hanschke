@@ -152,18 +152,16 @@
     .pbadge-l { font-size:10px; font-weight:500; color:rgba(255,255,255,.5); line-height:1.4; margin-top:3px; text-transform:uppercase; letter-spacing:.06em; }
 
     /* ===== EVENTS STRIP ===== */
-    #evstrip { background:var(--black); border-top:3px solid var(--red); }
-    .evstrip-in { display:flex; align-items:stretch; }
-    .evstrip-lbl { padding:0 24px; display:flex; align-items:center; border-right:1px solid rgba(255,255,255,.08); flex-shrink:0; }
-    .evstrip-lbl span { font-size:9px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--red); writing-mode:vertical-rl; transform:rotate(180deg); }
-    .evlist { display:flex; flex:1; overflow-x:auto; scrollbar-width:none; }
-    .evlist::-webkit-scrollbar { display:none; }
-    .ev { padding:20px 26px; border-right:1px solid rgba(255,255,255,.07); min-width:210px; display:flex; flex-direction:column; gap:4px; flex-shrink:0; transition:background .15s; cursor:default; }
+    #evstrip { background:var(--black); border-top:3px solid var(--red); padding:48px 0; }
+    .evstrip-in { display:flex; flex-direction:column; gap:32px; }
+    .evstrip-header { display:flex; align-items:center; justify-content:space-between; }
+    .evstrip-title { font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--red); }
+    .evlist { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1px; background:rgba(255,255,255,.07); }
+    .ev { padding:24px; background:var(--black); display:flex; flex-direction:column; gap:6px; transition:background .15s; cursor:default; }
     .ev:hover { background:rgba(255,255,255,.04); }
     .ev-type { font-size:9px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--red); }
     .ev-title { font-size:13px; font-weight:600; color:var(--white); line-height:1.3; }
     .ev-meta { font-size:11.5px; color:rgba(255,255,255,.38); margin-top:2px; }
-    .evcta { padding:0 24px; display:flex; align-items:center; flex-shrink:0; border-left:1px solid rgba(255,255,255,.07); }
 
     /* ===== CONSULTING / LEISTUNGEN ===== */
     #consulting { background:var(--white); }
@@ -372,8 +370,7 @@
       .bgrid { grid-template-columns:repeat(2,1fr); }
       .pgrid { grid-template-columns:repeat(2,1fr); }
       .phead { flex-direction:column; align-items:flex-start; gap:14px; }
-      .evstrip-in { flex-direction:column; }
-      .evstrip-lbl { display:none; }
+      .evlist { grid-template-columns:1fr; }
       .evcta { border-left:none; border-top:1px solid rgba(255,255,255,.07); padding:14px 20px; }
       .fi-w { flex-direction:column; gap:10px; text-align:center; }
       .cform { padding:22px; }
@@ -463,9 +460,12 @@
 
 <!-- EVENTS STRIP -->
 <section id="evstrip">
-  <div class="wrap" style="padding:0 48px;">
+  <div class="wrap">
     <div class="evstrip-in">
-      <div class="evstrip-lbl"><span>Aktuelle Termine</span></div>
+      <div class="evstrip-header">
+        <span class="evstrip-title">Aktuelle Termine</span>
+        <a href="#kontakt" class="btn btn-primary" style="padding:8px 20px;font-size:12px;">Anmelden</a>
+      </div>
       <div class="evlist">
         <div class="ev">
           <span class="ev-type">Webinar · kostenlos</span>
@@ -492,9 +492,6 @@
           <span class="ev-title">Lean-Demand-Management (LDM)</span>
           <span class="ev-meta">Freitags · 30–60 Min.</span>
         </div>
-      </div>
-      <div class="evcta">
-        <a href="#kontakt" class="btn btn-primary">Anmelden</a>
       </div>
     </div>
   </div>
