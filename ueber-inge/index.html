@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Über Inge Hanschke — Dipl.-Inf., EAM-Expertin D-A-CH | Hanschke Consulting</title>
+  <meta name="description" content="Inge Hanschke — Dipl.-Inf., 35+ Jahre IT-Praxis, 10+ Fachbücher im Carl Hanser Verlag. Biografie, Methodik, Expertise. DIE EAM-Expertin im deutschsprachigen Raum.">
+  <meta property="og:title" content="Über Inge Hanschke — Dipl.-Inf., EAM-Expertin D-A-CH">
+  <meta property="og:description" content="35+ Jahre IT-Praxis. 10+ Fachbücher. 500+ beratene Unternehmen. Lernen Sie Inge Hanschke kennen — sachlich, faktisch.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.hanschke-consulting.com/ueber-inge/">
+  <meta property="og:image" content="https://www.hanschke-consulting.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- DSGVO-konformes Font-Hosting via bunny.net (keine IP-Übertragung an Google) -->
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --red:      #E94545;
+      --red-dk:   #c83030;
+      --black:    #0a0a0a;
+      --g900:     #141414;
+      --g800:     #282828;
+      --g700:     #3c3c3c;
+      --g600:     #666;
+      --g400:     #999;
+      --g200:     #e0e0e0;
+      --g100:     #f5f5f5;
+      --g50:      #fafafa;
+      --white:    #fff;
+      --teal:     #1a7d8b;
+      --f:        'Inter', sans-serif;
+      --max:      1200px;
+      --r:        2px;
+      --ease:     cubic-bezier(.25,.1,.25,1);
+    }
+
+    body { font-family: var(--f); background: var(--white); color: var(--black); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 48px; }
+
+    /* TYPOGRAPHY */
+    .ey {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 11px; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--red);
+    }
+    .ey::before { content:''; display:block; width:20px; height:2px; background:var(--red); flex-shrink:0; }
+
+    h1 { font-size: clamp(2.4rem,5.5vw,4rem); font-weight: 900; line-height: 1.08; letter-spacing: -.035em; }
+    h2 { font-size: clamp(1.8rem,3vw,2.6rem); font-weight: 700; line-height: 1.1; letter-spacing: -.025em; }
+    h3 { font-size: 1rem; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; }
+    h4 { font-size: .875rem; font-weight: 600; }
+
+    .lead { font-size: 1.05rem; line-height: 1.72; color: var(--g700); }
+    em.r { font-style: normal; color: var(--red); }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 24px; font-family: var(--f); font-size: 13px; font-weight: 600;
+      letter-spacing: .01em; border-radius: var(--r);
+      transition: background .15s var(--ease), color .15s var(--ease), border-color .15s var(--ease), transform .1s;
+      cursor: pointer; border: 1.5px solid transparent; white-space: nowrap;
+    }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--red); color: var(--white); border-color: var(--red); }
+    .btn-primary:hover { background: var(--red-dk); border-color: var(--red-dk); }
+    .btn-dark { background: var(--black); color: var(--white); border-color: var(--black); }
+    .btn-dark:hover { background: var(--g800); border-color: var(--g800); }
+    .btn-outline { background: transparent; color: var(--black); border-color: var(--g200); }
+    .btn-outline:hover { border-color: var(--black); }
+    .btn-outline-w { background: transparent; color: var(--white); border-color: rgba(255,255,255,.35); }
+    .btn-outline-w:hover { background: var(--white); color: var(--black); border-color: var(--white); }
+
+    /* SECTIONS */
+    .sec { padding: 96px 0; }
+    .sec-sm { padding: 64px 0; }
+    .sh { margin-bottom: 56px; }
+    .sh .ey { margin-bottom: 18px; }
+    .sh h2 { margin-bottom: 14px; }
+
+    /* ===== NAV ===== */
+    #nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      height: 60px; background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--g200);
+      transition: box-shadow .2s;
+    }
+    #nav.sc { box-shadow: 0 2px 24px rgba(0,0,0,.07); }
+    .nav-w { max-width: var(--max); margin: 0 auto; padding: 0 48px; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-logo { display:flex; flex-direction:column; flex-shrink:0; }
+    .nav-logo-n { font-size: 14.5px; font-weight: 800; letter-spacing: -.02em; color: var(--black); line-height: 1.1; }
+    .nav-logo-s { font-size: 9.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--red); margin-top: 2px; }
+    .nav-links { display:flex; align-items:center; gap:26px; }
+    .nav-links a { font-size: 13px; font-weight: 500; color: var(--g600); transition: color .14s; }
+    .nav-links a:hover { color: var(--black); }
+    .nav-links a.active { color: var(--black); font-weight: 600; }
+    .nav-act { display:flex; align-items:center; gap:8px; flex-shrink:0; }
+    .hbg { display:none; flex-direction:column; justify-content:center; gap:5px; cursor:pointer; padding:6px; background:none; border:none; width:36px; height:36px; }
+    .hbg span { display:block; width:22px; height:1.5px; background:var(--black); transition:transform .22s var(--ease),opacity .22s; transform-origin:center; }
+    .hbg.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+    .hbg.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+    .hbg.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+    .mmenu { display:none; position:fixed; top:60px; left:0; right:0; bottom:0; background:var(--white); z-index:199; padding:32px 24px 48px; flex-direction:column; gap:4px; overflow-y:auto; }
+    .mmenu.open { display:flex; }
+    .mmenu a { font-size:1.05rem; font-weight:600; color:var(--black); padding:13px 0; border-bottom:1px solid var(--g100); }
+    .mmenu .btn { margin-top:20px; align-self:flex-start; }
+
+    /* ===== PAGE HERO ===== */
+    #page-hero {
+      padding-top: 60px;
+      background: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+    #page-hero::before {
+      content:''; position:absolute; inset:0;
+      background-image: linear-gradient(var(--g200) 1px,transparent 1px), linear-gradient(90deg,var(--g200) 1px,transparent 1px);
+      background-size: 64px 64px; opacity: .35; pointer-events:none;
+    }
+    #page-hero::after {
+      content:''; position:absolute; inset:0;
+      background: radial-gradient(ellipse 60% 80% at 65% 50%,transparent 30%,var(--white) 100%);
+      pointer-events:none;
+    }
+    .page-hero-in {
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr 380px; gap: 80px;
+      align-items: center; padding: 80px 0 88px;
+    }
+    .page-hero-bc {
+      font-size: 12px; font-weight: 500; color: var(--g400); margin-bottom: 20px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .page-hero-bc a { color: var(--g400); transition: color .14s; }
+    .page-hero-bc a:hover { color: var(--black); }
+    .page-hero-bc span { color: var(--g200); }
+
+    /* Portrait */
+    .pframe { aspect-ratio: 3/4; background: var(--g100); border-radius: var(--r); overflow: hidden; border: 1px solid var(--g200); position: relative; }
+    .pframe::before { content:''; position:absolute; top:-10px; right:-10px; width:56px; height:56px; background:var(--red); border-radius:var(--r); z-index:-1; pointer-events:none; }
+    .pframe svg { width:100%; height:100%; display:block; }
+    .pbadge { position:absolute; bottom:18px; left:-18px; background:var(--black); color:var(--white); padding:12px 16px 14px; border-radius:var(--r); border-left:3px solid var(--red); }
+    .pbadge-v { font-size:1.2rem; font-weight:900; letter-spacing:-.04em; line-height:1; }
+    .pbadge-l { font-size:10px; font-weight:500; color:rgba(255,255,255,.5); line-height:1.4; margin-top:3px; text-transform:uppercase; letter-spacing:.06em; }
+
+    /* ===== QUICK-FACTS BAR ===== */
+    #facts-bar {
+      background: var(--black);
+      border-top: 3px solid var(--red);
+    }
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,.06);
+    }
+    .fact-item {
+      background: var(--black);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .fact-v { font-size: 2.4rem; font-weight: 900; letter-spacing: -.05em; color: var(--white); line-height: 1; }
+    .fact-v sup { font-size: 1.1rem; font-weight: 700; color: var(--red); }
+    .fact-l { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: rgba(255,255,255,.4); margin-top: 6px; }
+
+    /* ===== BIOGRAFIE ===== */
+    #biografie { background: var(--white); }
+    .bio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .bio-text p { font-size: .95rem; line-height: 1.78; color: var(--g700); margin-bottom: 18px; }
+    .bio-text p:last-child { margin-bottom: 0; }
+    .bio-text strong { color: var(--black); font-weight: 600; }
+    .bio-quote {
+      padding: 22px 24px; border-left: 3px solid var(--red);
+      background: var(--g50); margin: 28px 0;
+    }
+    .bio-quote p { font-size: 1.05rem; font-style: italic; color: var(--black); line-height: 1.6; font-weight: 500; }
+    .bio-quote cite { display: block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--red); margin-top: 10px; font-style: normal; }
+
+    /* Timeline / Stationen */
+    .timeline { display: flex; flex-direction: column; gap: 0; }
+    .tl-item { display: flex; gap: 20px; padding-bottom: 28px; position: relative; }
+    .tl-item::before {
+      content:''; position:absolute; left: 9px; top: 22px; bottom: 0;
+      width: 1px; background: var(--g200);
+    }
+    .tl-item:last-child::before { display: none; }
+    .tl-dot {
+      width: 20px; height: 20px; border-radius: 50%;
+      border: 2px solid var(--g200); background: var(--white);
+      flex-shrink: 0; margin-top: 2px; position: relative; z-index: 1;
+      transition: border-color .15s, background .15s;
+    }
+    .tl-item.highlight .tl-dot { border-color: var(--red); background: var(--red); }
+    .tl-body { padding-top: 0; }
+    .tl-year { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--red); margin-bottom: 3px; }
+    .tl-title { font-size: .95rem; font-weight: 700; color: var(--black); margin-bottom: 4px; }
+    .tl-desc { font-size: .87rem; line-height: 1.6; color: var(--g600); }
+
+    /* ===== EXPERTISE ===== */
+    #expertise { background: var(--g900); color: var(--white); }
+    #expertise .ey { color: var(--red); }
+    #expertise .ey::before { background: var(--red); }
+    #expertise h2 { color: var(--white); margin-top: 18px; margin-bottom: 14px; }
+    .exp-intro { font-size: .95rem; line-height: 1.72; color: rgba(255,255,255,.55); max-width: 560px; margin-bottom: 48px; }
+
+    .exp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.06); }
+    .exp-item { background: var(--g900); padding: 28px 24px; transition: background .15s; }
+    .exp-item:hover { background: rgba(255,255,255,.04); }
+    .exp-num { font-size: 10px; font-weight: 800; letter-spacing: .12em; color: var(--red); margin-bottom: 10px; }
+    .exp-item h3 { font-size: .95rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .exp-item p { font-size: .84rem; line-height: 1.65; color: rgba(255,255,255,.45); }
+
+    /* ===== METHODIK ===== */
+    #methodik { background: var(--g100); border-top: 1px solid var(--g200); }
+    .meth-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .meth-text h2 { margin-bottom: 18px; }
+    .meth-text p { font-size: .95rem; line-height: 1.75; color: var(--g700); margin-bottom: 16px; }
+    .meth-text strong { color: var(--black); font-weight: 600; }
+    .meth-principles { display: flex; flex-direction: column; gap: 16px; }
+    .meth-p {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 20px; background: var(--white); border: 1px solid var(--g200);
+      border-radius: var(--r); transition: border-color .15s, box-shadow .15s;
+    }
+    .meth-p:hover { border-color: var(--g400); box-shadow: 0 4px 16px rgba(0,0,0,.05); }
+    .meth-p-icon {
+      width: 36px; height: 36px; background: rgba(233,69,69,.08);
+      border-radius: var(--r); display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .meth-p-text h4 { font-size: .9rem; font-weight: 700; color: var(--black); margin-bottom: 4px; }
+    .meth-p-text p { font-size: .84rem; line-height: 1.6; color: var(--g600); }
+
+    /* ===== BÜCHER ===== */
+    #buecher { background: var(--white); }
+    .bgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .buch { display: flex; flex-direction: column; border: 1px solid var(--g200); border-radius: var(--r); overflow: hidden; transition: transform .18s var(--ease), box-shadow .18s var(--ease); }
+    .buch:hover { transform: translateY(-5px); box-shadow: 0 12px 32px rgba(0,0,0,.08); }
+    .bcover { aspect-ratio: 3/4; overflow: hidden; background: var(--g800); }
+    .bcover svg { width: 100%; height: 100%; display: block; }
+    .bmeta { padding: 12px 14px 14px; background: var(--g50); border-top: 1px solid var(--g200); }
+    .bmeta h4 { font-size: 12px; font-weight: 700; color: var(--black); margin-bottom: 3px; line-height: 1.3; }
+    .bpub { font-size: 10.5px; color: var(--g600); }
+
+    /* ===== ZITATE / REFERENZEN ===== */
+    #referenzen { background: var(--g100); border-top: 1px solid var(--g200); }
+    .ref-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--g200); border: 1px solid var(--g200); }
+    .ref-item { background: var(--white); padding: 32px 28px; }
+    .ref-quote { font-size: .93rem; line-height: 1.7; color: var(--g700); font-style: italic; margin-bottom: 16px; }
+    .ref-quote::before { content: '"'; font-size: 2rem; font-weight: 900; color: var(--red); line-height: 0; vertical-align: -.35em; margin-right: 4px; }
+    .ref-author { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--black); }
+    .ref-role { font-size: 11px; color: var(--g400); margin-top: 2px; }
+
+    /* ===== CTA ===== */
+    #page-cta { background: var(--black); }
+    .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 48px; padding: 72px 0; }
+    #page-cta .ey { color: var(--red); }
+    #page-cta .ey::before { background: var(--red); }
+    .cta-text h2 { color: var(--white); margin: 16px 0 12px; }
+    .cta-text p { font-size: .95rem; color: rgba(255,255,255,.5); max-width: 480px; line-height: 1.72; }
+    .cta-acts { display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap; align-items: center; }
+
+    /* ===== IMPRESSUM ===== */
+    #impressum-page {
+      display: none;
+      position: fixed; inset: 0; z-index: 500;
+      background: var(--white); overflow-y: auto;
+      padding: 80px 0 60px;
+    }
+    #impressum-page.open { display: block; }
+    .imp-close { position:fixed; top:20px; right:20px; width:40px; height:40px; background:var(--black); color:var(--white); border:none; border-radius:50%; font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:501; }
+    .imp-content h1 { font-size:1.8rem; margin-bottom:32px; }
+    .imp-content h2 { font-size:1.1rem; margin:28px 0 10px; color:var(--black); }
+    .imp-content h3 { font-size:.95rem; margin:20px 0 8px; }
+    .imp-content p { font-size:.9rem; line-height:1.75; color:var(--g700); margin-bottom:12px; }
+    .imp-content address { font-style:normal; font-size:.9rem; line-height:1.75; color:var(--g700); margin-bottom:12px; }
+
+    /* ===== FOOTER ===== */
+    footer { background: var(--g900); padding: 28px 0; border-top: 1px solid rgba(255,255,255,.06); }
+    .fi-w { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .fcopy { font-size: 12px; color: rgba(255,255,255,.25); }
+    .fnav { display: flex; gap: 24px; }
+    .fnav a { font-size: 12px; color: rgba(255,255,255,.3); transition: color .14s; cursor: pointer; }
+    .fnav a:hover { color: rgba(255,255,255,.7); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1100px) {
+      .page-hero-in { grid-template-columns: 1fr 300px; gap: 48px; }
+      .bio-grid { grid-template-columns: 1fr; gap: 40px; }
+      .meth-grid { grid-template-columns: 1fr; gap: 40px; }
+      .exp-grid { grid-template-columns: 1fr 1fr; }
+      .bgrid { grid-template-columns: repeat(4, 1fr); }
+      .ref-grid { grid-template-columns: 1fr 1fr; }
+      .facts-grid { grid-template-columns: repeat(2, 1fr); }
+      .cta-inner { flex-direction: column; align-items: flex-start; gap: 32px; }
+    }
+    @media (max-width: 800px) {
+      .wrap { padding: 0 20px; }
+      .nav-w { padding: 0 20px; }
+      .nav-links, .nav-act .btn-outline { display: none; }
+      .hbg { display: flex; }
+      .sec { padding: 56px 0; }
+      .sec-sm { padding: 40px 0; }
+      .page-hero-in { grid-template-columns: 1fr; padding: 48px 0 56px; }
+      .page-hero-photo { max-width: 280px; }
+      .exp-grid { grid-template-columns: 1fr; }
+      .bgrid { grid-template-columns: repeat(2, 1fr); }
+      .ref-grid { grid-template-columns: 1fr; }
+      .facts-grid { grid-template-columns: repeat(2, 1fr); }
+      .fi-w { flex-direction: column; gap: 10px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-w">
+    <a href="../" class="nav-logo">
+      <span class="nav-logo-n">Inge Hanschke</span>
+      <span class="nav-logo-s">Hanschke Consulting</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../leistungen/">Beratung</a></li>
+      <li><a href="../ueber-inge/" class="active">Über mich</a></li>
+      <li><a href="../trainings/">Schulungen</a></li>
+      <li><a href="../buecher/">Bücher</a></li>
+      <li><a href="../partner/">Partner</a></li>
+      <li><a href="../#events">Events</a></li>
+    </ul>
+    <div class="nav-act">
+      <a href="../#evstrip" class="btn btn-outline" style="padding:8px 16px;font-size:12.5px;">Termine</a>
+      <a href="../#kontakt" class="btn btn-primary" style="padding:8px 16px;font-size:12.5px;">Kontakt</a>
+    </div>
+    <button class="hbg" id="hbgBtn" onclick="toggleMenu()" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <a href="../leistungen/" onclick="closeMenu()">Beratung</a>
+  <a href="../ueber-inge/" onclick="closeMenu()">Über mich</a>
+  <a href="../trainings/" onclick="closeMenu()">Schulungen &amp; Webinare</a>
+  <a href="../buecher/" onclick="closeMenu()">Bücher</a>
+  <a href="../partner/" onclick="closeMenu()">Partner</a>
+  <a href="../#events" onclick="closeMenu()">Events</a>
+  <a href="../#kontakt" class="btn btn-primary" onclick="closeMenu()">Kontakt aufnehmen</a>
+</div>
+
+<!-- ===== PAGE HERO ===== -->
+<section id="page-hero">
+  <div class="wrap">
+    <div class="page-hero-in">
+      <div>
+        <div class="page-hero-bc">
+          <a href="../">Startseite</a>
+          <span>›</span>
+          <span style="color:var(--black);">Über mich</span>
+        </div>
+        <div class="ey">Dipl.-Inf. Inge Hanschke</div>
+        <h1 style="margin-top:18px;">35 Jahre.<br><em class="r">Keine Theorie.</em><br>Nur was funktioniert.</h1>
+        <p class="lead" style="margin-top:20px;max-width:520px;">
+          IT-Managerin, Unternehmensberaterin, Autorin. Gegründet auf 35+ Jahren IT-Praxis —
+          als Anwenderin, als Produkthaus-Insiderin, als Dienstleisterin.
+          Das Resultat: Methoden, die in der Praxis bestehen. Keine Akademiker-Konstrukte.
+        </p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:32px;">
+          <a href="#biografie" class="btn btn-dark">Biografie lesen</a>
+          <a href="../#kontakt" class="btn btn-outline">Direktkontakt</a>
+        </div>
+      </div>
+      <div class="page-hero-photo" style="position:relative;">
+        <div class="pframe">
+          <svg viewBox="0 0 380 506" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="380" height="506" fill="#eeeeee"/>
+            <circle cx="190" cy="168" r="72" fill="#d4d4d4"/>
+            <ellipse cx="190" cy="390" rx="130" ry="104" fill="#d4d4d4"/>
+            <text x="190" y="484" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" font-weight="500" fill="#bbb">Foto folgt</text>
+          </svg>
+          <div class="pbadge">
+            <div class="pbadge-v">EAM #1</div>
+            <div class="pbadge-l">D-A-CH<br>Marktführerin</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FACTS BAR ===== -->
+<section id="facts-bar">
+  <div class="wrap">
+    <div class="facts-grid">
+      <div class="fact-item">
+        <div class="fact-v">35<sup>+</sup></div>
+        <div class="fact-l">Jahre IT-Praxis</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-v">10<sup>+</sup></div>
+        <div class="fact-l">Fachbücher im Hanser Verlag</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-v">90<sup>%</sup></div>
+        <div class="fact-l">EAM-Fachleute D-A-CH<br>kennen mindestens ein Buch</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-v">500<sup>+</sup></div>
+        <div class="fact-l">Unternehmen beraten</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BIOGRAFIE ===== -->
+<section id="biografie" class="sec">
+  <div class="wrap">
+    <div class="sh">
+      <span class="ey">Biografie</span>
+      <h2 style="margin-top:18px;">Aus der Praxis.<br>Für die Praxis.</h2>
+    </div>
+    <div class="bio-grid">
+      <div class="bio-text">
+        <p>
+          Inge Hanschke ist Dipl.-Informatikerin und hat mehr als 35 Jahre IT-Erfahrung —
+          nicht aus der Berater-Distanz, sondern als Teil der Systeme: als <strong>IT-Managerin in Anwenderunternehmen</strong>,
+          in einem <strong>ERP-Produkthaus</strong> und als <strong>IT-Dienstleisterin</strong>.
+          Diese drei Perspektiven zusammen bilden die Grundlage ihres Beratungsansatzes.
+        </p>
+        <p>
+          Sie hat in Unternehmen unterschiedlichster Branchen — Industrie, Versicherungen, Finance, IT-Dienstleistung —
+          Geschäftsmodelle digitalisiert, IT an Geschäftsanforderungen ausgerichtet und IT-Management professionalisiert.
+          <strong>500+ Unternehmen</strong> im deutschsprachigen Raum und darüber hinaus.
+        </p>
+
+        <blockquote class="bio-quote">
+          <p>„Einfach und effektiv — das ist kein Slogan. Das ist der Maßstab, an dem ich jede Lösung messe."</p>
+          <cite>Inge Hanschke</cite>
+        </blockquote>
+
+        <p>
+          Parallel zur Beratungstätigkeit hat sie <strong>über 10 Fachbücher im Carl Hanser Verlag</strong> veröffentlicht.
+          Das Standardwerk „Enterprise Architecture Management einfach &amp; effektiv" erscheint 2026 in der 4.&nbsp;Auflage.
+          Neu in 2027: „Wirksames strategisches IT-Management" — auf Deutsch, Englisch und Spanisch.
+        </p>
+        <p>
+          Rund <strong>90&nbsp;%</strong> der deutschsprachigen Enterprise-Architekten kennen mindestens eines ihrer Bücher.
+          Diese Bekanntheit ist nicht das Ergebnis von Marketingbudgets — sie ist das Resultat von Inhalten,
+          die in der Praxis tatsächlich funktionieren.
+        </p>
+        <p>
+          Inge Hanschke ist Gründerin und Inhaberin von <strong>Hanschke Consulting</strong> mit Sitz in München.
+          Sie berät in D-A-CH, arbeitet remote und vor Ort — und sagt klar, was funktioniert und was nicht.
+        </p>
+      </div>
+      <div>
+        <!-- Timeline: Karrierestationen -->
+        <div style="margin-bottom:32px;">
+          <span class="ey">Karriere</span>
+        </div>
+        <div class="timeline">
+          <div class="tl-item highlight">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <div class="tl-year">Heute</div>
+              <div class="tl-title">Hanschke Consulting — Inhaberin</div>
+              <div class="tl-desc">Beratung, Schulungen, Webinare. EAM, Digitale Transformation, KI &amp; Data, Informationssicherheit. D-A-CH und international.</div>
+            </div>
+          </div>
+          <div class="tl-item highlight">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <div class="tl-year">Seit 2026</div>
+              <div class="tl-title">4. Auflage EAM-Standardwerk</div>
+              <div class="tl-desc">„Enterprise Architecture Management einfach &amp; effektiv" erscheint in der 4. überarbeiteten Auflage im Carl Hanser Verlag.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <div class="tl-year">10+ Jahre</div>
+              <div class="tl-title">IT-Dienstleistung</div>
+              <div class="tl-desc">Beratung, Implementierung, Schulung. Branchenübergreifend: Industrie, Versicherungen, Finance, öffentliche Hand.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <div class="tl-year">Mehrjährig</div>
+              <div class="tl-title">ERP-Produkthaus</div>
+              <div class="tl-desc">Produktentwicklung und -management. Innenansicht: Wie Software-Produkte gebaut werden und wo Implementierungsprojekte scheitern.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <div class="tl-year">Mehrjährig</div>
+              <div class="tl-title">IT-Managerin in Anwenderunternehmen</div>
+              <div class="tl-desc">Verantwortung für IT-Strategie, Enterprise Architecture, Digitalisierungsprogramme. Operative Umsetzungsverantwortung statt Beraterdistanz.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <div class="tl-year">Studium</div>
+              <div class="tl-title">Dipl.-Informatik</div>
+              <div class="tl-desc">Studium der Informatik. Abschluss als Diplom-Informatikerin — fachliche Grundlage für 35+ Jahre IT-Praxis.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERTISE ===== -->
+<section id="expertise" class="sec">
+  <div class="wrap">
+    <span class="ey">Fachgebiete</span>
+    <h2 style="margin-top:18px;color:var(--white);">Sechs Gebiete.<br>Alle aus der Praxis.</h2>
+    <p class="exp-intro">
+      Kein Consulting-Bingo. Jedes dieser Felder ist durch langjährige Praxiserfahrung,
+      veröffentlichte Methodik und nachweisbare Projektergebnisse unterlegt.
+    </p>
+    <div class="exp-grid">
+      <div class="exp-item">
+        <div class="exp-num">01</div>
+        <h3>Strategisches IT-Management</h3>
+        <p>IT-Strategieentwicklung, Ziel-Bild-Gestaltung &amp; Roadmapping, Lean Innovationsmanagement. IT als Enabler — nicht als Kostenstelle.</p>
+      </div>
+      <div class="exp-item">
+        <div class="exp-num">02</div>
+        <h3>IT-Management</h3>
+        <p>Lean Checkup, IT-Organisation 4.0, wirksames Lean IT-Instrumentarium. Effizienz ohne Bürokratiestau.</p>
+      </div>
+      <div class="exp-item">
+        <div class="exp-num">03</div>
+        <h3>Enterprise Architecture Management</h3>
+        <p>Quick-Start &amp; Ausbau, Business Architecture 4 Digitalization, EAM-Tool-Evaluierung. Das Kerngebiet — seit 20+ Jahren.</p>
+      </div>
+      <div class="exp-item">
+        <div class="exp-num">04</div>
+        <h3>KI &amp; Data</h3>
+        <p>KI-/BI-Strategie, Lean Datenmanagement, individuelle KI-Beratung. Fundament zuerst — dann KI. Nicht umgekehrt.</p>
+      </div>
+      <div class="exp-item">
+        <div class="exp-num">05</div>
+        <h3>Lean Value Management</h3>
+        <p>Lean Demand Management, IT-Portfoliomanagement, Ziel-Bild &amp; Roadmapping. Die richtigen Dinge tun — mit minimalem Aufwand.</p>
+      </div>
+      <div class="exp-item">
+        <div class="exp-num">06</div>
+        <h3>Informationssicherheit &amp; Datenschutz</h3>
+        <p>ISMS nach ISO 27001, DSGVO-Compliance, Cyber-Security-Strategie. Sicherheit als Führungsaufgabe.</p>
+      </div>
+    </div>
+    <div style="margin-top:40px;">
+      <a href="../leistungen/" class="btn btn-primary">Alle Beratungsleistungen</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== METHODIK ===== -->
+<section id="methodik" class="sec">
+  <div class="wrap">
+    <div class="meth-grid">
+      <div class="meth-text">
+        <span class="ey">Methodik</span>
+        <h2 style="margin-top:18px;">„Einfach &amp; effektiv"<br>ist keine Formel.</h2>
+        <p>
+          Das Motto zieht sich durch alle Bücher, alle Schulungen, alle Beratungsmandate.
+          Es beschreibt einen Maßstab: Lösungen, die in der Praxis bestehen —
+          ohne theoretischen Überbau, ohne Beraterbürokratie, ohne Komplexität um der Komplexität willen.
+        </p>
+        <p>
+          Der Ansatz ist <strong>pragmatisch, systematisch und lean</strong>:
+          Zuerst verstehen, was tatsächlich gebraucht wird.
+          Dann das Richtige — und nicht das Vollständige — umsetzen.
+          Kontinuierlich lernen. Und den Aufwand immer dem Nutzen gegenüberstellen.
+        </p>
+        <p>
+          Das ist kein Selbstzweck. Es ist das Ergebnis aus 35 Jahren Beobachtung,
+          was in IT-Projekten scheitert und was bestehen bleibt.
+        </p>
+      </div>
+      <div class="meth-principles">
+        <div class="meth-p">
+          <div class="meth-p-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#E94545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="#E94545" stroke-width="1.5"/></svg>
+          </div>
+          <div class="meth-p-text">
+            <h4>Nutzen zuerst</h4>
+            <p>Jede Maßnahme wird am geschäftlichen Nutzen gemessen — nicht an methodischer Vollständigkeit.</p>
+          </div>
+        </div>
+        <div class="meth-p">
+          <div class="meth-p-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="#E94545" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="meth-p-text">
+            <h4>Quick-Start statt Big Bang</h4>
+            <p>Messbare Ergebnisse schnell liefern. Dann ausbauen. Kein jahrelanges Aufbau-Projekt ohne Zwischenergebnis.</p>
+          </div>
+        </div>
+        <div class="meth-p">
+          <div class="meth-p-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z" stroke="#E94545" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="meth-p-text">
+            <h4>Systematisch &amp; lean</h4>
+            <p>Strukturiert vorgehen, Komplexität reduzieren. Methoden als Werkzeug — nicht als Selbstzweck.</p>
+          </div>
+        </div>
+        <div class="meth-p">
+          <div class="meth-p-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="#E94545" stroke-width="1.8"/><path d="M12 5v2M12 17v2M5 12h2M17 12h2M7.05 7.05l1.41 1.41M15.54 15.54l1.41 1.41M7.05 16.95l1.41-1.41M15.54 8.46l1.41-1.41" stroke="#E94545" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="meth-p-text">
+            <h4>Kontinuierliches Lernen</h4>
+            <p>Experimentieren, messen, anpassen. Kein starrer Masterplan — sondern belastbarer Rahmen mit Anpassungsfähigkeit.</p>
+          </div>
+        </div>
+        <div class="meth-p">
+          <div class="meth-p-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="#E94545" stroke-width="1.8" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="#E94545" stroke-width="1.8"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="#E94545" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <div class="meth-p-text">
+            <h4>Enabling statt Abhängigkeit</h4>
+            <p>Ziel ist die Selbständigkeit des Kunden — nicht die Verlängerung des Beratungsmandats.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BÜCHER ===== -->
+<section id="buecher" class="sec">
+  <div class="wrap">
+    <div class="sh">
+      <span class="ey">Publikationen</span>
+      <h2 style="margin-top:18px;">Die Bücher.<br>Seit Jahren Standardwerke.</h2>
+      <p class="lead" style="margin-top:14px;max-width:600px;">
+        10+ Fachbücher im Carl Hanser Verlag — mit regelmäßigen Neuauflagen.
+        2026 die vierte Auflage des EAM-Standardwerks.
+        NEU 2027: Wirksames strategisches IT-Management auf Deutsch, Englisch und Spanisch.
+        Bücher, die in EAM-Abteilungen nicht als Deko stehen.
+      </p>
+    </div>
+    <div class="bgrid">
+      <div class="buch">
+        <div class="bcover">
+          <svg viewBox="0 0 200 267" xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="267" fill="#111827"/>
+            <rect x="0" y="0" width="6" height="267" fill="#E94545"/>
+            <text x="103" y="90" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="13" fill="white">Strategic</text>
+            <text x="103" y="110" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="13" fill="white">IT Management</text>
+            <text x="103" y="136" text-anchor="middle" font-family="Inter,sans-serif" font-weight="400" font-size="10" fill="rgba(255,255,255,0.5)">Hanschke</text>
+            <text x="103" y="210" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#E94545" font-weight="600">NEU 2027</text>
+          </svg>
+        </div>
+        <div class="bmeta">
+          <h4>Strategic IT Management</h4>
+          <span class="bpub">Carl Hanser Verlag · NEU 2027 (DE/EN/ES)</span>
+        </div>
+      </div>
+      <div class="buch">
+        <div class="bcover">
+          <svg viewBox="0 0 200 267" xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="267" fill="#0c2233"/>
+            <rect x="0" y="0" width="6" height="267" fill="#1a7d8b"/>
+            <text x="103" y="86" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="12" fill="white">Enterprise</text>
+            <text x="103" y="104" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="12" fill="white">Architecture</text>
+            <text x="103" y="122" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="12" fill="white">Management</text>
+            <text x="103" y="148" text-anchor="middle" font-family="Inter,sans-serif" font-weight="400" font-size="10" fill="rgba(255,255,255,0.5)">einfach &amp; effektiv</text>
+            <text x="103" y="210" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#1a7d8b" font-weight="600">4. Auflage 2026</text>
+          </svg>
+        </div>
+        <div class="bmeta">
+          <h4>Enterprise Architecture Management einfach &amp; effektiv</h4>
+          <span class="bpub">Carl Hanser Verlag · 4. Aufl. 2026</span>
+        </div>
+      </div>
+      <div class="buch">
+        <div class="bcover">
+          <svg viewBox="0 0 200 267" xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="267" fill="#1a1a1a"/>
+            <rect x="0" y="0" width="6" height="267" fill="#E94545"/>
+            <text x="103" y="90" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="13" fill="white">Lean</text>
+            <text x="103" y="110" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="13" fill="white">IT-Management</text>
+            <text x="103" y="136" text-anchor="middle" font-family="Inter,sans-serif" font-weight="400" font-size="10" fill="rgba(255,255,255,0.5)">Hanschke</text>
+            <text x="103" y="210" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#E94545" font-weight="600">Hanser Verlag</text>
+          </svg>
+        </div>
+        <div class="bmeta">
+          <h4>Lean IT-Management</h4>
+          <span class="bpub">Carl Hanser Verlag</span>
+        </div>
+      </div>
+      <div class="buch">
+        <div class="bcover">
+          <svg viewBox="0 0 200 267" xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="267" fill="#1c1008"/>
+            <rect x="0" y="0" width="6" height="267" fill="#E94545"/>
+            <text x="103" y="86" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="11" fill="white">Business</text>
+            <text x="103" y="104" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="11" fill="white">Architecture 4</text>
+            <text x="103" y="122" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="11" fill="white">Digitalization</text>
+            <text x="103" y="148" text-anchor="middle" font-family="Inter,sans-serif" font-weight="400" font-size="10" fill="rgba(255,255,255,0.5)">Hanschke</text>
+            <text x="103" y="210" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#888" font-weight="600">Hanser Verlag</text>
+          </svg>
+        </div>
+        <div class="bmeta">
+          <h4>Business Architecture 4 Digitalization</h4>
+          <span class="bpub">Carl Hanser Verlag</span>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:32px;">
+      <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener" class="btn btn-outline">Alle Bücher bei Hanser</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REFERENZEN / ZITATE ===== -->
+<section id="referenzen" class="sec-sm">
+  <div class="wrap">
+    <div class="sh">
+      <span class="ey">Stimmen aus der Praxis</span>
+      <h2 style="margin-top:18px;">Was Kunden berichten.<br>Unkommentiert.</h2>
+    </div>
+    <div class="ref-grid">
+      <div class="ref-item">
+        <p class="ref-quote">Die Schulungen sind so aufgebaut, dass man am nächsten Tag direkt etwas anwenden kann. Kein Theoriemonolog.</p>
+        <div class="ref-author">IT-Architekt</div>
+        <div class="ref-role">Versicherungskonzern, D-A-CH</div>
+      </div>
+      <div class="ref-item">
+        <p class="ref-quote">Das EAM-Buch liegt seit Jahren im Regal jedes Architekten bei uns im Haus. Das sagt eigentlich alles.</p>
+        <div class="ref-author">Leiter IT-Architektur</div>
+        <div class="ref-role">Industrieunternehmen, Deutschland</div>
+      </div>
+      <div class="ref-item">
+        <p class="ref-quote">Inge Hanschke sagt, was funktioniert — und was nicht. Das ist selten in der Beraterbranche.</p>
+        <div class="ref-author">CDO</div>
+        <div class="ref-role">Mittelständisches IT-Unternehmen, DACH</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section id="page-cta">
+  <div class="wrap">
+    <div class="cta-inner">
+      <div class="cta-text">
+        <span class="ey">Direktkontakt</span>
+        <h2>Mandat, Schulung oder Webinar?</h2>
+        <p>
+          Beratungsanfragen, Schulungsanmeldungen, Webinar-Termine.
+          Rückmeldung innerhalb von 24 Stunden — kein Vorgespräch-Vorgespräch.
+        </p>
+      </div>
+      <div class="cta-acts">
+        <a href="../#kontakt" class="btn btn-primary">
+          Anfrage stellen
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="../trainings/" class="btn btn-outline-w">Schulungen ansehen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fi-w">
+      <span class="fcopy">© 2026 Hanschke Consulting · Inge Hanschke · Alle Rechte vorbehalten.</span>
+      <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+        <nav class="fnav">
+          <a onclick="openImpressum()">Impressum</a>
+          <a onclick="openImpressum('datenschutz')">Datenschutz</a>
+          <a href="https://www.linkedin.com/in/ingehanschke/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener">Hanser Verlag</a>
+        </nav>
+        <!-- Sprach-Switcher -->
+        <div style="display:flex;gap:6px;align-items:center;border-left:1px solid rgba(255,255,255,.1);padding-left:20px;">
+          <a href="#" style="font-size:11px;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.85);padding:3px 8px;background:rgba(255,255,255,.12);border-radius:2px;">DE</a>
+          <a href="#" title="English version coming soon" style="font-size:11px;font-weight:600;letter-spacing:.06em;color:rgba(255,255,255,.3);padding:3px 8px;border-radius:2px;">EN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== IMPRESSUM OVERLAY ===== -->
+<div id="impressum-page">
+  <button class="imp-close" onclick="closeImpressum()">✕</button>
+  <div class="wrap">
+    <div class="imp-content">
+      <h1 id="imp-title">Impressum</h1>
+
+      <div id="imp-main">
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <address>
+          Inge Hanschke<br>
+          Straßl ins Holz 15<br>
+          81829 München<br>
+          Deutschland
+        </address>
+
+        <h2>Kontakt</h2>
+        <p>
+          E-Mail: <a href="mailto:info@hanschke-consulting.com">info@hanschke-consulting.com</a><br>
+          Mobil: <a href="tel:+4915221000172">+49 (0)152 210 001 72</a>
+        </p>
+
+        <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+        <p>Inge Hanschke</p>
+
+        <h2>Haftungsausschluss</h2>
+
+        <h3>Haftung für Inhalte</h3>
+        <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+
+        <h3>Haftung für Links</h3>
+        <p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+
+        <h3>Urheberrecht</h3>
+        <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+      </div>
+
+      <div id="imp-datenschutz" style="display:none;">
+        <h2>Datenschutzerklärung</h2>
+        <p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.</p>
+        <p>Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
+        <p>Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('sc', scrollY > 16), {passive:true});
+
+  // Hamburger
+  function toggleMenu() {
+    const m = document.getElementById('mmenu'), b = document.getElementById('hbgBtn');
+    const open = m.classList.toggle('open');
+    b.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  function closeMenu() {
+    document.getElementById('mmenu').classList.remove('open');
+    document.getElementById('hbgBtn').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // Impressum overlay
+  function openImpressum(section) {
+    const page = document.getElementById('impressum-page');
+    document.getElementById('imp-main').style.display = section === 'datenschutz' ? 'none' : 'block';
+    document.getElementById('imp-datenschutz').style.display = section === 'datenschutz' ? 'block' : 'none';
+    document.getElementById('imp-title').textContent = section === 'datenschutz' ? 'Datenschutz' : 'Impressum';
+    page.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeImpressum() {
+    document.getElementById('impressum-page').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if(e.key==='Escape') closeImpressum(); });
+</script>
+<script src="https://visual-feedback-tool.vercel.app/api/embed.js?key=3d1b3cb26e7e52347690a5348e94a491c2b71b858fdd1a18"></script>
+</body>
+</html>

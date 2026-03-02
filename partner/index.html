@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partner &amp; Netzwerk — Hanschke Consulting</title>
+  <meta name="description" content="Das Expertennetzwerk von Hanschke Consulting: BOC Group, Ardoq, codecentric, LeanIX, Gerstbach Business Analyse, LUY, SEMP Consulting, Values4Change, WiCon — für ganzheitliche IT-Beratung im D-A-CH-Raum.">
+  <meta property="og:title" content="Partner &amp; Netzwerk — Hanschke Consulting">
+  <meta property="og:description" content="9 Partnerunternehmen für ganzheitliche IT-Beratung. EAM-Tools, Business-Analyse, Organisationsentwicklung und mehr — das Netzwerk von Inge Hanschke.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.hanschke-consulting.com/partner/">
+  <meta property="og:image" content="https://www.hanschke-consulting.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    :root {
+      --red: #E94545; --red-dk: #c83030; --black: #0a0a0a; --g900: #141414;
+      --g800: #282828; --g700: #3c3c3c; --g600: #666; --g400: #999;
+      --g200: #e0e0e0; --g100: #f5f5f5; --g50: #fafafa; --white: #fff;
+      --teal: #1a7d8b; --f: 'Inter', sans-serif; --max: 1200px; --r: 2px;
+      --ease: cubic-bezier(.25,.1,.25,1);
+    }
+    body { font-family: var(--f); background: var(--white); color: var(--black); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 48px; }
+    .ey { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--red); }
+    .ey::before { content:''; display:block; width:20px; height:2px; background:var(--red); flex-shrink:0; }
+    h1 { font-size: clamp(2.4rem,5.5vw,4rem); font-weight: 900; line-height: 1.08; letter-spacing: -.035em; }
+    h2 { font-size: clamp(1.8rem,3vw,2.6rem); font-weight: 700; line-height: 1.1; letter-spacing: -.025em; }
+    h3 { font-size: 1rem; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; }
+    .lead { font-size: 1.05rem; line-height: 1.72; color: var(--g700); }
+    em.r { font-style: normal; color: var(--red); }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; font-family: var(--f); font-size: 13px; font-weight: 600; letter-spacing: .01em; border-radius: var(--r); transition: background .15s var(--ease), color .15s var(--ease), border-color .15s var(--ease), transform .1s; cursor: pointer; border: 1.5px solid transparent; white-space: nowrap; }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--red); color: var(--white); border-color: var(--red); }
+    .btn-primary:hover { background: var(--red-dk); border-color: var(--red-dk); }
+    .btn-dark { background: var(--black); color: var(--white); border-color: var(--black); }
+    .btn-dark:hover { background: var(--g800); border-color: var(--g800); }
+    .btn-outline { background: transparent; color: var(--black); border-color: var(--g200); }
+    .btn-outline:hover { border-color: var(--black); }
+    .btn-outline-w { background: transparent; color: var(--white); border-color: rgba(255,255,255,.35); }
+    .btn-outline-w:hover { background: var(--white); color: var(--black); border-color: var(--white); }
+    .sec { padding: 96px 0; }
+    .sec-sm { padding: 64px 0; }
+
+    /* NAV */
+    #nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; background: rgba(255,255,255,.96); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--g200); transition: box-shadow .2s; }
+    #nav.sc { box-shadow: 0 2px 24px rgba(0,0,0,.07); }
+    .nav-w { max-width: var(--max); margin: 0 auto; padding: 0 48px; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-logo { display:flex; flex-direction:column; flex-shrink:0; }
+    .nav-logo-n { font-size: 14.5px; font-weight: 800; letter-spacing: -.02em; color: var(--black); line-height: 1.1; }
+    .nav-logo-s { font-size: 9.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--red); margin-top: 2px; }
+    .nav-links { display:flex; align-items:center; gap:26px; }
+    .nav-links a { font-size: 13px; font-weight: 500; color: var(--g600); transition: color .14s; }
+    .nav-links a:hover { color: var(--black); }
+    .nav-links a.active { color: var(--black); font-weight: 600; }
+    .nav-act { display:flex; align-items:center; gap:8px; flex-shrink:0; }
+    .hbg { display:none; flex-direction:column; justify-content:center; gap:5px; cursor:pointer; padding:6px; background:none; border:none; width:36px; height:36px; }
+    .hbg span { display:block; width:22px; height:1.5px; background:var(--black); transition:transform .22s var(--ease),opacity .22s; transform-origin:center; }
+    .hbg.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+    .hbg.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+    .hbg.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+    .mmenu { display:none; position:fixed; top:60px; left:0; right:0; bottom:0; background:var(--white); z-index:199; padding:32px 24px 48px; flex-direction:column; gap:4px; overflow-y:auto; }
+    .mmenu.open { display:flex; }
+    .mmenu a { font-size:1.05rem; font-weight:600; color:var(--black); padding:13px 0; border-bottom:1px solid var(--g100); }
+    .mmenu .btn { margin-top:20px; align-self:flex-start; }
+
+    /* PAGE HERO */
+    #page-hero { padding-top: 60px; background: var(--white); position: relative; overflow: hidden; }
+    #page-hero::before { content:''; position:absolute; inset:0; background-image: linear-gradient(var(--g200) 1px,transparent 1px), linear-gradient(90deg,var(--g200) 1px,transparent 1px); background-size: 64px 64px; opacity: .35; pointer-events:none; }
+    #page-hero::after { content:''; position:absolute; inset:0; background: radial-gradient(ellipse 80% 100% at 50% 100%,transparent 40%,var(--white) 100%); pointer-events:none; }
+    .page-hero-in { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 400px; gap: 72px; align-items: center; padding: 80px 0 88px; }
+    .page-hero-bc { font-size: 12px; font-weight: 500; color: var(--g400); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .page-hero-bc a { color: var(--g400); transition: color .14s; }
+    .page-hero-bc a:hover { color: var(--black); }
+    .page-hero-bc span { color: var(--g200); }
+
+    /* Prinzip Card (Hero rechts) */
+    .prinzip-card { background: var(--black); border-radius: var(--r); padding: 28px; border-left: 3px solid var(--red); }
+    .pc-label { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--red); margin-bottom: 14px; }
+    .pc-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.06); }
+    .pc-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .pc-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--red); flex-shrink: 0; margin-top: 6px; }
+    .pc-text { font-size: .85rem; color: rgba(255,255,255,.55); line-height: 1.55; }
+    .pc-text strong { color: rgba(255,255,255,.85); font-weight: 600; }
+
+    /* PARTNER INTRO */
+    #partner-intro { background: var(--g100); border-top: 1px solid var(--g200); }
+    .pi-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .pi-stat-row { display: flex; gap: 0; margin-top: 28px; background: var(--white); border: 1px solid var(--g200); }
+    .pi-stat { padding: 20px 24px; border-right: 1px solid var(--g200); flex: 1; }
+    .pi-stat:last-child { border-right: none; }
+    .pi-stat-v { font-size: 1.8rem; font-weight: 900; color: var(--black); letter-spacing: -.05em; line-height: 1; }
+    .pi-stat-v sup { font-size: .85rem; color: var(--red); }
+    .pi-stat-l { font-size: 10px; color: var(--g400); text-transform: uppercase; letter-spacing: .06em; margin-top: 4px; }
+
+    /* PARTNER GRID */
+    #partner-grid { background: var(--white); }
+    .partner-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--g200); border: 1px solid var(--g200); }
+    .partner-card { background: var(--white); padding: 32px; display: flex; flex-direction: column; transition: background .14s; position: relative; overflow: hidden; }
+    .partner-card:hover { background: var(--g50); }
+    .partner-card::after { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--red); transform: scaleY(0); transform-origin: top; transition: transform .22s var(--ease); }
+    .partner-card:hover::after { transform: scaleY(1); }
+    .partner-logo { width: 100%; height: 56px; background: var(--g100); border-radius: var(--r); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; border: 1px solid var(--g200); overflow: hidden; }
+    .partner-logo-text { font-size: 13px; font-weight: 700; color: var(--g600); letter-spacing: -.01em; text-align: center; padding: 0 12px; }
+    .partner-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 12px; }
+    .partner-tag { font-size: 9.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--g600); padding: 2px 7px; background: var(--g100); border-radius: 2px; }
+    .partner-card h3 { font-size: .98rem; font-weight: 700; color: var(--black); margin-bottom: 10px; letter-spacing: -.01em; }
+    .partner-card p { font-size: .87rem; line-height: 1.68; color: var(--g600); flex: 1; }
+    .partner-card-foot { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--g100); display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .partner-scope { font-size: 10px; font-weight: 600; color: var(--g400); letter-spacing: .04em; }
+
+    /* KOOPERATION */
+    #kooperation { background: var(--g900); }
+    #kooperation .ey { color: var(--red); }
+    #kooperation .ey::before { background: var(--red); }
+    .koop-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: rgba(255,255,255,.06); margin-top: 40px; }
+    .koop-item { background: rgba(255,255,255,.02); padding: 28px 24px; }
+    .koop-item-num { font-size: 2rem; font-weight: 900; color: var(--red); letter-spacing: -.06em; line-height: 1; margin-bottom: 12px; }
+    .koop-item h3 { font-size: .92rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .koop-item p { font-size: .85rem; line-height: 1.65; color: rgba(255,255,255,.45); }
+
+    /* PARTNER WERDEN */
+    #partner-werden { background: var(--g100); border-top: 1px solid var(--g200); }
+    .pw-inner { display: flex; align-items: center; justify-content: space-between; gap: 48px; }
+    .pw-text h2 { margin-bottom: 12px; }
+    .pw-text p { font-size: .95rem; color: var(--g700); max-width: 500px; line-height: 1.72; }
+    .pw-acts { display: flex; gap: 10px; flex-shrink: 0; flex-wrap: wrap; }
+
+    /* CTA */
+    #page-cta { background: var(--black); }
+    .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 48px; padding: 72px 0; }
+    #page-cta .ey { color: var(--red); }
+    #page-cta .ey::before { background: var(--red); }
+    .cta-text h2 { color: var(--white); margin: 16px 0 12px; }
+    .cta-text p { font-size: .95rem; color: rgba(255,255,255,.5); max-width: 480px; line-height: 1.72; }
+    .cta-acts { display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap; align-items: center; }
+
+    /* IMPRESSUM */
+    #impressum-page { display: none; position: fixed; inset: 0; z-index: 500; background: var(--white); overflow-y: auto; padding: 80px 0 60px; }
+    #impressum-page.open { display: block; }
+    .imp-close { position:fixed; top:20px; right:20px; width:40px; height:40px; background:var(--black); color:var(--white); border:none; border-radius:50%; font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:501; }
+    .imp-content h1 { font-size:1.8rem; margin-bottom:32px; }
+    .imp-content h2 { font-size:1.1rem; margin:28px 0 10px; color:var(--black); }
+    .imp-content h3 { font-size:.95rem; margin:20px 0 8px; }
+    .imp-content p { font-size:.9rem; line-height:1.75; color:var(--g700); margin-bottom:12px; }
+    .imp-content address { font-style:normal; font-size:.9rem; line-height:1.75; color:var(--g700); margin-bottom:12px; }
+
+    /* FOOTER */
+    footer { background: var(--g900); padding: 28px 0; border-top: 1px solid rgba(255,255,255,.06); }
+    .fi-w { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .fcopy { font-size: 12px; color: rgba(255,255,255,.25); }
+    .fnav { display: flex; gap: 24px; }
+    .fnav a { font-size: 12px; color: rgba(255,255,255,.3); transition: color .14s; cursor: pointer; }
+    .fnav a:hover { color: rgba(255,255,255,.7); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1100px) {
+      .page-hero-in { grid-template-columns: 1fr; gap: 36px; }
+      .pi-inner { grid-template-columns: 1fr; gap: 36px; }
+      .partner-grid { grid-template-columns: repeat(2, 1fr); }
+      .koop-grid { grid-template-columns: 1fr; }
+      .cta-inner { flex-direction: column; align-items: flex-start; gap: 32px; }
+      .pw-inner { flex-direction: column; align-items: flex-start; gap: 28px; }
+    }
+    @media (max-width: 800px) {
+      .wrap { padding: 0 20px; }
+      .nav-w { padding: 0 20px; }
+      .nav-links, .nav-act .btn-outline { display: none; }
+      .hbg { display: flex; }
+      .sec { padding: 56px 0; }
+      .sec-sm { padding: 40px 0; }
+      .page-hero-in { padding: 48px 0 56px; }
+      .fi-w { flex-direction: column; gap: 10px; text-align: center; }
+      .partner-grid { grid-template-columns: 1fr; }
+      .pi-stat-row { flex-direction: column; }
+      .pi-stat { border-right: none; border-bottom: 1px solid var(--g200); }
+      .pi-stat:last-child { border-bottom: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-w">
+    <a href="../" class="nav-logo">
+      <span class="nav-logo-n">Inge Hanschke</span>
+      <span class="nav-logo-s">Hanschke Consulting</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../leistungen/">Beratung</a></li>
+      <li><a href="../ueber-inge/">Über mich</a></li>
+      <li><a href="../trainings/">Schulungen</a></li>
+      <li><a href="../buecher/">Bücher</a></li>
+      <li><a href="#" class="active">Partner</a></li>
+      <li><a href="../events/">Events</a></li>
+    </ul>
+    <div class="nav-act">
+      <a href="../events/" class="btn btn-outline" style="padding:8px 16px;font-size:12.5px;">Termine</a>
+      <a href="../#kontakt" class="btn btn-primary" style="padding:8px 16px;font-size:12.5px;">Kontakt</a>
+    </div>
+    <button class="hbg" id="hbgBtn" onclick="toggleMenu()" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <a href="../leistungen/" onclick="closeMenu()">Beratung</a>
+  <a href="../ueber-inge/" onclick="closeMenu()">Über mich</a>
+  <a href="../trainings/" onclick="closeMenu()">Schulungen &amp; Webinare</a>
+  <a href="../buecher/" onclick="closeMenu()">Bücher</a>
+  <a href="#" onclick="closeMenu()">Partner</a>
+  <a href="../events/" onclick="closeMenu()">Events</a>
+  <a href="../#kontakt" class="btn btn-primary" onclick="closeMenu()">Kontakt aufnehmen</a>
+</div>
+
+<!-- PAGE HERO -->
+<section id="page-hero">
+  <div class="wrap">
+    <div class="page-hero-in">
+      <div>
+        <div class="page-hero-bc">
+          <a href="../">Startseite</a>
+          <span>›</span>
+          <span style="color:var(--black);">Partner &amp; Netzwerk</span>
+        </div>
+        <span class="ey">Expertennetzwerk</span>
+        <h1 style="margin-top:18px;">Partner &amp;<br><em class="r">Netzwerk.</em></h1>
+        <p class="lead" style="margin-top:20px;max-width:520px;">
+          Ganzheitliche IT-Beratung braucht ein starkes Netzwerk.
+          Hanschke Consulting arbeitet mit ausgewählten Partnerunternehmen zusammen —
+          für Leistungen, die über das eigene Beratungsportfolio hinausgehen.
+        </p>
+      </div>
+      <div class="prinzip-card">
+        <div class="pc-label">Partnerschafts-Prinzip</div>
+        <div class="pc-item">
+          <div class="pc-dot"></div>
+          <div class="pc-text"><strong>Auswahl nach Kompetenz.</strong> Jedes Partnerunternehmen wurde persönlich ausgewählt — auf Basis nachgewiesener Expertise und gemeinsamer Projekterfahrung.</div>
+        </div>
+        <div class="pc-item">
+          <div class="pc-dot"></div>
+          <div class="pc-text"><strong>Keine Provisionslogik.</strong> Partner werden nicht nach Abschlussquoten bewertet. Die Empfehlung gilt, wenn sie dem Kunden nutzt.</div>
+        </div>
+        <div class="pc-item">
+          <div class="pc-dot"></div>
+          <div class="pc-text"><strong>Komplementäre Stärken.</strong> Tools, Methoden, Branchen — das Netzwerk deckt ab, was die Einzelberatung nicht allein leisten kann.</div>
+        </div>
+        <div class="pc-item">
+          <div class="pc-dot"></div>
+          <div class="pc-text"><strong>D-A-CH-fokussiert.</strong> Alle Partner sind im deutschsprachigen Markt etabliert und verstehen dessen Besonderheiten.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNER INTRO -->
+<section id="partner-intro" class="sec-sm">
+  <div class="wrap">
+    <div class="pi-inner">
+      <div>
+        <span class="ey">Das Netzwerk</span>
+        <h2 style="margin-top:18px;">Mehr als die Summe<br>der Einzelteile.</h2>
+        <div class="pi-stat-row">
+          <div class="pi-stat">
+            <div class="pi-stat-v">9</div>
+            <div class="pi-stat-l">Partnerunternehmen</div>
+          </div>
+          <div class="pi-stat">
+            <div class="pi-stat-v">35<sup>+</sup></div>
+            <div class="pi-stat-l">Jahre gemeinsamer Praxis</div>
+          </div>
+          <div class="pi-stat">
+            <div class="pi-stat-v">D-A-CH</div>
+            <div class="pi-stat-l">Marktfokus</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:.95rem;line-height:1.78;color:var(--g700);">
+          Kein Beratungsunternehmen kann alles gleich gut.
+          Hanschke Consulting setzt auf ein Netzwerk aus spezialisierten Partnern —
+          von EAM-Tool-Anbietern über Business-Analyse-Experten bis zu
+          Organisationsentwicklern und IT-Service-Spezialisten.
+        </p>
+        <p style="font-size:.95rem;line-height:1.78;color:var(--g700);margin-top:12px;">
+          Die Kooperation ist projektbezogen, offen und auf den Kundennutzen ausgerichtet.
+          Bei Bedarf koordiniert Hanschke Consulting die richtigen Partner — oder empfiehlt sie direkt.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNER GRID -->
+<section id="partner-grid" class="sec">
+  <div class="wrap">
+    <div style="margin-bottom:40px;">
+      <span class="ey">Partnerunternehmen</span>
+      <h2 style="margin-top:18px;">9 Partner. Eine Methodik.</h2>
+    </div>
+
+    <div class="partner-grid">
+
+      <!-- BOC Group -->
+      <div class="partner-card">
+        <div class="partner-logo">
+          <span class="partner-logo-text">BOC Group · ADOit</span>
+        </div>
+        <div class="partner-tags">
+          <span class="partner-tag">EAM-Tool</span>
+          <span class="partner-tag">Software</span>
+        </div>
+        <h3>BOC Group — ADOit</h3>
+        <p>Die BOC Group ist Anbieter der EAM-Softwarelösung ADOit — einem der führenden Enterprise Architecture Management Tools im D-A-CH-Raum. Hanschke Consulting begleitet die Tool-Einführung und -Optimierung auf Basis der BOC-Plattform.</p>
+        <div class="partner-card-foot">
+          <span class="partner-scope">EAM · Tool-Evaluierung · Einführung</span>
+          <a href="https://www.boc-group.com" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:11.5px;padding:6px 14px;">
+            boc-group.com
+            <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H7M12 4v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Ardoq -->
+      <div class="partner-card">
+        <div class="partner-logo">
+          <span class="partner-logo-text">Ardoq AS</span>
+        </div>
+        <div class="partner-tags">
+          <span class="partner-tag">EAM-Tool</span>
+          <span class="partner-tag">Cloud</span>
+        </div>
+        <h3>Ardoq AS</h3>
+        <p>Ardoq ist eine cloudbasierte Enterprise Architecture-Plattform für dynamisches und kontinuierliches Architekturmanagement. Als Partner unterstützt Hanschke Consulting bei der Einführung, Konfiguration und Nutzungsoptimierung von Ardoq.</p>
+        <div class="partner-card-foot">
+          <span class="partner-scope">EAM · Cloud EA · Tool-Einführung</span>
+          <a href="https://www.ardoq.com" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:11.5px;padding:6px 14px;">
+            ardoq.com
+            <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H7M12 4v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- codecentric -->
+      <div class="partner-card">
+        <div class="partner-logo">
+          <span class="partner-logo-text">codecentric AG</span>
+        </div>
+        <div class="partner-tags">
+          <span class="partner-tag">Software</span>
+          <span class="partner-tag">KI</span>
+          <span class="partner-tag">Agile</span>
+        </div>
+        <h3>codecentric AG</h3>
+        <p>codecentric ist ein spezialisiertes IT-Beratungs- und Softwareentwicklungsunternehmen mit Schwerpunkten in Agile, DevOps, KI und Cloud. Die Partnerschaft verbindet strategische IT-Beratung mit technischer Umsetzungskompetenz.</p>
+        <div class="partner-card-foot">
+          <span class="partner-scope">KI · DevOps · Softwareentwicklung</span>
+          <a href="https://www.codecentric.de" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:11.5px;padding:6px 14px;">
+            codecentric.de
+            <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H7M12 4v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Gerstbach -->
+      <div class="partner-card">
+        <div class="partner-logo">
+          <span class="partner-logo-text">Gerstbach Business Analyse</span>
+        </div>
+        <div class="partner-tags">
+          <span class="partner-tag">Business-Analyse</span>
+          <span class="partner-tag">Training</span>
+        </div>
+        <h3>Gerstbach Business Analyse</h3>
+        <p>Gerstbach Business Analyse ist spezialisiert auf professionelle Business-Analyse-Ausbildung und -Beratung. Die Kooperation ergänzt den BA4D-Ansatz von Hanschke Consulting um zertifizierte Ausbildungspfade und Methoden-Vertiefung.</p>
+        <div class="partner-card-foot">
+          <span class="partner-scope">Business-Analyse · Training · BABOK</span>
+          <a href="https://www.gerstbach.at" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:11.5px;padding:6px 14px;">
+            gerstbach.at
+            <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H7M12 4v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- LeanIX -->
+      <div class="partner-card">
+        <div class="partner-logo">
+          <span class="partner-logo-text">LeanIX</span>
+        </div>
+        <div class="partner-tags">
+          <span class="partner-tag">EAM-Tool</span>
+          <span class="partner-tag">SaaS</span>
+        </div>
+        <h3>LeanIX</h3>
+        <p>LeanIX ist eine führende SaaS-Plattform für Enterprise Architecture Management mit Fokus auf Kontinuierlichkeit und Business-IT-Alignment. Hanschke Consulting unterstützt bei Einführung und Nutzungsoptimierung für mittelständische und große Unternehmen.</p>
+        <div class="partner-card-foot">
+          <span class="partner-scope">EAM · SaaS · Business-IT-Alignment</span>
+          <a href="https://www.leanix.net" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:11.5px;padding:6px 14px;">
+            leanix.net
+            <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H7M12 4v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- LUY -->
+      <div class="partner-card">
+        <div class="partner-logo">
+          <span class="partner-logo-text">LUY — Business Navigation</span>
+        </div>
+        <div class="partner-tags">
+          <span class="partner-tag">Strategie</span>
+          <span class="partner-tag">Führung</span>
+        </div>
+        <h3>LUY — Business Navigation</h3>
+        <p>LUY Business Navigation unterstützt Unternehmen bei strategischer Ausrichtung, Führungskräfteentwicklung und organisationalem Wandel. Die Partnerschaft verbindet IT-Beratung mit Organisationsentwicklung und Change Management.</p>
+        <div class="partner-card-foot">
+          <span class="partner-scope">Strategie · Change · Führung</span>
+          <a href="../#kontakt" class="btn btn-outline" style="font-size:11.5px;padding:6px 14px;">Anfragen</a>
+        </div>
+      </div>
+
+      <!-- SEMP Consulting -->
+      <div class="partner-card">
+        <div class="partner-logo">
+          <span class="partner-logo-text">SEMP Consulting GmbH</span>
+        </div>
+        <div class="partner-tags">
+          <span class="partner-tag">IT-Service</span>
+          <span class="partner-tag">Governance</span>
+        </div>
+        <h3>SEMP Consulting GmbH</h3>
+        <p>SEMP Consulting ist spezialisiert auf IT-Service-Management, IT-Governance und ITSM-Prozessoptimierung. Die Kooperation erweitert das Hanschke-Portfolio um operative IT-Management-Kompetenz und ITSM-Umsetzung.</p>
+        <div class="partner-card-foot">
+          <span class="partner-scope">ITSM · Governance · IT-Prozesse</span>
+          <a href="../#kontakt" class="btn btn-outline" style="font-size:11.5px;padding:6px 14px;">Anfragen</a>
+        </div>
+      </div>
+
+      <!-- Values4Change -->
+      <div class="partner-card">
+        <div class="partner-logo">
+          <span class="partner-logo-text">Values4Change</span>
+        </div>
+        <div class="partner-tags">
+          <span class="partner-tag">Transformation</span>
+          <span class="partner-tag">Kultur</span>
+        </div>
+        <h3>Values4Change</h3>
+        <p>Values4Change begleitet Unternehmen bei kulturellem Wandel, Wertearbeit und Transformationsprozessen. Die Partnerschaft ergänzt IT-Transformation um die menschliche und kulturelle Dimension — unverzichtbar für nachhaltigen Wandel.</p>
+        <div class="partner-card-foot">
+          <span class="partner-scope">Kulturwandel · Transformation · Werte</span>
+          <a href="../#kontakt" class="btn btn-outline" style="font-size:11.5px;padding:6px 14px;">Anfragen</a>
+        </div>
+      </div>
+
+      <!-- WiCon -->
+      <div class="partner-card">
+        <div class="partner-logo">
+          <span class="partner-logo-text">WiCon WirtschaftsConsulting</span>
+        </div>
+        <div class="partner-tags">
+          <span class="partner-tag">Wirtschaftsberatung</span>
+          <span class="partner-tag">Prozesse</span>
+        </div>
+        <h3>WiCon WirtschaftsConsulting GmbH</h3>
+        <p>WiCon WirtschaftsConsulting verbindet betriebswirtschaftliche Expertise mit IT-Beratung für Mittelstand und Industrie. Die Kooperation stärkt die Business-Seite der IT-Beratung — von Prozessoptimierung bis zur wirtschaftlichen Bewertung von IT-Investitionen.</p>
+        <div class="partner-card-foot">
+          <span class="partner-scope">Wirtschaft · Prozesse · IT-Investitionen</span>
+          <a href="../#kontakt" class="btn btn-outline" style="font-size:11.5px;padding:6px 14px;">Anfragen</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- KOOPERATION -->
+<section id="kooperation" class="sec">
+  <div class="wrap">
+    <span class="ey">Zusammenarbeit</span>
+    <h2 style="color:var(--white);margin-top:18px;max-width:600px;">So funktioniert die Partnerschaft.</h2>
+    <div class="koop-grid">
+      <div class="koop-item">
+        <div class="koop-item-num">01</div>
+        <h3>Projektbezogene Empfehlung</h3>
+        <p>Partner werden nicht pauschal empfohlen — sondern wenn der konkrete Projektbedarf es erfordert. Die Empfehlung orientiert sich immer am Kundennutzen.</p>
+      </div>
+      <div class="koop-item">
+        <div class="koop-item-num">02</div>
+        <h3>Gemeinsame Projektarbeit</h3>
+        <p>Bei komplexen Vorhaben arbeiten Hanschke Consulting und Partnerunternehmen in gemeinsamen Projektteams — klar abgegrenzte Verantwortlichkeiten, koordiniertes Vorgehen.</p>
+      </div>
+      <div class="koop-item">
+        <div class="koop-item-num">03</div>
+        <h3>Methodische Konsistenz</h3>
+        <p>Alle Partnerunternehmen teilen den „einfach &amp; effektiv"-Ansatz von Hanschke Consulting — pragmatisch, praxisnah, ohne unnötige Komplexität.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNER WERDEN -->
+<section id="partner-werden" class="sec-sm">
+  <div class="wrap">
+    <div class="pw-inner">
+      <div class="pw-text">
+        <span class="ey" style="margin-bottom:14px;display:inline-flex;">Netzwerk erweitern</span>
+        <h2>Partner werden.</h2>
+        <p style="margin-top:12px;">Sie sind ein Unternehmen mit komplementärer Expertise und einem pragmatischen Ansatz? Hanschke Consulting ist offen für Kooperationsgespräche. Kein langes Bewerbungsverfahren — direktes Gespräch, klare Erwartungen.</p>
+      </div>
+      <div class="pw-acts">
+        <a href="../#kontakt" class="btn btn-primary">
+          Kooperationsanfrage
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="../leistungen/" class="btn btn-outline">Leistungsportfolio</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="page-cta">
+  <div class="wrap">
+    <div class="cta-inner">
+      <div class="cta-text">
+        <span class="ey">Beratung anfragen</span>
+        <h2>Ganzheitliche Beratung.<br>Jetzt anfragen.</h2>
+        <p>
+          IT-Beratung, Schulungsanmeldung oder Partneranfrage —
+          Rückmeldung innerhalb von 24 Stunden.
+          Direkt und sachlich.
+        </p>
+      </div>
+      <div class="cta-acts">
+        <a href="../#kontakt" class="btn btn-primary">
+          Kontakt aufnehmen
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="../leistungen/" class="btn btn-outline-w">Alle Leistungen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fi-w">
+      <span class="fcopy">© 2026 Hanschke Consulting · Inge Hanschke · Alle Rechte vorbehalten.</span>
+      <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+        <nav class="fnav">
+          <a onclick="openImpressum()">Impressum</a>
+          <a onclick="openImpressum('datenschutz')">Datenschutz</a>
+          <a href="https://www.linkedin.com/in/ingehanschke/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener">Hanser Verlag</a>
+        </nav>
+        <div style="display:flex;gap:6px;align-items:center;border-left:1px solid rgba(255,255,255,.1);padding-left:20px;">
+          <a href="#" style="font-size:11px;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.85);padding:3px 8px;background:rgba(255,255,255,.12);border-radius:2px;">DE</a>
+          <a href="#" title="English version coming soon" style="font-size:11px;font-weight:600;letter-spacing:.06em;color:rgba(255,255,255,.3);padding:3px 8px;border-radius:2px;">EN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- IMPRESSUM OVERLAY -->
+<div id="impressum-page">
+  <button class="imp-close" onclick="closeImpressum()">✕</button>
+  <div class="wrap">
+    <div class="imp-content">
+      <h1 id="imp-title">Impressum</h1>
+      <div id="imp-main">
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <address>Inge Hanschke<br>Straßl ins Holz 15<br>81829 München<br>Deutschland</address>
+        <h2>Kontakt</h2>
+        <p>E-Mail: <a href="mailto:info@hanschke-consulting.com">info@hanschke-consulting.com</a><br>Mobil: <a href="tel:+4915221000172">+49 (0)152 210 001 72</a></p>
+        <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+        <p>Inge Hanschke</p>
+        <h2>Haftungsausschluss</h2>
+        <h3>Haftung für Inhalte</h3>
+        <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
+        <h3>Haftung für Links</h3>
+        <p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+        <h3>Urheberrecht</h3>
+        <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+      </div>
+      <div id="imp-datenschutz" style="display:none;">
+        <h2>Datenschutzerklärung</h2>
+        <p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten erhoben werden, erfolgt dies stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.</p>
+        <p>Wir weisen darauf hin, dass die Datenübertragung im Internet Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
+        <p>Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung wird hiermit ausdrücklich widersprochen.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('sc', scrollY > 16), {passive:true});
+
+  function toggleMenu() {
+    const m = document.getElementById('mmenu'), b = document.getElementById('hbgBtn');
+    const open = m.classList.toggle('open');
+    b.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  function closeMenu() {
+    document.getElementById('mmenu').classList.remove('open');
+    document.getElementById('hbgBtn').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function openImpressum(section) {
+    const page = document.getElementById('impressum-page');
+    document.getElementById('imp-main').style.display = section === 'datenschutz' ? 'none' : 'block';
+    document.getElementById('imp-datenschutz').style.display = section === 'datenschutz' ? 'block' : 'none';
+    document.getElementById('imp-title').textContent = section === 'datenschutz' ? 'Datenschutz' : 'Impressum';
+    page.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeImpressum() {
+    document.getElementById('impressum-page').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if(e.key==='Escape') closeImpressum(); });
+</script>
+<script src="https://visual-feedback-tool.vercel.app/api/embed.js?key=3d1b3cb26e7e52347690a5348e94a491c2b71b858fdd1a18"></script>
+</body>
+</html>

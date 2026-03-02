@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webinare — Kostenlose Freitags-Webinare | Hanschke Consulting</title>
+  <meta name="description" content="5 kostenlose Freitags-Webinare von Inge Hanschke: BPEAM, DIG, LDM, AGILE, ISMS. 30–60 Minuten. Termin auf Anfrage. EAM, Digitale Transformation, Datenmanagement, Agile, Informationssicherheit.">
+  <meta property="og:title" content="Webinare — Kostenlose Freitags-Webinare | Hanschke Consulting">
+  <meta property="og:description" content="Alle 5 Webinare von Hanschke Consulting: BPEAM, DIG, LDM, AGILE, ISMS. Kostenlos, freitags, 30–60 Min. Termin auf Anfrage.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.hanschke-consulting.com/trainings/webinare/">
+  <meta property="og:image" content="https://www.hanschke-consulting.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    :root {
+      --red: #E94545; --red-dk: #c83030; --black: #0a0a0a; --g900: #141414;
+      --g800: #282828; --g700: #3c3c3c; --g600: #666; --g400: #999;
+      --g200: #e0e0e0; --g100: #f5f5f5; --g50: #fafafa; --white: #fff;
+      --teal: #1a7d8b; --f: 'Inter', sans-serif; --max: 1200px; --r: 2px;
+      --ease: cubic-bezier(.25,.1,.25,1);
+    }
+    body { font-family: var(--f); background: var(--white); color: var(--black); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 48px; }
+    .ey { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--red); }
+    .ey::before { content:''; display:block; width:20px; height:2px; background:var(--red); flex-shrink:0; }
+    h1 { font-size: clamp(2.4rem,5.5vw,4rem); font-weight: 900; line-height: 1.08; letter-spacing: -.035em; }
+    h2 { font-size: clamp(1.6rem,2.8vw,2.2rem); font-weight: 700; line-height: 1.1; letter-spacing: -.025em; }
+    h3 { font-size: 1rem; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; }
+    .lead { font-size: 1.05rem; line-height: 1.72; color: var(--g700); }
+    em.r { font-style: normal; color: var(--red); }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; font-family: var(--f); font-size: 13px; font-weight: 600; letter-spacing: .01em; border-radius: var(--r); transition: background .15s var(--ease), color .15s var(--ease), border-color .15s var(--ease), transform .1s; cursor: pointer; border: 1.5px solid transparent; white-space: nowrap; }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--red); color: var(--white); border-color: var(--red); }
+    .btn-primary:hover { background: var(--red-dk); border-color: var(--red-dk); }
+    .btn-dark { background: var(--black); color: var(--white); border-color: var(--black); }
+    .btn-dark:hover { background: var(--g800); border-color: var(--g800); }
+    .btn-outline { background: transparent; color: var(--black); border-color: var(--g200); }
+    .btn-outline:hover { border-color: var(--black); }
+    .btn-outline-w { background: transparent; color: var(--white); border-color: rgba(255,255,255,.35); }
+    .btn-outline-w:hover { background: var(--white); color: var(--black); border-color: var(--white); }
+    .sec { padding: 96px 0; }
+    .sec-sm { padding: 64px 0; }
+
+    /* NAV */
+    #nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; background: rgba(255,255,255,.96); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--g200); transition: box-shadow .2s; }
+    #nav.sc { box-shadow: 0 2px 24px rgba(0,0,0,.07); }
+    .nav-w { max-width: var(--max); margin: 0 auto; padding: 0 48px; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-logo { display:flex; flex-direction:column; flex-shrink:0; }
+    .nav-logo-n { font-size: 14.5px; font-weight: 800; letter-spacing: -.02em; color: var(--black); line-height: 1.1; }
+    .nav-logo-s { font-size: 9.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--red); margin-top: 2px; }
+    .nav-links { display:flex; align-items:center; gap:26px; }
+    .nav-links a { font-size: 13px; font-weight: 500; color: var(--g600); transition: color .14s; }
+    .nav-links a:hover { color: var(--black); }
+    .nav-links a.active { color: var(--black); font-weight: 600; }
+    .nav-act { display:flex; align-items:center; gap:8px; flex-shrink:0; }
+    .hbg { display:none; flex-direction:column; justify-content:center; gap:5px; cursor:pointer; padding:6px; background:none; border:none; width:36px; height:36px; }
+    .hbg span { display:block; width:22px; height:1.5px; background:var(--black); transition:transform .22s var(--ease),opacity .22s; transform-origin:center; }
+    .hbg.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+    .hbg.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+    .hbg.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+    .mmenu { display:none; position:fixed; top:60px; left:0; right:0; bottom:0; background:var(--white); z-index:199; padding:32px 24px 48px; flex-direction:column; gap:4px; overflow-y:auto; }
+    .mmenu.open { display:flex; }
+    .mmenu a { font-size:1.05rem; font-weight:600; color:var(--black); padding:13px 0; border-bottom:1px solid var(--g100); }
+    .mmenu .btn { margin-top:20px; align-self:flex-start; }
+
+    /* PAGE HERO */
+    #page-hero { padding-top: 60px; background: var(--white); position: relative; overflow: hidden; }
+    #page-hero::before { content:''; position:absolute; inset:0; background-image: linear-gradient(var(--g200) 1px,transparent 1px), linear-gradient(90deg,var(--g200) 1px,transparent 1px); background-size: 64px 64px; opacity: .35; pointer-events:none; }
+    #page-hero::after { content:''; position:absolute; inset:0; background: radial-gradient(ellipse 80% 100% at 50% 100%,transparent 40%,var(--white) 100%); pointer-events:none; }
+    .page-hero-in { position: relative; z-index: 1; padding: 72px 0 64px; max-width: 680px; }
+    .page-hero-bc { font-size: 12px; font-weight: 500; color: var(--g400); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .page-hero-bc a { color: var(--g400); transition: color .14s; }
+    .page-hero-bc a:hover { color: var(--black); }
+    .page-hero-bc span { color: var(--g200); }
+
+    /* WEBINAR CARDS */
+    #webinare { background: var(--white); }
+    .webinar-full { border: 1px solid var(--g200); margin-bottom: 2px; overflow: hidden; transition: box-shadow .15s; }
+    .webinar-full:hover { box-shadow: 0 4px 24px rgba(0,0,0,.06); }
+    .wf-header { display: grid; grid-template-columns: 72px 1fr auto; gap: 0; background: var(--white); }
+    .wf-code-col { background: var(--black); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px 16px; text-align: center; flex-shrink: 0; }
+    .wf-code { font-size: .75rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; color: var(--red); line-height: 1.2; }
+    .wf-body { padding: 24px 28px; }
+    .wf-meta-top { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+    .wf-badge { font-size: 9.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: 2px 8px; border-radius: 2px; }
+    .wf-badge-free { background: rgba(233,69,69,.1); color: var(--red); }
+    .wf-badge-theme { background: var(--g100); color: var(--g600); }
+    .wf-body h2 { font-size: 1.15rem; font-weight: 800; color: var(--black); letter-spacing: -.02em; margin-bottom: 10px; }
+    .wf-desc { font-size: .9rem; line-height: 1.72; color: var(--g600); max-width: 640px; }
+    .wf-attrs { display: flex; gap: 28px; margin-top: 16px; flex-wrap: wrap; }
+    .wf-attr { display: flex; flex-direction: column; gap: 2px; }
+    .wf-attr-l { font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--g400); }
+    .wf-attr-v { font-size: .88rem; font-weight: 600; color: var(--black); }
+    .wf-act-col { display: flex; flex-direction: column; align-items: flex-end; justify-content: center; padding: 24px 24px; gap: 8px; flex-shrink: 0; min-width: 180px; }
+    .wf-free-tag { font-size: 11px; font-weight: 700; color: var(--red); letter-spacing: .04em; text-transform: uppercase; text-align: center; }
+
+    /* Termine section */
+    .wf-termine { border-top: 1px solid var(--g100); background: var(--g50); padding: 20px 28px 20px 100px; }
+    .wf-termine-head { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--g400); margin-bottom: 12px; }
+    .termine-list { display: flex; flex-direction: column; gap: 8px; }
+    .termin-row { display: flex; align-items: center; gap: 16px; padding: 10px 16px; background: var(--white); border: 1px solid var(--g200); border-radius: var(--r); }
+    .termin-row.on-demand { background: var(--g100); }
+    .termin-date { font-size: .88rem; font-weight: 700; color: var(--black); min-width: 120px; }
+    .termin-date.tbd { color: var(--g600); font-weight: 600; }
+    .termin-time { font-size: .82rem; color: var(--g600); min-width: 80px; }
+    .termin-dur { font-size: .82rem; color: var(--g400); min-width: 80px; }
+    .termin-format { font-size: .82rem; color: var(--g400); flex: 1; }
+    .termin-cta { margin-left: auto; flex-shrink: 0; }
+    .termin-anfrage { font-size: 11px; font-weight: 600; color: var(--g600); font-style: italic; }
+
+    /* CTA dark */
+    #cta-bottom { background: var(--black); }
+    .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 48px; padding: 72px 0; }
+    #cta-bottom .ey { color: var(--red); }
+    #cta-bottom .ey::before { background: var(--red); }
+    .cta-text h2 { color: var(--white); margin: 16px 0 12px; font-size: clamp(1.6rem,2.8vw,2.2rem); }
+    .cta-text p { font-size: .95rem; color: rgba(255,255,255,.5); max-width: 480px; line-height: 1.72; }
+    .cta-acts { display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap; align-items: center; }
+
+    /* IMPRESSUM */
+    #impressum-page { display: none; position: fixed; inset: 0; z-index: 500; background: var(--white); overflow-y: auto; padding: 80px 0 60px; }
+    #impressum-page.open { display: block; }
+    .imp-close { position:fixed; top:20px; right:20px; width:40px; height:40px; background:var(--black); color:var(--white); border:none; border-radius:50%; font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:501; }
+    .imp-content h1 { font-size:1.8rem; margin-bottom:32px; }
+    .imp-content h2 { font-size:1.1rem; margin:28px 0 10px; color:var(--black); }
+    .imp-content h3 { font-size:.95rem; margin:20px 0 8px; }
+    .imp-content p { font-size:.9rem; line-height:1.75; color:var(--g700); margin-bottom:12px; }
+    .imp-content address { font-style:normal; font-size:.9rem; line-height:1.75; color:var(--g700); margin-bottom:12px; }
+
+    /* FOOTER */
+    footer { background: var(--g900); padding: 28px 0; border-top: 1px solid rgba(255,255,255,.06); }
+    .fi-w { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .fcopy { font-size: 12px; color: rgba(255,255,255,.25); }
+    .fnav { display: flex; gap: 24px; }
+    .fnav a { font-size: 12px; color: rgba(255,255,255,.3); transition: color .14s; cursor: pointer; }
+    .fnav a:hover { color: rgba(255,255,255,.7); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1100px) {
+      .wf-header { grid-template-columns: 64px 1fr; }
+      .wf-act-col { display: none; }
+      .wf-termine { padding-left: 92px; }
+      .cta-inner { flex-direction: column; align-items: flex-start; gap: 32px; }
+    }
+    @media (max-width: 800px) {
+      .wrap { padding: 0 20px; }
+      .nav-w { padding: 0 20px; }
+      .nav-links, .nav-act .btn-outline { display: none; }
+      .hbg { display: flex; }
+      .sec { padding: 56px 0; }
+      .page-hero-in { padding: 48px 0 48px; }
+      .fi-w { flex-direction: column; gap: 10px; text-align: center; }
+      .wf-header { grid-template-columns: 56px 1fr; }
+      .wf-termine { padding-left: 20px; }
+      .termin-row { flex-direction: column; align-items: flex-start; gap: 6px; }
+      .termin-cta { margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-w">
+    <a href="../../" class="nav-logo">
+      <span class="nav-logo-n">Inge Hanschke</span>
+      <span class="nav-logo-s">Hanschke Consulting</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../../leistungen/">Beratung</a></li>
+      <li><a href="../../ueber-inge/">Über mich</a></li>
+      <li><a href="../" class="active">Schulungen</a></li>
+      <li><a href="../../buecher/">Bücher</a></li>
+      <li><a href="../../partner/">Partner</a></li>
+      <li><a href="../../events/">Events</a></li>
+    </ul>
+    <div class="nav-act">
+      <a href="../../events/" class="btn btn-outline" style="padding:8px 16px;font-size:12.5px;">Termine</a>
+      <a href="../../kontakt/" class="btn btn-primary" style="padding:8px 16px;font-size:12.5px;">Kontakt</a>
+    </div>
+    <button class="hbg" id="hbgBtn" onclick="toggleMenu()" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <a href="../../leistungen/" onclick="closeMenu()">Beratung</a>
+  <a href="../../ueber-inge/" onclick="closeMenu()">Über mich</a>
+  <a href="../" onclick="closeMenu()">Schulungen &amp; Webinare</a>
+  <a href="../../buecher/" onclick="closeMenu()">Bücher</a>
+  <a href="../../partner/" onclick="closeMenu()">Partner</a>
+  <a href="../../events/" onclick="closeMenu()">Events</a>
+  <a href="../../kontakt/" class="btn btn-primary" onclick="closeMenu()">Kontakt aufnehmen</a>
+</div>
+
+<!-- PAGE HERO -->
+<section id="page-hero">
+  <div class="wrap">
+    <div class="page-hero-in">
+      <div class="page-hero-bc">
+        <a href="../../">Startseite</a>
+        <span>›</span>
+        <a href="../">Trainings</a>
+        <span>›</span>
+        <span style="color:var(--black);">Webinare</span>
+      </div>
+      <span class="ey">Kostenlos · Freitags</span>
+      <h1 style="margin-top:18px;">Webinare von<br>Inge <em class="r">Hanschke.</em></h1>
+      <p class="lead" style="margin-top:20px;max-width:580px;">
+        5 kostenlose Freitags-Webinare — 30 bis 60 Minuten, online, ohne Anmeldepflicht.
+        Einstieg in EAM, Digitale Transformation, Datenmanagement, Agile und Informationssicherheit.
+        Alle Termine auf Anfrage.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- WEBINARE -->
+<section id="webinare" class="sec" style="padding-top:48px;">
+  <div class="wrap">
+
+    <!-- BPEAM -->
+    <div class="webinar-full" id="bpeam">
+      <div class="wf-header">
+        <div class="wf-code-col">
+          <span class="wf-code">BP<br>EAM</span>
+        </div>
+        <div class="wf-body">
+          <div class="wf-meta-top">
+            <span class="wf-badge wf-badge-free">Kostenlos</span>
+            <span class="wf-badge wf-badge-theme">Enterprise Architecture Management</span>
+          </div>
+          <h2>Best-Practice EAM — Enterprise Architecture Management einfach &amp; effektiv</h2>
+          <p class="wf-desc">
+            Ein strukturierter Einstieg in Enterprise Architecture Management aus der Praxis.
+            Inge Hanschke stellt die Best-Practice-EAM-Methodik vor, erklärt die typischen Einführungsfehler
+            und zeigt, wie EAM schlanker und wirksamer gestaltet werden kann.
+            Für IT-Architekten, IT-Leiter und alle, die EAM in ihrem Unternehmen aufbauen oder optimieren wollen.
+          </p>
+          <div class="wf-attrs">
+            <div class="wf-attr"><span class="wf-attr-l">Dauer</span><span class="wf-attr-v">30–60 Min.</span></div>
+            <div class="wf-attr"><span class="wf-attr-l">Format</span><span class="wf-attr-v">Online · Webinar</span></div>
+            <div class="wf-attr"><span class="wf-attr-l">Rhythmus</span><span class="wf-attr-v">Freitags</span></div>
+            <div class="wf-attr"><span class="wf-attr-l">Kosten</span><span class="wf-attr-v" style="color:var(--red);">Kostenlos</span></div>
+          </div>
+        </div>
+        <div class="wf-act-col">
+          <span class="wf-free-tag">Kostenlos</span>
+          <a href="../../kontakt/" class="btn btn-dark" style="width:100%;justify-content:center;">Termin anfragen</a>
+          <p style="font-size:11px;color:var(--g400);text-align:center;line-height:1.4;">Rückmeldung innerhalb 24 Std.</p>
+        </div>
+      </div>
+      <div class="wf-termine">
+        <div class="wf-termine-head">Termine</div>
+        <div class="termine-list">
+          <div class="termin-row on-demand">
+            <span class="termin-date tbd">Auf Anfrage</span>
+            <span class="termin-time">Freitags</span>
+            <span class="termin-dur">30–60 Min.</span>
+            <span class="termin-format">Online · kostenlos</span>
+            <div class="termin-cta">
+              <a href="../../kontakt/" class="btn btn-primary" style="font-size:11.5px;padding:8px 16px;">Termin anfragen</a>
+            </div>
+          </div>
+          <p style="font-size:.82rem;color:var(--g400);margin-top:8px;">Konkrete Termine werden nach Anfrage abgestimmt und hier veröffentlicht.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DIG -->
+    <div class="webinar-full" id="dig">
+      <div class="wf-header">
+        <div class="wf-code-col">
+          <span class="wf-code">DIG</span>
+        </div>
+        <div class="wf-body">
+          <div class="wf-meta-top">
+            <span class="wf-badge wf-badge-free">Kostenlos</span>
+            <span class="wf-badge wf-badge-theme">Strategisches IT-Management</span>
+          </div>
+          <h2>Wirksame Digitale Transformation — Methodik, Stolperfallen, Erfolgsfaktoren</h2>
+          <p class="wf-desc">
+            Digitale Transformation scheitert selten an der Technologie — sie scheitert an fehlender Strategie,
+            unklaren Zielen und mangelnder Organisation.
+            Dieses Webinar zeigt, was wirklich funktioniert: Methodik aus der Praxis,
+            häufige Fehler und wie man sie vermeidet, konkrete Einstiegspunkte für Unternehmen jeder Größe.
+            Kein Buzzword-Bingo — ausschließlich praxiserprobte Erkenntnisse.
+          </p>
+          <div class="wf-attrs">
+            <div class="wf-attr"><span class="wf-attr-l">Dauer</span><span class="wf-attr-v">30–60 Min.</span></div>
+            <div class="wf-attr"><span class="wf-attr-l">Format</span><span class="wf-attr-v">Online · Webinar</span></div>
+            <div class="wf-attr"><span class="wf-attr-l">Rhythmus</span><span class="wf-attr-v">Freitags</span></div>
+            <div class="wf-attr"><span class="wf-attr-l">Kosten</span><span class="wf-attr-v" style="color:var(--red);">Kostenlos</span></div>
+          </div>
+        </div>
+        <div class="wf-act-col">
+          <span class="wf-free-tag">Kostenlos</span>
+          <a href="../../kontakt/" class="btn btn-dark" style="width:100%;justify-content:center;">Termin anfragen</a>
+          <p style="font-size:11px;color:var(--g400);text-align:center;line-height:1.4;">Rückmeldung innerhalb 24 Std.</p>
+        </div>
+      </div>
+      <div class="wf-termine">
+        <div class="wf-termine-head">Termine</div>
+        <div class="termine-list">
+          <div class="termin-row on-demand">
+            <span class="termin-date tbd">Auf Anfrage</span>
+            <span class="termin-time">Freitags</span>
+            <span class="termin-dur">30–60 Min.</span>
+            <span class="termin-format">Online · kostenlos</span>
+            <div class="termin-cta">
+              <a href="../../kontakt/" class="btn btn-primary" style="font-size:11.5px;padding:8px 16px;">Termin anfragen</a>
+            </div>
+          </div>
+          <p style="font-size:.82rem;color:var(--g400);margin-top:8px;">Konkrete Termine werden nach Anfrage abgestimmt und hier veröffentlicht.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LDM -->
+    <div class="webinar-full" id="ldm">
+      <div class="wf-header">
+        <div class="wf-code-col">
+          <span class="wf-code">LDM</span>
+        </div>
+        <div class="wf-body">
+          <div class="wf-meta-top">
+            <span class="wf-badge wf-badge-free">Kostenlos</span>
+            <span class="wf-badge wf-badge-theme">KI &amp; Data</span>
+          </div>
+          <h2>Lean Datenmanagement — Datenstrategie, Datenarchitektur &amp; KI-Readiness</h2>
+          <p class="wf-desc">
+            Daten sind das Fundament für alle Planungs- und Entscheidungsprozesse.
+            Dieses Webinar vermittelt, wie ein handhabbares Datenmanagement aufgebaut wird:
+            Datenstrategie entwickeln, Datenarchitektur strukturieren, Datenqualität sichern
+            und die Basis für KI-getriebene Geschäftsmodelle schaffen.
+            Lean und ohne überdimensionierten Aufwand.
+          </p>
+          <div class="wf-attrs">
+            <div class="wf-attr"><span class="wf-attr-l">Dauer</span><span class="wf-attr-v">30–60 Min.</span></div>
+            <div class="wf-attr"><span class="wf-attr-l">Format</span><span class="wf-attr-v">Online · Webinar</span></div>
+            <div class="wf-attr"><span class="wf-attr-l">Rhythmus</span><span class="wf-attr-v">Freitags</span></div>
+            <div class="wf-attr"><span class="wf-attr-l">Kosten</span><span class="wf-attr-v" style="color:var(--red);">Kostenlos</span></div>
+          </div>
+        </div>
+        <div class="wf-act-col">
+          <span class="wf-free-tag">Kostenlos</span>
+          <a href="../../kontakt/" class="btn btn-dark" style="width:100%;justify-content:center;">Termin anfragen</a>
+          <p style="font-size:11px;color:var(--g400);text-align:center;line-height:1.4;">Rückmeldung innerhalb 24 Std.</p>
+        </div>
+      </div>
+      <div class="wf-termine">
+        <div class="wf-termine-head">Termine</div>
+        <div class="termine-list">
+          <div class="termin-row on-demand">
+            <span class="termin-date tbd">Auf Anfrage</span>
+            <span class="termin-time">Freitags</span>
+            <span class="termin-dur">30–60 Min.</span>
+            <span class="termin-format">Online · kostenlos</span>
+            <div class="termin-cta">
+              <a href="../../kontakt/" class="btn btn-primary" style="font-size:11.5px;padding:8px 16px;">Termin anfragen</a>
+            </div>
+          </div>
+          <p style="font-size:.82rem;color:var(--g400);margin-top:8px;">Konkrete Termine werden nach Anfrage abgestimmt und hier veröffentlicht.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- AGILE -->
+    <div class="webinar-full" id="agile">
+      <div class="wf-header">
+        <div class="wf-code-col">
+          <span class="wf-code">AGILE</span>
+        </div>
+        <div class="wf-body">
+          <div class="wf-meta-top">
+            <span class="wf-badge wf-badge-free">Kostenlos</span>
+            <span class="wf-badge wf-badge-theme">Lean Value Management</span>
+          </div>
+          <h2>Agiles IT-Management in der Praxis — Lean &amp; Agile, Sustainable Quick-wins</h2>
+          <p class="wf-desc">
+            Agile Methoden sind kein Selbstzweck — sie sind ein Mittel, um schneller Wert zu liefern.
+            Dieses Webinar zeigt, wie agile Methoden im IT-Management gezielt eingesetzt werden:
+            Lean-Prinzipien im Portfolio, iterative Planung, Demand-Steuerung in agilen Teams,
+            und wie Quick-wins nachhaltig erzielt werden — ohne Rückfall in alte Muster.
+          </p>
+          <div class="wf-attrs">
+            <div class="wf-attr"><span class="wf-attr-l">Dauer</span><span class="wf-attr-v">30–60 Min.</span></div>
+            <div class="wf-attr"><span class="wf-attr-l">Format</span><span class="wf-attr-v">Online · Webinar</span></div>
+            <div class="wf-attr"><span class="wf-attr-l">Rhythmus</span><span class="wf-attr-v">Freitags</span></div>
+            <div class="wf-attr"><span class="wf-attr-l">Kosten</span><span class="wf-attr-v" style="color:var(--red);">Kostenlos</span></div>
+          </div>
+        </div>
+        <div class="wf-act-col">
+          <span class="wf-free-tag">Kostenlos</span>
+          <a href="../../kontakt/" class="btn btn-dark" style="width:100%;justify-content:center;">Termin anfragen</a>
+          <p style="font-size:11px;color:var(--g400);text-align:center;line-height:1.4;">Rückmeldung innerhalb 24 Std.</p>
+        </div>
+      </div>
+      <div class="wf-termine">
+        <div class="wf-termine-head">Termine</div>
+        <div class="termine-list">
+          <div class="termin-row on-demand">
+            <span class="termin-date tbd">Auf Anfrage</span>
+            <span class="termin-time">Freitags</span>
+            <span class="termin-dur">30–60 Min.</span>
+            <span class="termin-format">Online · kostenlos</span>
+            <div class="termin-cta">
+              <a href="../../kontakt/" class="btn btn-primary" style="font-size:11.5px;padding:8px 16px;">Termin anfragen</a>
+            </div>
+          </div>
+          <p style="font-size:.82rem;color:var(--g400);margin-top:8px;">Konkrete Termine werden nach Anfrage abgestimmt und hier veröffentlicht.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ISMS -->
+    <div class="webinar-full" id="isms">
+      <div class="wf-header">
+        <div class="wf-code-col">
+          <span class="wf-code">ISMS</span>
+        </div>
+        <div class="wf-body">
+          <div class="wf-meta-top">
+            <span class="wf-badge wf-badge-free">Kostenlos</span>
+            <span class="wf-badge wf-badge-theme">Informationssicherheit</span>
+          </div>
+          <h2>Informationssicherheit &amp; Datenschutz — einfach &amp; effektiv einführen</h2>
+          <p class="wf-desc">
+            Was sind die wesentlichen Anforderungen aus ISO 27001, DSGVO und NIS-2?
+            Wie führt man ein ISMS pragmatisch ein, ohne bürokratischen Overhead?
+            Dieses Webinar gibt einen strukturierten Überblick:
+            Grundkonzepte, typische Stolperfallen und konkrete Einstiegspunkte
+            für Unternehmen, die Informationssicherheit ernstnehmen — ohne sich zu verlieren.
+          </p>
+          <div class="wf-attrs">
+            <div class="wf-attr"><span class="wf-attr-l">Dauer</span><span class="wf-attr-v">30–60 Min.</span></div>
+            <div class="wf-attr"><span class="wf-attr-l">Format</span><span class="wf-attr-v">Online · Webinar</span></div>
+            <div class="wf-attr"><span class="wf-attr-l">Rhythmus</span><span class="wf-attr-v">Freitags</span></div>
+            <div class="wf-attr"><span class="wf-attr-l">Kosten</span><span class="wf-attr-v" style="color:var(--red);">Kostenlos</span></div>
+          </div>
+        </div>
+        <div class="wf-act-col">
+          <span class="wf-free-tag">Kostenlos</span>
+          <a href="../../kontakt/" class="btn btn-dark" style="width:100%;justify-content:center;">Termin anfragen</a>
+          <p style="font-size:11px;color:var(--g400);text-align:center;line-height:1.4;">Rückmeldung innerhalb 24 Std.</p>
+        </div>
+      </div>
+      <div class="wf-termine">
+        <div class="wf-termine-head">Termine</div>
+        <div class="termine-list">
+          <div class="termin-row on-demand">
+            <span class="termin-date tbd">Auf Anfrage</span>
+            <span class="termin-time">Freitags</span>
+            <span class="termin-dur">30–60 Min.</span>
+            <span class="termin-format">Online · kostenlos</span>
+            <div class="termin-cta">
+              <a href="../../kontakt/" class="btn btn-primary" style="font-size:11.5px;padding:8px 16px;">Termin anfragen</a>
+            </div>
+          </div>
+          <p style="font-size:.82rem;color:var(--g400);margin-top:8px;">Konkrete Termine werden nach Anfrage abgestimmt und hier veröffentlicht.</p>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size:.85rem;color:var(--g400);margin-top:24px;">
+      Alle Webinare kostenlos. Termine werden individuell nach Anfrage abgestimmt.
+      <a href="../schulungen/" style="color:var(--black);text-decoration:underline;text-underline-offset:3px;">Zu den Schulungen (kostenpflichtig)</a>
+    </p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta-bottom">
+  <div class="wrap">
+    <div class="cta-inner">
+      <div class="cta-text">
+        <span class="ey">Termin anfragen</span>
+        <h2>Webinar-Termin<br>jetzt anfragen.</h2>
+        <p>
+          Alle Webinare kostenlos — Termin per Anfrage. Rückmeldung innerhalb 24 Stunden.
+          Kein Vorgespräch, keine Anmeldeformulare.
+        </p>
+      </div>
+      <div class="cta-acts">
+        <a href="../../kontakt/" class="btn btn-primary">
+          Termin anfragen
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="../schulungen/" class="btn btn-outline-w">Schulungen ansehen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fi-w">
+      <span class="fcopy">© 2026 Hanschke Consulting · Inge Hanschke · Alle Rechte vorbehalten.</span>
+      <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+        <nav class="fnav">
+          <a onclick="openImpressum()">Impressum</a>
+          <a onclick="openImpressum('datenschutz')">Datenschutz</a>
+          <a href="https://www.linkedin.com/in/ingehanschke/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener">Hanser Verlag</a>
+        </nav>
+        <div style="display:flex;gap:6px;align-items:center;border-left:1px solid rgba(255,255,255,.1);padding-left:20px;">
+          <a href="#" style="font-size:11px;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.85);padding:3px 8px;background:rgba(255,255,255,.12);border-radius:2px;">DE</a>
+          <a href="#" title="English version coming soon" style="font-size:11px;font-weight:600;letter-spacing:.06em;color:rgba(255,255,255,.3);padding:3px 8px;border-radius:2px;">EN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- IMPRESSUM OVERLAY -->
+<div id="impressum-page">
+  <button class="imp-close" onclick="closeImpressum()">✕</button>
+  <div class="wrap">
+    <div class="imp-content">
+      <h1 id="imp-title">Impressum</h1>
+      <div id="imp-main">
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <address>Inge Hanschke<br>Straßl ins Holz 15<br>81829 München<br>Deutschland</address>
+        <h2>Kontakt</h2>
+        <p>E-Mail: <a href="mailto:info@hanschke-consulting.com">info@hanschke-consulting.com</a><br>Mobil: <a href="tel:+4915221000172">+49 (0)152 210 001 72</a></p>
+        <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+        <p>Inge Hanschke</p>
+        <h2>Haftungsausschluss</h2>
+        <h3>Haftung für Inhalte</h3>
+        <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
+        <h3>Haftung für Links</h3>
+        <p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+        <h3>Urheberrecht</h3>
+        <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+      </div>
+      <div id="imp-datenschutz" style="display:none;">
+        <h2>Datenschutzerklärung</h2>
+        <p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten erhoben werden, erfolgt dies stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.</p>
+        <p>Wir weisen darauf hin, dass die Datenübertragung im Internet Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
+        <p>Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung wird hiermit ausdrücklich widersprochen.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('sc', scrollY > 16), {passive:true});
+  function toggleMenu() {
+    const m = document.getElementById('mmenu'), b = document.getElementById('hbgBtn');
+    const open = m.classList.toggle('open');
+    b.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  function closeMenu() {
+    document.getElementById('mmenu').classList.remove('open');
+    document.getElementById('hbgBtn').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function openImpressum(section) {
+    const page = document.getElementById('impressum-page');
+    document.getElementById('imp-main').style.display = section === 'datenschutz' ? 'none' : 'block';
+    document.getElementById('imp-datenschutz').style.display = section === 'datenschutz' ? 'block' : 'none';
+    document.getElementById('imp-title').textContent = section === 'datenschutz' ? 'Datenschutz' : 'Impressum';
+    page.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeImpressum() {
+    document.getElementById('impressum-page').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if(e.key==='Escape') closeImpressum(); });
+</script>
+<script src="https://visual-feedback-tool.vercel.app/api/embed.js?key=3d1b3cb26e7e52347690a5348e94a491c2b71b858fdd1a18"></script>
+</body>
+</html>

@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT-Management — Beratung, Schulung, Webinar | Hanschke Consulting</title>
+  <meta name="description" content="Lean IT-Management: Effizienzsteigerung, Kostenoptimierung und Absicherung. Lean Checkup, IT-Organisation 4.0, wirksames IT-Instrumentarium. Beratung und Schulungen von Inge Hanschke.">
+  <meta property="og:title" content="IT-Management — Hanschke Consulting">
+  <meta property="og:description" content="Lean Checkup, IT-Organisation 4.0, Lean IT-Instrumentarium. Effizienz ohne Bürokratiestau. Schulung ITMGMT. Webinar AGILE. Inge Hanschke — 35+ Jahre IT-Praxis.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.hanschke-consulting.com/leistungen/it-management/">
+  <meta property="og:image" content="https://www.hanschke-consulting.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    :root {
+      --red: #E94545; --red-dk: #c83030; --black: #0a0a0a; --g900: #141414;
+      --g800: #282828; --g700: #3c3c3c; --g600: #666; --g400: #999;
+      --g200: #e0e0e0; --g100: #f5f5f5; --g50: #fafafa; --white: #fff;
+      --teal: #1a7d8b; --f: 'Inter', sans-serif; --max: 1200px; --r: 2px;
+      --ease: cubic-bezier(.25,.1,.25,1);
+    }
+    body { font-family: var(--f); background: var(--white); color: var(--black); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 48px; }
+    .ey { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--red); }
+    .ey::before { content:''; display:block; width:20px; height:2px; background:var(--red); flex-shrink:0; }
+    h1 { font-size: clamp(2.4rem,5.5vw,4rem); font-weight: 900; line-height: 1.08; letter-spacing: -.035em; }
+    h2 { font-size: clamp(1.8rem,3vw,2.6rem); font-weight: 700; line-height: 1.1; letter-spacing: -.025em; }
+    h3 { font-size: 1rem; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; }
+    h4 { font-size: .875rem; font-weight: 600; }
+    .lead { font-size: 1.05rem; line-height: 1.72; color: var(--g700); }
+    em.r { font-style: normal; color: var(--red); }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; font-family: var(--f); font-size: 13px; font-weight: 600; letter-spacing: .01em; border-radius: var(--r); transition: background .15s var(--ease), color .15s var(--ease), border-color .15s var(--ease), transform .1s; cursor: pointer; border: 1.5px solid transparent; white-space: nowrap; }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--red); color: var(--white); border-color: var(--red); }
+    .btn-primary:hover { background: var(--red-dk); border-color: var(--red-dk); }
+    .btn-dark { background: var(--black); color: var(--white); border-color: var(--black); }
+    .btn-dark:hover { background: var(--g800); border-color: var(--g800); }
+    .btn-outline { background: transparent; color: var(--black); border-color: var(--g200); }
+    .btn-outline:hover { border-color: var(--black); }
+    .btn-outline-w { background: transparent; color: var(--white); border-color: rgba(255,255,255,.35); }
+    .btn-outline-w:hover { background: var(--white); color: var(--black); border-color: var(--white); }
+    .sec { padding: 96px 0; }
+    .sec-sm { padding: 64px 0; }
+
+    /* NAV */
+    #nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; background: rgba(255,255,255,.96); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--g200); transition: box-shadow .2s; }
+    #nav.sc { box-shadow: 0 2px 24px rgba(0,0,0,.07); }
+    .nav-w { max-width: var(--max); margin: 0 auto; padding: 0 48px; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-logo { display:flex; flex-direction:column; flex-shrink:0; }
+    .nav-logo-n { font-size: 14.5px; font-weight: 800; letter-spacing: -.02em; color: var(--black); line-height: 1.1; }
+    .nav-logo-s { font-size: 9.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--red); margin-top: 2px; }
+    .nav-links { display:flex; align-items:center; gap:26px; }
+    .nav-links a { font-size: 13px; font-weight: 500; color: var(--g600); transition: color .14s; }
+    .nav-links a:hover { color: var(--black); }
+    .nav-links a.active { color: var(--black); font-weight: 600; }
+    .nav-act { display:flex; align-items:center; gap:8px; flex-shrink:0; }
+    .hbg { display:none; flex-direction:column; justify-content:center; gap:5px; cursor:pointer; padding:6px; background:none; border:none; width:36px; height:36px; }
+    .hbg span { display:block; width:22px; height:1.5px; background:var(--black); transition:transform .22s var(--ease),opacity .22s; transform-origin:center; }
+    .hbg.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+    .hbg.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+    .hbg.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+    .mmenu { display:none; position:fixed; top:60px; left:0; right:0; bottom:0; background:var(--white); z-index:199; padding:32px 24px 48px; flex-direction:column; gap:4px; overflow-y:auto; }
+    .mmenu.open { display:flex; }
+    .mmenu a { font-size:1.05rem; font-weight:600; color:var(--black); padding:13px 0; border-bottom:1px solid var(--g100); }
+    .mmenu .btn { margin-top:20px; align-self:flex-start; }
+
+    /* PAGE HERO */
+    #page-hero { padding-top: 60px; background: var(--white); position: relative; overflow: hidden; }
+    #page-hero::before { content:''; position:absolute; inset:0; background-image: linear-gradient(var(--g200) 1px,transparent 1px), linear-gradient(90deg,var(--g200) 1px,transparent 1px); background-size: 64px 64px; opacity: .35; pointer-events:none; }
+    #page-hero::after { content:''; position:absolute; inset:0; background: radial-gradient(ellipse 80% 100% at 50% 100%,transparent 40%,var(--white) 100%); pointer-events:none; }
+    .page-hero-in { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 360px; gap: 72px; align-items: center; padding: 80px 0 88px; }
+    .page-hero-bc { font-size: 12px; font-weight: 500; color: var(--g400); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .page-hero-bc a { color: var(--g400); transition: color .14s; }
+    .page-hero-bc a:hover { color: var(--black); }
+    .page-hero-bc span { color: var(--g200); }
+    .expert-badge { background: var(--black); border-radius: var(--r); padding: 28px; border-left: 3px solid var(--red); }
+    .eb-label { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--red); margin-bottom: 12px; }
+    .eb-stat { display: flex; align-items: baseline; gap: 6px; margin-bottom: 8px; }
+    .eb-v { font-size: 2rem; font-weight: 900; color: var(--white); letter-spacing: -.05em; line-height: 1; }
+    .eb-v sup { font-size: .9rem; color: var(--red); font-weight: 700; }
+    .eb-l { font-size: 12px; color: rgba(255,255,255,.45); }
+    .eb-sep { height: 1px; background: rgba(255,255,255,.08); margin: 14px 0; }
+    .eb-quote { font-size: .82rem; line-height: 1.55; color: rgba(255,255,255,.5); font-style: italic; }
+    .eb-quote strong { color: rgba(255,255,255,.82); font-style: normal; font-weight: 600; }
+
+    /* ANCHOR NAV */
+    #anav { background: var(--g100); border-top: 1px solid var(--g200); border-bottom: 1px solid var(--g200); position: sticky; top: 60px; z-index: 100; }
+    .anav-in { display: flex; align-items: center; overflow-x: auto; scrollbar-width: none; }
+    .anav-in::-webkit-scrollbar { display: none; }
+    .anav-link { padding: 14px 20px; font-size: 12.5px; font-weight: 600; color: var(--g600); white-space: nowrap; border-bottom: 2px solid transparent; transition: color .14s, border-color .14s; }
+    .anav-link:hover { color: var(--black); }
+    .anav-link.active { color: var(--black); border-bottom-color: var(--red); }
+
+    /* LEISTUNGSBLÖCKE */
+    #beratung { background: var(--white); }
+    .l-intro { font-size: .95rem; line-height: 1.78; color: var(--g700); max-width: 720px; margin-bottom: 48px; }
+    .l-intro strong { color: var(--black); font-weight: 600; }
+    .lblock-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--g200); border: 1px solid var(--g200); margin-bottom: 2px; }
+    .lblock { background: var(--white); padding: 36px 32px; transition: background .15s; position: relative; overflow: hidden; }
+    .lblock:hover { background: var(--g50); }
+    .lblock::after { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--red); transform: scaleY(0); transform-origin: top; transition: transform .22s var(--ease); }
+    .lblock:hover::after { transform: scaleY(1); }
+    .lblock-num { font-size: 11px; font-weight: 800; letter-spacing: .1em; color: var(--g200); margin-bottom: 10px; }
+    .lblock h3 { font-size: 1.05rem; font-weight: 700; color: var(--black); margin-bottom: 12px; letter-spacing: -.015em; }
+    .lblock p { font-size: .9rem; line-height: 1.72; color: var(--g600); margin-bottom: 16px; }
+    .lblock-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .ltag { font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--g600); padding: 3px 8px; background: var(--g100); border-radius: 2px; }
+    .l-list { list-style: none; padding: 0; margin-top: 8px; }
+    .l-list li { font-size: .87rem; line-height: 1.6; color: var(--g600); padding: 5px 0 5px 16px; position: relative; }
+    .l-list li::before { content: '—'; position: absolute; left: 0; color: var(--red); font-weight: 700; }
+    .lblock-full { background: var(--white); border: 1px solid var(--g200); border-top: none; padding: 36px 32px; transition: background .15s; position: relative; overflow: hidden; }
+    .lblock-full:hover { background: var(--g50); }
+    .lblock-full::after { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--red); transform: scaleY(0); transform-origin: top; transition: transform .22s var(--ease); }
+    .lblock-full:hover::after { transform: scaleY(1); }
+    .lblock-full-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .lblock-full .lblock-num { font-size: 11px; font-weight: 800; letter-spacing: .1em; color: var(--g200); margin-bottom: 10px; }
+    .lblock-full h3 { font-size: 1.05rem; font-weight: 700; color: var(--black); margin-bottom: 12px; letter-spacing: -.015em; }
+    .lblock-full p { font-size: .9rem; line-height: 1.72; color: var(--g600); margin-bottom: 16px; }
+
+    /* WEBINAR */
+    #webinar { background: var(--g100); border-top: 1px solid var(--g200); }
+    .webinar-card { background: var(--white); border: 1px solid var(--g200); border-radius: var(--r); padding: 36px; display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
+    .wc-label { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--g400); margin-bottom: 8px; }
+    .wc-code { font-size: 10px; font-weight: 800; letter-spacing: .14em; color: var(--red); text-transform: uppercase; }
+    .webinar-card h3 { font-size: 1.2rem; font-weight: 700; color: var(--black); margin: 8px 0 10px; letter-spacing: -.015em; }
+    .webinar-card p { font-size: .9rem; line-height: 1.72; color: var(--g600); max-width: 540px; }
+    .wc-meta { display: flex; gap: 20px; margin-top: 16px; flex-wrap: wrap; }
+    .wc-meta-item { display: flex; flex-direction: column; gap: 2px; }
+    .wc-meta-label { font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--g400); }
+    .wc-meta-val { font-size: 13px; font-weight: 600; color: var(--black); }
+    .wc-acts { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; flex-shrink: 0; min-width: 180px; }
+
+    /* SCHULUNGEN */
+    #schulungen { background: var(--white); border-top: 1px solid var(--g200); }
+    .s-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--g200); border: 1px solid var(--g200); }
+    .s-card { background: var(--white); padding: 32px; display: flex; flex-direction: column; transition: background .15s; }
+    .s-card:hover { background: var(--g50); }
+    .s-card-code { font-size: 10px; font-weight: 800; letter-spacing: .14em; color: var(--red); margin-bottom: 10px; }
+    .s-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--black); margin-bottom: 10px; letter-spacing: -.015em; }
+    .s-card p { font-size: .88rem; line-height: 1.68; color: var(--g600); flex: 1; margin-bottom: 20px; }
+    .s-card-details { display: flex; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; }
+    .s-detail { display: flex; flex-direction: column; gap: 2px; }
+    .s-detail-l { font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--g400); }
+    .s-detail-v { font-size: 13px; font-weight: 600; color: var(--black); }
+    .s-content { list-style: none; padding: 0; margin-bottom: 20px; }
+    .s-content li { font-size: .85rem; color: var(--g600); padding: 4px 0 4px 14px; position: relative; line-height: 1.5; }
+    .s-content li::before { content: '—'; position: absolute; left: 0; color: var(--red); font-weight: 700; }
+    .s-cta-dark { background: var(--black); padding: 32px; display: flex; flex-direction: column; justify-content: space-between; }
+    .s-cta-dark h3 { font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .s-cta-dark p { font-size: .88rem; color: rgba(255,255,255,.45); margin-bottom: 20px; line-height: 1.65; }
+
+    /* EXPERTE */
+    #experte { background: var(--g900); color: var(--white); }
+    #experte .ey { color: var(--red); }
+    #experte .ey::before { background: var(--red); }
+    .exp-grid { display: grid; grid-template-columns: 260px 1fr; gap: 64px; align-items: center; }
+    .exp-portrait { aspect-ratio: 3/4; background: var(--g800); border-radius: var(--r); overflow: hidden; border: 1px solid var(--g700); }
+    .exp-portrait svg { width: 100%; height: 100%; display: block; }
+    .exp-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,.06); margin: 24px 0; }
+    .exp-kpi { background: rgba(255,255,255,.03); padding: 16px 14px; }
+    .exp-kpi-v { font-size: 1.5rem; font-weight: 900; color: var(--red); letter-spacing: -.04em; }
+    .exp-kpi-l { font-size: 10px; color: rgba(255,255,255,.35); margin-top: 3px; text-transform: uppercase; letter-spacing: .06em; }
+    .exp-text p { font-size: .92rem; line-height: 1.75; color: rgba(255,255,255,.6); margin-bottom: 14px; }
+    .exp-text strong { color: rgba(255,255,255,.9); font-weight: 600; }
+
+    /* CTA */
+    #page-cta { background: var(--black); }
+    .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 48px; padding: 72px 0; }
+    #page-cta .ey { color: var(--red); }
+    #page-cta .ey::before { background: var(--red); }
+    .cta-text h2 { color: var(--white); margin: 16px 0 12px; }
+    .cta-text p { font-size: .95rem; color: rgba(255,255,255,.5); max-width: 480px; line-height: 1.72; }
+    .cta-acts { display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap; align-items: center; }
+
+    /* IMPRESSUM */
+    #impressum-page { display: none; position: fixed; inset: 0; z-index: 500; background: var(--white); overflow-y: auto; padding: 80px 0 60px; }
+    #impressum-page.open { display: block; }
+    .imp-close { position:fixed; top:20px; right:20px; width:40px; height:40px; background:var(--black); color:var(--white); border:none; border-radius:50%; font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:501; }
+    .imp-content h1 { font-size:1.8rem; margin-bottom:32px; }
+    .imp-content h2 { font-size:1.1rem; margin:28px 0 10px; color:var(--black); }
+    .imp-content h3 { font-size:.95rem; margin:20px 0 8px; }
+    .imp-content p { font-size:.9rem; line-height:1.75; color:var(--g700); margin-bottom:12px; }
+    .imp-content address { font-style:normal; font-size:.9rem; line-height:1.75; color:var(--g700); margin-bottom:12px; }
+
+    /* FOOTER */
+    footer { background: var(--g900); padding: 28px 0; border-top: 1px solid rgba(255,255,255,.06); }
+    .fi-w { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .fcopy { font-size: 12px; color: rgba(255,255,255,.25); }
+    .fnav { display: flex; gap: 24px; }
+    .fnav a { font-size: 12px; color: rgba(255,255,255,.3); transition: color .14s; cursor: pointer; }
+    .fnav a:hover { color: rgba(255,255,255,.7); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1100px) {
+      .page-hero-in { grid-template-columns: 1fr; gap: 40px; }
+      .lblock-grid { grid-template-columns: 1fr; }
+      .lblock-full-inner { grid-template-columns: 1fr; gap: 28px; }
+      .s-grid { grid-template-columns: 1fr; }
+      .exp-grid { grid-template-columns: 1fr; gap: 36px; }
+      .exp-portrait { max-width: 240px; }
+      .webinar-card { grid-template-columns: 1fr; gap: 28px; }
+      .cta-inner { flex-direction: column; align-items: flex-start; gap: 32px; }
+    }
+    @media (max-width: 800px) {
+      .wrap { padding: 0 20px; }
+      .nav-w { padding: 0 20px; }
+      .nav-links, .nav-act .btn-outline { display: none; }
+      .hbg { display: flex; }
+      .sec { padding: 56px 0; }
+      .sec-sm { padding: 40px 0; }
+      .page-hero-in { padding: 48px 0 56px; }
+      .fi-w { flex-direction: column; gap: 10px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-w">
+    <a href="../../" class="nav-logo">
+      <span class="nav-logo-n">Inge Hanschke</span>
+      <span class="nav-logo-s">Hanschke Consulting</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../" class="active">Beratung</a></li>
+      <li><a href="../../ueber-inge/">Über mich</a></li>
+      <li><a href="../../trainings/">Schulungen</a></li>
+      <li><a href="../../buecher/">Bücher</a></li>
+      <li><a href="../../partner/">Partner</a></li>
+      <li><a href="../../#events">Events</a></li>
+    </ul>
+    <div class="nav-act">
+      <a href="../../#evstrip" class="btn btn-outline" style="padding:8px 16px;font-size:12.5px;">Termine</a>
+      <a href="../../#kontakt" class="btn btn-primary" style="padding:8px 16px;font-size:12.5px;">Kontakt</a>
+    </div>
+    <button class="hbg" id="hbgBtn" onclick="toggleMenu()" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <a href="../" onclick="closeMenu()">Beratung</a>
+  <a href="../../ueber-inge/" onclick="closeMenu()">Über mich</a>
+  <a href="../../trainings/" onclick="closeMenu()">Schulungen &amp; Webinare</a>
+  <a href="../../buecher/" onclick="closeMenu()">Bücher</a>
+  <a href="../../partner/" onclick="closeMenu()">Partner</a>
+  <a href="../../#events" onclick="closeMenu()">Events</a>
+  <a href="../../#kontakt" class="btn btn-primary" onclick="closeMenu()">Kontakt aufnehmen</a>
+</div>
+
+<!-- PAGE HERO -->
+<section id="page-hero">
+  <div class="wrap">
+    <div class="page-hero-in">
+      <div>
+        <div class="page-hero-bc">
+          <a href="../../">Startseite</a>
+          <span>›</span>
+          <a href="../">Beratungsleistungen</a>
+          <span>›</span>
+          <span style="color:var(--black);">IT-Management</span>
+        </div>
+        <span class="ey">Beratungsleistung 03</span>
+        <h1 style="margin-top:18px;"><em class="r">Lean</em><br>IT-Management.</h1>
+        <p class="lead" style="margin-top:20px;max-width:520px;">
+          Effizienzsteigerung, Kostenoptimierung &amp; Absicherung durch Lean Checkup,
+          IT-Organisation 4.0 und wirksames Lean IT-Instrumentarium.
+          KI- &amp; digitalen Reifegrad bestimmen, Potenziale heben — ohne Bürokratiestau.
+        </p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:32px;">
+          <a href="../../#kontakt" class="btn btn-primary">
+            Beratung anfragen
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#webinar" class="btn btn-outline">Kostenloses Webinar</a>
+        </div>
+      </div>
+      <div class="expert-badge">
+        <div class="eb-label">Warum Hanschke Consulting</div>
+        <div class="eb-stat">
+          <span class="eb-v">35<sup>+</sup></span>
+          <span class="eb-l">Jahre IT-Praxis</span>
+        </div>
+        <div class="eb-stat">
+          <span class="eb-v">500<sup>+</sup></span>
+          <span class="eb-l">Unternehmen beraten</span>
+        </div>
+        <div class="eb-stat">
+          <span class="eb-v">10<sup>+</sup></span>
+          <span class="eb-l">Fachbücher Hanser Verlag</span>
+        </div>
+        <div class="eb-sep"></div>
+        <p class="eb-quote">
+          <strong>Lean IT-Management</strong> — erschienen im Carl Hanser Verlag. Methodik für wirksames und effizientes IT-Management.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANCHOR NAV -->
+<nav id="anav">
+  <div class="wrap">
+    <div class="anav-in">
+      <a href="#beratung" class="anav-link active">Beratungsleistungen</a>
+      <a href="#webinar" class="anav-link">Webinar (kostenlos)</a>
+      <a href="#schulungen" class="anav-link">Schulungen</a>
+      <a href="#experte" class="anav-link">Über die Expertin</a>
+    </div>
+  </div>
+</nav>
+
+<!-- BERATUNGSLEISTUNGEN -->
+<section id="beratung" class="sec">
+  <div class="wrap">
+    <div style="margin-bottom:40px;">
+      <span class="ey">Beratungsleistungen</span>
+      <h2 style="margin-top:18px;">Effizienz ohne Bürokratie.<br>Lean statt aufgebläht.</h2>
+      <p class="l-intro" style="margin-top:14px;">
+        Viele IT-Organisationen tragen Strukturen mit sich, die einmal sinnvoll waren — heute aber
+        hauptsächlich Aufwand erzeugen. <strong>Lean IT-Management</strong> schafft keine neuen Schichten,
+        sondern entfernt die überflüssigen. Methoden &amp; Werkzeuge für ein wirksames und effizientes
+        strategisches und operatives IT-Management — mit KI-gestützten Arbeitsweisen wo sinnvoll.
+      </p>
+    </div>
+
+    <div class="lblock-grid">
+      <div class="lblock">
+        <div class="lblock-num">01</div>
+        <h3>Lean Checkup</h3>
+        <p>
+          KI- &amp; digitaler Reifegrad bestimmen und Potenziale für die Verschlankung
+          sowie die Erhöhung von Kundenwert identifizieren.
+          Klare Bestandsaufnahme — ohne Schönfärberei, mit direkten Handlungsempfehlungen.
+        </p>
+        <ul class="l-list">
+          <li>Systematische Analyse des IT-Reifegrads (Strategie, Prozesse, Organisation, Tools)</li>
+          <li>Identifikation von Effizienzpotenzialen und Kostentreibern</li>
+          <li>Benchmark: Wo steht die IT im Vergleich zu Best Practices?</li>
+          <li>Priorisierter Aktionsplan mit Quick-Wins und mittelfristigen Maßnahmen</li>
+        </ul>
+        <div class="lblock-tags" style="margin-top:16px;">
+          <span class="ltag">Reifegrad</span>
+          <span class="ltag">Quick-Wins</span>
+          <span class="ltag">Effizienzpotenziale</span>
+        </div>
+      </div>
+      <div class="lblock">
+        <div class="lblock-num">02</div>
+        <h3>IT-Organisation 4.0 &amp; Leanisieren</h3>
+        <p>
+          Enablen durch Lean Organisation 4.0 — mit Servant Leadership, agilen Strukturen
+          und klaren Verantwortlichkeiten. Organisation für den digitalen Wandel aufstellen,
+          ohne die betriebliche Stabilität zu gefährden.
+        </p>
+        <ul class="l-list">
+          <li>Organisationsanalyse: Strukturen, Rollen, Schnittstellen</li>
+          <li>Lean-Redesign der IT-Organisation</li>
+          <li>Servant Leadership und agile Führungsprinzipien einführen</li>
+          <li>Change-Begleitung und Stakeholder-Einbindung</li>
+        </ul>
+        <div class="lblock-tags" style="margin-top:16px;">
+          <span class="ltag">Organisation 4.0</span>
+          <span class="ltag">Servant Leadership</span>
+          <span class="ltag">Change</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="lblock-grid">
+      <div class="lblock">
+        <div class="lblock-num">03</div>
+        <h3>Wirksames Lean IT-Instrumentarium</h3>
+        <p>
+          Methoden &amp; Werkzeuge für ein wirksames und effizientes strategisches und operatives IT-Management —
+          ohne Methodendschungel. Das richtige Werkzeug für den richtigen Zweck:
+          lean, anwendbar, nachhaltig verankert.
+        </p>
+        <ul class="l-list">
+          <li>IT-Governance-Strukturen schlanker gestalten</li>
+          <li>IT-Service-Management (ITSM) lean aufsetzen</li>
+          <li>KPIs und Steuerungssysteme einführen</li>
+          <li>KI-gestützte IT-Management-Methoden integrieren</li>
+        </ul>
+        <div class="lblock-tags" style="margin-top:16px;">
+          <span class="ltag">IT-Governance</span>
+          <span class="ltag">ITSM</span>
+          <span class="ltag">KPIs</span>
+        </div>
+      </div>
+      <div class="lblock">
+        <div class="lblock-num">04</div>
+        <h3>Application Portfolio Management</h3>
+        <p>
+          Welche Applikationen braucht das Unternehmen wirklich — und welche kosten nur Geld?
+          Systematische Bewertung des Applikationsportfolios und Ableitung eines belastbaren
+          Konsolidierungs- und Modernisierungsplans.
+        </p>
+        <ul class="l-list">
+          <li>Inventarisierung und Kategorisierung des Applikationsbestands</li>
+          <li>Nutzwertanalyse: Business-Fit und technischer Zustand</li>
+          <li>Konsolidierungs- und Ablöse-Roadmap</li>
+          <li>Kostenoptimierung durch gezielte Portfoliobereinigung</li>
+        </ul>
+        <div class="lblock-tags" style="margin-top:16px;">
+          <span class="ltag">App-Portfolio</span>
+          <span class="ltag">Konsolidierung</span>
+          <span class="ltag">Kostenoptimierung</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Full-width: IT-Konsolidierung & Cloud -->
+    <div class="lblock-full">
+      <div class="lblock-num">05</div>
+      <h3>IT-Konsolidierung &amp; Cloud-Migration</h3>
+      <div class="lblock-full-inner">
+        <div>
+          <p>
+            IT-Landschaften, die über Jahre gewachsen sind, tragen Redundanzen, Schatten-IT
+            und veraltete Systeme mit sich — das kostet Geld und erhöht das Risiko.
+            Hanschke Consulting begleitet <strong>IT-Konsolidierungsprojekte</strong>
+            mit methodischer Klarheit und operativer Erfahrung.
+          </p>
+          <ul class="l-list">
+            <li>Ist-Analyse: Redundanzen, Abhängigkeiten, Risiken identifizieren</li>
+            <li>Konsolidierungsstrategie und Business Case entwickeln</li>
+            <li>Migrations-Roadmap mit Priorisierung und Meilensteinen</li>
+          </ul>
+        </div>
+        <div>
+          <p>
+            Cloud ist kein Selbstzweck — sondern ein Mittel zur Erhöhung von Flexibilität,
+            Skalierbarkeit und Kostentransparenz. Die Entscheidung „Cloud vs. On-Premises"
+            wird auf Basis konkreter Anforderungen getroffen, nicht auf Basis von Hype-Zyklen.
+          </p>
+          <ul class="l-list">
+            <li>Cloud-Readiness-Assessment</li>
+            <li>Hybrid- und Multi-Cloud-Strategie entwickeln</li>
+            <li>Migrations-Begleitung und Governance</li>
+          </ul>
+          <div class="lblock-tags" style="margin-top:16px;">
+            <span class="ltag">Konsolidierung</span>
+            <span class="ltag">Cloud-Migration</span>
+            <span class="ltag">Kostenreduktion</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WEBINAR -->
+<section id="webinar" class="sec-sm">
+  <div class="wrap">
+    <div style="margin-bottom:32px;">
+      <span class="ey">Kostenloser Einstieg</span>
+      <h2 style="margin-top:18px;">Webinar: Lean &amp; Agile — Sustainable Quick-wins</h2>
+    </div>
+    <div class="webinar-card">
+      <div>
+        <div class="wc-label">Webinar · kostenlos</div>
+        <div class="wc-code">AGILE</div>
+        <h3>Lean &amp; Agile — was wirklich funktioniert. Und was nicht.</h3>
+        <p>
+          Agile Methoden ohne Hype — was in der IT-Organisation tatsächlich nachhaltige Verbesserungen bringt
+          und was Modeerscheinung ist. Dieses Webinar zeigt konkrete Lean-Quick-wins,
+          vermeidet Cargo-Cult-Agilität und gibt einen realistischen Überblick
+          über Einführungspfade für Lean &amp; Agile in gewachsenen IT-Organisationen.
+        </p>
+        <div class="wc-meta">
+          <div class="wc-meta-item">
+            <span class="wc-meta-label">Format</span>
+            <span class="wc-meta-val">Online-Webinar</span>
+          </div>
+          <div class="wc-meta-item">
+            <span class="wc-meta-label">Dauer</span>
+            <span class="wc-meta-val">30–60 Min.</span>
+          </div>
+          <div class="wc-meta-item">
+            <span class="wc-meta-label">Rhythmus</span>
+            <span class="wc-meta-val">Freitags</span>
+          </div>
+          <div class="wc-meta-item">
+            <span class="wc-meta-label">Kosten</span>
+            <span class="wc-meta-val" style="color:var(--red);">Kostenlos</span>
+          </div>
+        </div>
+      </div>
+      <div class="wc-acts">
+        <a href="../../#kontakt" class="btn btn-dark" style="width:100%;justify-content:center;">
+          Webinar-Termin anfragen
+        </a>
+        <p style="font-size:11px;color:var(--g400);line-height:1.5;">Nächster Termin auf Anfrage. Rückmeldung innerhalb 24 Std.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHULUNGEN -->
+<section id="schulungen" class="sec">
+  <div class="wrap">
+    <div style="margin-bottom:40px;">
+      <span class="ey">Schulungen</span>
+      <h2 style="margin-top:18px;">IT-Management lernen.<br>In zwei Tagen.</h2>
+      <p style="font-size:.95rem;line-height:1.72;color:var(--g700);margin-top:14px;max-width:600px;">
+        Eine 2-tägige Schulung — komprimiert, praxisorientiert, direkt anwendbar.
+        Lean Checkup, IT-Organisation 4.0 und das wirksame IT-Instrumentarium auf zwei Tage verdichtet.
+      </p>
+    </div>
+    <div class="s-grid">
+      <div class="s-card">
+        <div class="s-card-code">ITMGMT</div>
+        <h3>Wirksame Organisation &amp; Instrumente — IT-Management</h3>
+        <p>
+          Lean Checkup, IT-Organisation 4.0, Lean IT-Instrumentarium.
+          Für IT-Leiter, IT-Manager und alle, die ihre IT-Organisation effizienter aufstellen wollen.
+          Nach zwei Tagen: ein klares Bild der Hebel und ein priorisierter Aktionsplan.
+        </p>
+        <div class="s-card-details">
+          <div class="s-detail">
+            <span class="s-detail-l">Dauer</span>
+            <span class="s-detail-v">2 Tage</span>
+          </div>
+          <div class="s-detail">
+            <span class="s-detail-l">Zielgruppe</span>
+            <span class="s-detail-v">IT-Leiter · IT-Manager</span>
+          </div>
+          <div class="s-detail">
+            <span class="s-detail-l">Format</span>
+            <span class="s-detail-v">Präsenz / Online</span>
+          </div>
+          <div class="s-detail">
+            <span class="s-detail-l">Nächster Termin</span>
+            <span class="s-detail-v">Auf Anfrage</span>
+          </div>
+        </div>
+        <ul class="s-content">
+          <li>Lean-Prinzipien im IT-Management: Grundlagen &amp; Übertragung</li>
+          <li>Lean Checkup: Methodik und Durchführung</li>
+          <li>IT-Organisation 4.0: Strukturen, Rollen, Servant Leadership</li>
+          <li>Wirksames IT-Instrumentarium: Governance, ITSM, KPIs</li>
+          <li>Application Portfolio Management kompakt</li>
+          <li>Praxisbeispiele &amp; Transferübungen</li>
+        </ul>
+        <a href="../../#kontakt" class="btn btn-primary" style="align-self:flex-start;">
+          Zur ITMGMT-Schulung anmelden
+        </a>
+      </div>
+
+      <div class="s-cta-dark">
+        <div>
+          <h3>Schulung individuell buchen</h3>
+          <p>
+            Inhouse-Schulungen für Ihr Team, Themen-Kombination mit STRAT oder EAM1 —
+            Anfrage direkt über das Kontaktformular. Rückmeldung innerhalb 24 Stunden.
+          </p>
+        </div>
+        <div>
+          <a href="../../#kontakt" class="btn btn-primary">Inhouse-Schulung anfragen</a>
+          <p style="font-size:.83rem;color:rgba(255,255,255,.3);margin-top:20px;line-height:1.6;">
+            Kombination mit Strategisches IT-Management (STRAT) oder EAM (EAM1/EAM2) möglich.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTIN -->
+<section id="experte" class="sec">
+  <div class="wrap">
+    <div class="exp-grid">
+      <div>
+        <div class="exp-portrait">
+          <svg viewBox="0 0 260 325" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="260" height="325" fill="#282828"/>
+            <circle cx="130" cy="112" r="54" fill="#363636"/>
+            <ellipse cx="130" cy="270" rx="96" ry="76" fill="#363636"/>
+            <text x="130" y="316" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="500" fill="#4a4a4a">Foto folgt</text>
+          </svg>
+        </div>
+      </div>
+      <div>
+        <span class="ey">Über die Expertin</span>
+        <h2 style="color:var(--white);margin:16px 0 8px;">Inge Hanschke.<br>Lean IT aus<br>drei Perspektiven.</h2>
+        <p style="font-size:11px;font-weight:500;color:rgba(255,255,255,.3);letter-spacing:.06em;text-transform:uppercase;margin-bottom:24px;">Dipl.-Inf. · Gründerin Hanschke Consulting</p>
+        <div class="exp-kpis">
+          <div class="exp-kpi"><div class="exp-kpi-v">35+</div><div class="exp-kpi-l">Jahre IT-Praxis</div></div>
+          <div class="exp-kpi"><div class="exp-kpi-v">500+</div><div class="exp-kpi-l">Unternehmen</div></div>
+          <div class="exp-kpi"><div class="exp-kpi-v">10+</div><div class="exp-kpi-l">Fachbücher</div></div>
+        </div>
+        <div class="exp-text">
+          <p>
+            Inge Hanschke hat IT-Management nicht nur beraten — sie hat es gelebt:
+            als <strong>IT-Managerin in Anwenderunternehmen</strong>, in einem <strong>ERP-Produkthaus</strong>
+            und als <strong>IT-Beraterin</strong> in hunderten von Projekten.
+            Diese drei Perspektiven machen den Unterschied: keine abstrakten Frameworks,
+            sondern Methoden, die in der Praxis bestehen.
+          </p>
+          <p>
+            Ihr Buch <strong>„Lean IT-Management"</strong> erschien im Carl Hanser Verlag
+            und ist Standardwerk für IT-Leiter, die ihre Organisation verschlanken wollen.
+          </p>
+        </div>
+        <a href="../../ueber-inge/" class="btn btn-outline-w">Vollständige Biografie</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="page-cta">
+  <div class="wrap">
+    <div class="cta-inner">
+      <div class="cta-text">
+        <span class="ey">Beratung anfragen</span>
+        <h2>IT effizienter aufstellen.<br>Jetzt anfragen.</h2>
+        <p>
+          Lean Checkup, IT-Organisation oder Schulungsanmeldung —
+          Rückmeldung innerhalb von 24 Stunden.
+          Direkt und ohne Umweg.
+        </p>
+      </div>
+      <div class="cta-acts">
+        <a href="../../#kontakt" class="btn btn-primary">
+          Beratung anfragen
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="../" class="btn btn-outline-w">Alle Leistungen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fi-w">
+      <span class="fcopy">© 2026 Hanschke Consulting · Inge Hanschke · Alle Rechte vorbehalten.</span>
+      <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+        <nav class="fnav">
+          <a onclick="openImpressum()">Impressum</a>
+          <a onclick="openImpressum('datenschutz')">Datenschutz</a>
+          <a href="https://www.linkedin.com/in/ingehanschke/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener">Hanser Verlag</a>
+        </nav>
+        <div style="display:flex;gap:6px;align-items:center;border-left:1px solid rgba(255,255,255,.1);padding-left:20px;">
+          <a href="#" style="font-size:11px;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.85);padding:3px 8px;background:rgba(255,255,255,.12);border-radius:2px;">DE</a>
+          <a href="#" title="English version coming soon" style="font-size:11px;font-weight:600;letter-spacing:.06em;color:rgba(255,255,255,.3);padding:3px 8px;border-radius:2px;">EN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- IMPRESSUM OVERLAY -->
+<div id="impressum-page">
+  <button class="imp-close" onclick="closeImpressum()">✕</button>
+  <div class="wrap">
+    <div class="imp-content">
+      <h1 id="imp-title">Impressum</h1>
+      <div id="imp-main">
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <address>Inge Hanschke<br>Straßl ins Holz 15<br>81829 München<br>Deutschland</address>
+        <h2>Kontakt</h2>
+        <p>E-Mail: <a href="mailto:info@hanschke-consulting.com">info@hanschke-consulting.com</a><br>Mobil: <a href="tel:+4915221000172">+49 (0)152 210 001 72</a></p>
+        <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+        <p>Inge Hanschke</p>
+        <h2>Haftungsausschluss</h2>
+        <h3>Haftung für Inhalte</h3>
+        <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+        <h3>Haftung für Links</h3>
+        <p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+        <h3>Urheberrecht</h3>
+        <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+      </div>
+      <div id="imp-datenschutz" style="display:none;">
+        <h2>Datenschutzerklärung</h2>
+        <p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten erhoben werden, erfolgt dies stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.</p>
+        <p>Wir weisen darauf hin, dass die Datenübertragung im Internet Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
+        <p>Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung wird hiermit ausdrücklich widersprochen.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('sc', scrollY > 16), {passive:true});
+
+  function toggleMenu() {
+    const m = document.getElementById('mmenu'), b = document.getElementById('hbgBtn');
+    const open = m.classList.toggle('open');
+    b.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  function closeMenu() {
+    document.getElementById('mmenu').classList.remove('open');
+    document.getElementById('hbgBtn').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  const sections = ['beratung','webinar','schulungen','experte'];
+  const anavLinks = document.querySelectorAll('.anav-link');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        anavLinks.forEach(l => l.classList.remove('active'));
+        const link = document.querySelector(`.anav-link[href="#${entry.target.id}"]`);
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(id => { const el = document.getElementById(id); if(el) observer.observe(el); });
+
+  function openImpressum(section) {
+    const page = document.getElementById('impressum-page');
+    document.getElementById('imp-main').style.display = section === 'datenschutz' ? 'none' : 'block';
+    document.getElementById('imp-datenschutz').style.display = section === 'datenschutz' ? 'block' : 'none';
+    document.getElementById('imp-title').textContent = section === 'datenschutz' ? 'Datenschutz' : 'Impressum';
+    page.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeImpressum() {
+    document.getElementById('impressum-page').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if(e.key==='Escape') closeImpressum(); });
+</script>
+<script src="https://visual-feedback-tool.vercel.app/api/embed.js?key=3d1b3cb26e7e52347690a5348e94a491c2b71b858fdd1a18"></script>
+</body>
+</html>

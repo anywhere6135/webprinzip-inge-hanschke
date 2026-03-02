@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beratungsleistungen — Hanschke Consulting | Inge Hanschke</title>
+  <meta name="description" content="6 Beratungsfelder. Jedes mit Beratung, Schulung und Webinar. EAM, Digitale Transformation, KI &amp; Data, Lean Value Management, Informationssicherheit — Hanschke Consulting.">
+  <meta property="og:title" content="Beratungsleistungen — Hanschke Consulting">
+  <meta property="og:description" content="6 Beratungsfelder. Methodik aus 35 Jahren IT-Praxis. Jedes Feld mit Beratung, Schulung und Webinar.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.hanschke-consulting.com/leistungen/">
+  <meta property="og:image" content="https://www.hanschke-consulting.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- DSGVO-konformes Font-Hosting via bunny.net (keine IP-Übertragung an Google) -->
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --red:      #E94545;
+      --red-dk:   #c83030;
+      --black:    #0a0a0a;
+      --g900:     #141414;
+      --g800:     #282828;
+      --g700:     #3c3c3c;
+      --g600:     #666;
+      --g400:     #999;
+      --g200:     #e0e0e0;
+      --g100:     #f5f5f5;
+      --g50:      #fafafa;
+      --white:    #fff;
+      --teal:     #1a7d8b;
+      --f:        'Inter', sans-serif;
+      --max:      1200px;
+      --r:        2px;
+      --ease:     cubic-bezier(.25,.1,.25,1);
+    }
+
+    body { font-family: var(--f); background: var(--white); color: var(--black); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 48px; }
+
+    /* TYPOGRAPHY */
+    .ey {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 11px; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--red);
+    }
+    .ey::before { content:''; display:block; width:20px; height:2px; background:var(--red); flex-shrink:0; }
+
+    h1 { font-size: clamp(2.4rem,5.5vw,4rem); font-weight: 900; line-height: 1.08; letter-spacing: -.035em; }
+    h2 { font-size: clamp(1.8rem,3vw,2.6rem); font-weight: 700; line-height: 1.1; letter-spacing: -.025em; }
+    h3 { font-size: 1rem; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; }
+    h4 { font-size: .875rem; font-weight: 600; }
+
+    .lead { font-size: 1.05rem; line-height: 1.72; color: var(--g700); }
+    em.r { font-style: normal; color: var(--red); }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 24px; font-family: var(--f); font-size: 13px; font-weight: 600;
+      letter-spacing: .01em; border-radius: var(--r);
+      transition: background .15s var(--ease), color .15s var(--ease), border-color .15s var(--ease), transform .1s;
+      cursor: pointer; border: 1.5px solid transparent; white-space: nowrap;
+    }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--red); color: var(--white); border-color: var(--red); }
+    .btn-primary:hover { background: var(--red-dk); border-color: var(--red-dk); }
+    .btn-dark { background: var(--black); color: var(--white); border-color: var(--black); }
+    .btn-dark:hover { background: var(--g800); border-color: var(--g800); }
+    .btn-outline { background: transparent; color: var(--black); border-color: var(--g200); }
+    .btn-outline:hover { border-color: var(--black); }
+    .btn-outline-w { background: transparent; color: var(--white); border-color: rgba(255,255,255,.35); }
+    .btn-outline-w:hover { background: var(--white); color: var(--black); border-color: var(--white); }
+
+    /* SECTIONS */
+    .sec { padding: 96px 0; }
+    .sec-sm { padding: 64px 0; }
+    .sh { margin-bottom: 56px; }
+    .sh .ey { margin-bottom: 18px; }
+    .sh h2 { margin-bottom: 14px; }
+
+    /* ===== NAV ===== */
+    #nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      height: 60px; background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--g200);
+      transition: box-shadow .2s;
+    }
+    #nav.sc { box-shadow: 0 2px 24px rgba(0,0,0,.07); }
+    .nav-w { max-width: var(--max); margin: 0 auto; padding: 0 48px; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-logo { display:flex; flex-direction:column; flex-shrink:0; }
+    .nav-logo-n { font-size: 14.5px; font-weight: 800; letter-spacing: -.02em; color: var(--black); line-height: 1.1; }
+    .nav-logo-s { font-size: 9.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--red); margin-top: 2px; }
+    .nav-links { display:flex; align-items:center; gap:26px; }
+    .nav-links a { font-size: 13px; font-weight: 500; color: var(--g600); transition: color .14s; }
+    .nav-links a:hover { color: var(--black); }
+    .nav-links a.active { color: var(--black); font-weight: 600; }
+    .nav-act { display:flex; align-items:center; gap:8px; flex-shrink:0; }
+    .hbg { display:none; flex-direction:column; justify-content:center; gap:5px; cursor:pointer; padding:6px; background:none; border:none; width:36px; height:36px; }
+    .hbg span { display:block; width:22px; height:1.5px; background:var(--black); transition:transform .22s var(--ease),opacity .22s; transform-origin:center; }
+    .hbg.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+    .hbg.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+    .hbg.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+    .mmenu { display:none; position:fixed; top:60px; left:0; right:0; bottom:0; background:var(--white); z-index:199; padding:32px 24px 48px; flex-direction:column; gap:4px; overflow-y:auto; }
+    .mmenu.open { display:flex; }
+    .mmenu a { font-size:1.05rem; font-weight:600; color:var(--black); padding:13px 0; border-bottom:1px solid var(--g100); }
+    .mmenu .btn { margin-top:20px; align-self:flex-start; }
+
+    /* ===== PAGE HERO ===== */
+    #page-hero {
+      padding-top: 60px;
+      background: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+    #page-hero::before {
+      content:''; position:absolute; inset:0;
+      background-image: linear-gradient(var(--g200) 1px,transparent 1px), linear-gradient(90deg,var(--g200) 1px,transparent 1px);
+      background-size: 64px 64px; opacity: .35; pointer-events:none;
+    }
+    #page-hero::after {
+      content:''; position:absolute; inset:0;
+      background: radial-gradient(ellipse 80% 100% at 50% 100%,transparent 40%,var(--white) 100%);
+      pointer-events:none;
+    }
+    .page-hero-in {
+      position: relative; z-index: 1;
+      padding: 80px 0 88px;
+      max-width: 760px;
+    }
+    .page-hero-bc {
+      font-size: 12px; font-weight: 500; color: var(--g400); margin-bottom: 20px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .page-hero-bc a { color: var(--g400); transition: color .14s; }
+    .page-hero-bc a:hover { color: var(--black); }
+    .page-hero-bc span { color: var(--g200); }
+
+    /* ===== LEISTUNGS-INTRO (Statement-Bar) ===== */
+    #intro-bar { background: var(--black); border-top: 3px solid var(--red); }
+    .intro-bar-in {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      padding: 56px 0;
+      align-items: center;
+    }
+    .intro-bar-text p { font-size: .95rem; line-height: 1.75; color: rgba(255,255,255,.55); }
+    .intro-bar-text p + p { margin-top: 12px; }
+    .intro-bar-text strong { color: rgba(255,255,255,.88); font-weight: 600; }
+    .intro-bar-meta {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+      background: rgba(255,255,255,.07);
+    }
+    .ibm-item { background: var(--black); padding: 24px 20px; }
+    .ibm-v { font-size: 1.8rem; font-weight: 900; color: var(--red); letter-spacing: -.05em; line-height: 1; }
+    .ibm-l { font-size: 10.5px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: rgba(255,255,255,.32); margin-top: 5px; }
+
+    /* ===== LEISTUNGS-GRID (6 Kacheln) ===== */
+    #leistungen { background: var(--white); }
+    .l-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--g200);
+      border: 1px solid var(--g200);
+    }
+    .l-card {
+      background: var(--white);
+      padding: 36px 32px 32px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: background .15s var(--ease);
+    }
+    .l-card:hover { background: var(--g50); }
+    .l-card::before {
+      content: '';
+      position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+      background: var(--red);
+      transform: scaleY(0); transform-origin: top;
+      transition: transform .22s var(--ease);
+    }
+    .l-card:hover::before { transform: scaleY(1); }
+
+    .l-card-icon {
+      width: 52px; height: 52px;
+      background: var(--g100);
+      border-radius: var(--r);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 22px;
+      transition: background .15s;
+    }
+    .l-card:hover .l-card-icon { background: var(--g200); }
+
+    .l-card-num {
+      position: absolute; top: 28px; right: 28px;
+      font-size: 11px; font-weight: 800; letter-spacing: .1em;
+      color: var(--g200);
+    }
+    .l-card h3 {
+      font-size: 1.05rem; font-weight: 700; color: var(--black);
+      letter-spacing: -.015em; margin-bottom: 10px; line-height: 1.25;
+    }
+    .l-card p {
+      font-size: .88rem; line-height: 1.68; color: var(--g600);
+      flex: 1; margin-bottom: 24px;
+    }
+    .l-card-tags {
+      display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px;
+    }
+    .l-tag {
+      font-size: 10px; font-weight: 700; letter-spacing: .06em;
+      text-transform: uppercase; color: var(--g600);
+      padding: 3px 8px; background: var(--g100); border-radius: 2px;
+    }
+    .l-card-cta {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12.5px; font-weight: 600; color: var(--black);
+      border-bottom: 1px solid var(--g200);
+      padding-bottom: 2px;
+      transition: color .14s, border-color .14s;
+      align-self: flex-start;
+    }
+    .l-card-cta:hover { color: var(--red); border-color: var(--red); }
+    .l-card-cta svg { transition: transform .18s var(--ease); }
+    .l-card-cta:hover svg { transform: translateX(3px); }
+
+    /* ===== PROCESS / WIE ES LÄUFT ===== */
+    #prozess { background: var(--g100); border-top: 1px solid var(--g200); }
+    .proc-head { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; margin-bottom: 48px; }
+    .proc-head-text p { font-size: .95rem; line-height: 1.72; color: var(--g700); margin-top: 14px; }
+    .proc-steps {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1px; background: var(--g200); border: 1px solid var(--g200);
+    }
+    .proc-step { background: var(--white); padding: 28px 22px; }
+    .proc-step-n {
+      font-size: 2rem; font-weight: 900; color: var(--g200);
+      letter-spacing: -.06em; line-height: 1; margin-bottom: 12px;
+    }
+    .proc-step h4 { font-size: .9rem; font-weight: 700; color: var(--black); margin-bottom: 6px; }
+    .proc-step p { font-size: .83rem; line-height: 1.6; color: var(--g600); }
+
+    /* ===== CROSSLINKS (Schulungen + Webinare) ===== */
+    #crosslinks { background: var(--white); border-top: 1px solid var(--g200); }
+    .cl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--g200); border: 1px solid var(--g200); }
+    .cl-item { background: var(--white); padding: 40px 36px; }
+    .cl-item h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; }
+    .cl-item p { font-size: .9rem; line-height: 1.7; color: var(--g600); margin-bottom: 24px; }
+
+    /* ===== CTA ===== */
+    #page-cta { background: var(--black); }
+    .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 48px; padding: 72px 0; }
+    #page-cta .ey { color: var(--red); }
+    #page-cta .ey::before { background: var(--red); }
+    .cta-text h2 { color: var(--white); margin: 16px 0 12px; }
+    .cta-text p { font-size: .95rem; color: rgba(255,255,255,.5); max-width: 480px; line-height: 1.72; }
+    .cta-acts { display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap; align-items: center; }
+
+    /* ===== IMPRESSUM ===== */
+    #impressum-page {
+      display: none; position: fixed; inset: 0; z-index: 500;
+      background: var(--white); overflow-y: auto; padding: 80px 0 60px;
+    }
+    #impressum-page.open { display: block; }
+    .imp-close { position:fixed; top:20px; right:20px; width:40px; height:40px; background:var(--black); color:var(--white); border:none; border-radius:50%; font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:501; }
+    .imp-content h1 { font-size:1.8rem; margin-bottom:32px; }
+    .imp-content h2 { font-size:1.1rem; margin:28px 0 10px; color:var(--black); }
+    .imp-content h3 { font-size:.95rem; margin:20px 0 8px; }
+    .imp-content p { font-size:.9rem; line-height:1.75; color:var(--g700); margin-bottom:12px; }
+    .imp-content address { font-style:normal; font-size:.9rem; line-height:1.75; color:var(--g700); margin-bottom:12px; }
+
+    /* ===== FOOTER ===== */
+    footer { background: var(--g900); padding: 28px 0; border-top: 1px solid rgba(255,255,255,.06); }
+    .fi-w { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .fcopy { font-size: 12px; color: rgba(255,255,255,.25); }
+    .fnav { display: flex; gap: 24px; }
+    .fnav a { font-size: 12px; color: rgba(255,255,255,.3); transition: color .14s; cursor: pointer; }
+    .fnav a:hover { color: rgba(255,255,255,.7); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1100px) {
+      .l-grid { grid-template-columns: repeat(2, 1fr); }
+      .proc-head { grid-template-columns: 1fr; gap: 24px; }
+      .proc-steps { grid-template-columns: repeat(2, 1fr); }
+      .intro-bar-in { grid-template-columns: 1fr; gap: 36px; }
+      .cta-inner { flex-direction: column; align-items: flex-start; gap: 32px; }
+    }
+    @media (max-width: 800px) {
+      .wrap { padding: 0 20px; }
+      .nav-w { padding: 0 20px; }
+      .nav-links, .nav-act .btn-outline { display: none; }
+      .hbg { display: flex; }
+      .sec { padding: 56px 0; }
+      .sec-sm { padding: 40px 0; }
+      .l-grid { grid-template-columns: 1fr; }
+      .cl-grid { grid-template-columns: 1fr; }
+      .proc-steps { grid-template-columns: 1fr; }
+      .intro-bar-meta { grid-template-columns: 1fr 1fr; }
+      .fi-w { flex-direction: column; gap: 10px; text-align: center; }
+      .page-hero-in { padding: 48px 0 56px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-w">
+    <a href="../" class="nav-logo">
+      <span class="nav-logo-n">Inge Hanschke</span>
+      <span class="nav-logo-s">Hanschke Consulting</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../leistungen/" class="active">Beratung</a></li>
+      <li><a href="../ueber-inge/">Über mich</a></li>
+      <li><a href="../trainings/">Schulungen</a></li>
+      <li><a href="../buecher/">Bücher</a></li>
+      <li><a href="../partner/">Partner</a></li>
+      <li><a href="../#events">Events</a></li>
+    </ul>
+    <div class="nav-act">
+      <a href="../#evstrip" class="btn btn-outline" style="padding:8px 16px;font-size:12.5px;">Termine</a>
+      <a href="../#kontakt" class="btn btn-primary" style="padding:8px 16px;font-size:12.5px;">Kontakt</a>
+    </div>
+    <button class="hbg" id="hbgBtn" onclick="toggleMenu()" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <a href="../leistungen/" onclick="closeMenu()">Beratung</a>
+  <a href="../ueber-inge/" onclick="closeMenu()">Über mich</a>
+  <a href="../trainings/" onclick="closeMenu()">Schulungen &amp; Webinare</a>
+  <a href="../buecher/" onclick="closeMenu()">Bücher</a>
+  <a href="../partner/" onclick="closeMenu()">Partner</a>
+  <a href="../#events" onclick="closeMenu()">Events</a>
+  <a href="../#kontakt" class="btn btn-primary" onclick="closeMenu()">Kontakt aufnehmen</a>
+</div>
+
+<!-- ===== PAGE HERO ===== -->
+<section id="page-hero">
+  <div class="wrap">
+    <div class="page-hero-in">
+      <div class="page-hero-bc">
+        <a href="../">Startseite</a>
+        <span>›</span>
+        <span style="color:var(--black);">Beratungsleistungen</span>
+      </div>
+      <span class="ey">Hanschke Consulting</span>
+      <h1 style="margin-top:18px;">Sechs Felder.<br><em class="r">Jedes aus der Praxis.</em></h1>
+      <p class="lead" style="margin-top:20px;max-width:640px;">
+        Nutzen Sie die Hanschke-Consulting Best-Practices und lassen Sie sich von Inge Hanschke persönlich
+        und deren Expertennetzwerk individuell und maßgeschneidert beraten.
+        Enabling &amp; Zukunftsorientierung — Effizienz- und Kostenoptimierung &amp; Absicherung.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INTRO-BAR (schwarz) ===== -->
+<section id="intro-bar">
+  <div class="wrap">
+    <div class="intro-bar-in">
+      <div class="intro-bar-text">
+        <p>
+          Kein Consulting-Bingo. Jedes dieser sechs Felder ist durch
+          <strong>langjährige Praxiserfahrung, veröffentlichte Methodik und nachweisbare Projektergebnisse</strong> unterlegt.
+          Zu jedem Block: Beratungsleistungen, Schulungen und Webinare — dieselbe Struktur, konsequent durchgezogen.
+        </p>
+        <p>
+          Hanschke Consulting berät branchenübergreifend — Industrie, Versicherungen, Finance, IT-Dienstleistung —
+          remote und vor Ort im <strong>gesamten D-A-CH-Raum</strong>.
+        </p>
+      </div>
+      <div class="intro-bar-meta">
+        <div class="ibm-item">
+          <div class="ibm-v">6</div>
+          <div class="ibm-l">Beratungsfelder</div>
+        </div>
+        <div class="ibm-item">
+          <div class="ibm-v">35<span style="font-size:1rem;color:var(--red);">+</span></div>
+          <div class="ibm-l">Jahre IT-Praxis</div>
+        </div>
+        <div class="ibm-item">
+          <div class="ibm-v">500<span style="font-size:1rem;color:var(--red);">+</span></div>
+          <div class="ibm-l">Unternehmen beraten</div>
+        </div>
+        <div class="ibm-item">
+          <div class="ibm-v">D-A-CH</div>
+          <div class="ibm-l">Einsatzgebiet</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LEISTUNGS-GRID ===== -->
+<section id="leistungen" class="sec">
+  <div class="wrap">
+    <div class="sh">
+      <span class="ey">Beratungsfelder</span>
+      <h2 style="margin-top:18px;">Wo Hanschke Consulting<br>konkret hilft.</h2>
+    </div>
+    <div class="l-grid">
+
+      <!-- 01 Enterprise Architecture Management -->
+      <div class="l-card">
+        <span class="l-card-num">01</span>
+        <div class="l-card-icon">
+          <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="12" height="12" rx="1" stroke="#0a0a0a" stroke-width="1.8"/>
+            <rect x="18" y="2" width="12" height="12" rx="1" stroke="#0a0a0a" stroke-width="1.8"/>
+            <rect x="10" y="18" width="12" height="12" rx="1" stroke="#E94545" stroke-width="1.8"/>
+            <path d="M8 14v4M24 14v4M16 14v4" stroke="#0a0a0a" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M8 18h16" stroke="#0a0a0a" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Enterprise Architecture Management</h3>
+        <p>
+          Nutzenorientierte Einführung und Verankerung von EAM im Unternehmen —
+          mit oder ohne EAM-Tool-Evaluierung. Komplexität beherrschen,
+          digitale und KI-Transformation planen und steuern.
+          Das Kerngebiet von Hanschke Consulting — seit über 20 Jahren.
+        </p>
+        <div class="l-card-tags">
+          <span class="l-tag">Quick-Start</span>
+          <span class="l-tag">EAM-Tool-Auswahl</span>
+          <span class="l-tag">BA4D</span>
+        </div>
+        <a href="eam/" class="l-card-cta">
+          Details zu EAM
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <!-- 02 Strategisches IT-Management -->
+      <div class="l-card">
+        <span class="l-card-num">02</span>
+        <div class="l-card-icon">
+          <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 24L12 14l6 5 8-11" stroke="#E94545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="28" cy="8" r="3" stroke="#E94545" stroke-width="1.8"/>
+            <path d="M4 28h24" stroke="#0a0a0a" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Strategisches IT-Management</h3>
+        <p>
+          IT strategisch und am Business ausrichten — durch IT-Strategieentwicklung,
+          Ziel-Bild-Gestaltung &amp; Roadmapping und Lean Innovationsmanagement.
+          Experimentieren und kontinuierliches Lernen als Schlüssel für die Zukunft.
+        </p>
+        <div class="l-card-tags">
+          <span class="l-tag">IT-Strategie</span>
+          <span class="l-tag">Roadmapping</span>
+          <span class="l-tag">Innovation</span>
+        </div>
+        <a href="strategisches-it-management/" class="l-card-cta">
+          Details ansehen
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <!-- 03 IT-Management -->
+      <div class="l-card">
+        <span class="l-card-num">03</span>
+        <div class="l-card-icon">
+          <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="13" stroke="#0a0a0a" stroke-width="1.8"/>
+            <path d="M16 10v6l4 3" stroke="#E94545" stroke-width="1.8" stroke-linecap="round"/>
+            <circle cx="16" cy="16" r="2" fill="#E94545"/>
+          </svg>
+        </div>
+        <h3>IT-Management</h3>
+        <p>
+          Lean Checkup, IT-Organisation 4.0 und wirksames Lean IT-Instrumentarium.
+          KI- &amp; digitaler Reifegrad bestimmen, Potenziale identifizieren
+          und durch schlanke Organisation für den digitalen Wandel aufstellen.
+        </p>
+        <div class="l-card-tags">
+          <span class="l-tag">Lean Checkup</span>
+          <span class="l-tag">Organisation 4.0</span>
+          <span class="l-tag">Effizienz</span>
+        </div>
+        <a href="it-management/" class="l-card-cta">
+          Details ansehen
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <!-- 04 KI & Data -->
+      <div class="l-card">
+        <span class="l-card-num">04</span>
+        <div class="l-card-icon">
+          <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="8" cy="8" r="3" stroke="#1a7d8b" stroke-width="1.8"/>
+            <circle cx="24" cy="8" r="3" stroke="#1a7d8b" stroke-width="1.8"/>
+            <circle cx="16" cy="24" r="3" stroke="#1a7d8b" stroke-width="1.8"/>
+            <circle cx="16" cy="14" r="4" stroke="#1a7d8b" stroke-width="1.8"/>
+            <path d="M8 11v3M24 11v3M12 22l-4-8M20 22l4-8M13 14H8M19 14h5" stroke="#1a7d8b" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>KI &amp; Data</h3>
+        <p>
+          Ohne sauberes Datenmanagement kein verlässliches BI — und ohne BI fehlen der KI die strukturierten Grundlagen.
+          KI-/BI-Strategie, Lean Datenmanagement und individuelle KI-Beratung
+          für datengetriebene Unternehmenssteuerung.
+        </p>
+        <div class="l-card-tags">
+          <span class="l-tag">KI-Strategie</span>
+          <span class="l-tag">Datenmanagement</span>
+          <span class="l-tag">BI</span>
+        </div>
+        <a href="ki-data/" class="l-card-cta">
+          Details ansehen
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <!-- 05 Lean Value Management -->
+      <div class="l-card">
+        <span class="l-card-num">05</span>
+        <div class="l-card-icon">
+          <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 26L12 8l5 10 4-6 5 14" stroke="#0a0a0a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 26h26" stroke="#0a0a0a" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="26" cy="26" r="2" fill="#E94545"/>
+          </svg>
+        </div>
+        <h3>Lean Value Management</h3>
+        <p>
+          Die wirklichen Anforderungen ermitteln, IT-Investitionen steuern und Nutzen stiften —
+          mit minimalem bürokratischem Aufwand den maximalen geschäftlichen Nutzen erzielen.
+          Demand-to-Value: Lean Demand Management und IT-Portfoliomanagement.
+        </p>
+        <div class="l-card-tags">
+          <span class="l-tag">Demand Management</span>
+          <span class="l-tag">Portfolio</span>
+          <span class="l-tag">Roadmapping</span>
+        </div>
+        <a href="lean-value-management/" class="l-card-cta">
+          Details ansehen
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <!-- 06 Informationssicherheit & Datenschutz -->
+      <div class="l-card">
+        <span class="l-card-num">06</span>
+        <div class="l-card-icon">
+          <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 3L4 8v8c0 8.5 5.4 16.4 12 18.5C22.6 32.4 28 24.5 28 16V8L16 3z" stroke="#0a0a0a" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M10 16l4 4 8-8" stroke="#E94545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Informationssicherheit &amp; Datenschutz</h3>
+        <p>
+          Sicherheit als Managementaufgabe — nicht als Papiertiger. ISMS-Aufbau nach ISO 27001,
+          EU-DSGVO-Compliance und operativ umsetzbare Cyber-Security-Strategien.
+          Rechtssicher und mit klarem Verantwortungsrahmen für IT-Manager und Entscheider.
+        </p>
+        <div class="l-card-tags">
+          <span class="l-tag">ISMS</span>
+          <span class="l-tag">ISO 27001</span>
+          <span class="l-tag">DSGVO</span>
+        </div>
+        <a href="informationssicherheit/" class="l-card-cta">
+          Details ansehen
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== WIE ES LÄUFT ===== -->
+<section id="prozess" class="sec">
+  <div class="wrap">
+    <div class="proc-head">
+      <div>
+        <span class="ey">Vorgehen</span>
+        <h2 style="margin-top:18px;">Wie ein Mandat<br>abläuft.</h2>
+      </div>
+      <div class="proc-head-text">
+        <p>
+          Kein endloses Onboarding, kein Methoden-Consulting über das Consulting.
+          Der Ablauf ist seit 35 Jahren gleich: verstehen, was gebraucht wird —
+          dann das Richtige umsetzen, nicht das Vollständige.
+        </p>
+      </div>
+    </div>
+    <div class="proc-steps">
+      <div class="proc-step">
+        <div class="proc-step-n">01</div>
+        <h4>Direktkontakt</h4>
+        <p>Formular oder Telefon. Keine Qualifikations-Calls, keine Erstgespräch-Formulare. Rückmeldung innerhalb 24 Stunden.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-step-n">02</div>
+        <h4>Analyse &amp; Diagnose</h4>
+        <p>Ist-Zustand verstehen, Ziele klären, Lücken identifizieren. Faktenbasiert — ohne Vorannahmen und Standardlösungen.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-step-n">03</div>
+        <h4>Konzept &amp; Quick-Start</h4>
+        <p>Maßgeschneidertes Vorgehen — mit Quick-Wins für schnelle, messbare Ergebnisse. Kein jahrelanges Aufbau-Projekt ohne Zwischenergebnis.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-step-n">04</div>
+        <h4>Umsetzung &amp; Enabling</h4>
+        <p>Gemeinsam umsetzen, schrittweise ausbauen. Ziel ist die Selbständigkeit Ihres Teams — nicht die Verlängerung des Mandats.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SCHULUNGEN & WEBINARE CROSSLINK ===== -->
+<section id="crosslinks" class="sec-sm">
+  <div class="wrap">
+    <div class="cl-grid">
+      <div class="cl-item">
+        <span class="ey">Schulungen</span>
+        <h3 style="margin-top:14px;">Wissen aufbauen.<br>In zwei Tagen.</h3>
+        <p>
+          Zu jedem Beratungsfeld gibt es eine 2-tägige Schulung.
+          Praxisorientiert, direkt anwendbar — ohne Theorieüberbau.
+          9 Schulungen im Programm, darunter EAM1, EAM2, ZBR, BA4D, ISMS.
+        </p>
+        <a href="../trainings/" class="btn btn-dark">
+          Alle Schulungen ansehen
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="cl-item" style="background:var(--g50);">
+        <span class="ey">Webinare</span>
+        <h3 style="margin-top:14px;">Erst reinschauen.<br>Kostenlos.</h3>
+        <p>
+          5 kostenlose Freitags-Webinare — je 30 bis 60 Minuten.
+          Direkter Einstieg in die Themen ohne Vorab-Commitment.
+          BPEAM, DIG, LDM, AGILE, ISMS — alle verfügbar auf Anfrage.
+        </p>
+        <a href="../trainings/" class="btn btn-outline">
+          Webinar-Termine anfragen
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section id="page-cta">
+  <div class="wrap">
+    <div class="cta-inner">
+      <div class="cta-text">
+        <span class="ey">Direktkontakt</span>
+        <h2>Mandat anfragen.<br>Direkt.</h2>
+        <p>
+          Beratungsanfragen, Projektbriefings, Schulungsanmeldungen.
+          Rückmeldung innerhalb von 24 Stunden — kein Vorgespräch-Vorgespräch.
+        </p>
+      </div>
+      <div class="cta-acts">
+        <a href="../#kontakt" class="btn btn-primary">
+          Anfrage stellen
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="../ueber-inge/" class="btn btn-outline-w">Über Inge Hanschke</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fi-w">
+      <span class="fcopy">© 2026 Hanschke Consulting · Inge Hanschke · Alle Rechte vorbehalten.</span>
+      <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+        <nav class="fnav">
+          <a onclick="openImpressum()">Impressum</a>
+          <a onclick="openImpressum('datenschutz')">Datenschutz</a>
+          <a href="https://www.linkedin.com/in/ingehanschke/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener">Hanser Verlag</a>
+        </nav>
+        <div style="display:flex;gap:6px;align-items:center;border-left:1px solid rgba(255,255,255,.1);padding-left:20px;">
+          <a href="#" style="font-size:11px;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.85);padding:3px 8px;background:rgba(255,255,255,.12);border-radius:2px;">DE</a>
+          <a href="#" title="English version coming soon" style="font-size:11px;font-weight:600;letter-spacing:.06em;color:rgba(255,255,255,.3);padding:3px 8px;border-radius:2px;">EN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== IMPRESSUM OVERLAY ===== -->
+<div id="impressum-page">
+  <button class="imp-close" onclick="closeImpressum()">✕</button>
+  <div class="wrap">
+    <div class="imp-content">
+      <h1 id="imp-title">Impressum</h1>
+      <div id="imp-main">
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <address>
+          Inge Hanschke<br>
+          Straßl ins Holz 15<br>
+          81829 München<br>
+          Deutschland
+        </address>
+        <h2>Kontakt</h2>
+        <p>
+          E-Mail: <a href="mailto:info@hanschke-consulting.com">info@hanschke-consulting.com</a><br>
+          Mobil: <a href="tel:+4915221000172">+49 (0)152 210 001 72</a>
+        </p>
+        <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+        <p>Inge Hanschke</p>
+        <h2>Haftungsausschluss</h2>
+        <h3>Haftung für Inhalte</h3>
+        <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+        <h3>Haftung für Links</h3>
+        <p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+        <h3>Urheberrecht</h3>
+        <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+      </div>
+      <div id="imp-datenschutz" style="display:none;">
+        <h2>Datenschutzerklärung</h2>
+        <p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten erhoben werden, erfolgt dies stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.</p>
+        <p>Wir weisen darauf hin, dass die Datenübertragung im Internet Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
+        <p>Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung wird hiermit ausdrücklich widersprochen.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('sc', scrollY > 16), {passive:true});
+
+  // Hamburger
+  function toggleMenu() {
+    const m = document.getElementById('mmenu'), b = document.getElementById('hbgBtn');
+    const open = m.classList.toggle('open');
+    b.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  function closeMenu() {
+    document.getElementById('mmenu').classList.remove('open');
+    document.getElementById('hbgBtn').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // Impressum overlay
+  function openImpressum(section) {
+    const page = document.getElementById('impressum-page');
+    document.getElementById('imp-main').style.display = section === 'datenschutz' ? 'none' : 'block';
+    document.getElementById('imp-datenschutz').style.display = section === 'datenschutz' ? 'block' : 'none';
+    document.getElementById('imp-title').textContent = section === 'datenschutz' ? 'Datenschutz' : 'Impressum';
+    page.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeImpressum() {
+    document.getElementById('impressum-page').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if(e.key==='Escape') closeImpressum(); });
+</script>
+<script src="https://visual-feedback-tool.vercel.app/api/embed.js?key=3d1b3cb26e7e52347690a5348e94a491c2b71b858fdd1a18"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+# Projektdokumentation (nicht in Repo)
+*.md
+*.mp3
+*.pdf
+*.docx
+*.pptx
+*.txt
+
+# Datierte Ordner (Meetings, Dateien)
+26-02-*/
+preparations/
+backups/
+_archiv-duplikate/
+
+# Entwürfe
+index-variante-b.html
+index-multipage.html
+
+# Git
+.git/
+
+# macOS
+.DS_Store

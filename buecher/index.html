@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fachbücher — Inge Hanschke im Carl Hanser Verlag | Hanschke Consulting</title>
+  <meta name="description" content="10+ Fachbücher von Inge Hanschke im Carl Hanser Verlag. Enterprise Architecture Management, Strategisches IT-Management, Business-Analyse, Informationssicherheit — einfach &amp; effektiv.">
+  <meta property="og:title" content="Fachbücher von Inge Hanschke — Hanschke Consulting">
+  <meta property="og:description" content="10+ Fachbücher im Carl Hanser Verlag. EAM, Strategisches IT-Management, Business-Analyse, Informationssicherheit — die Standardwerke für die IT-Praxis im D-A-CH-Raum.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.hanschke-consulting.com/buecher/">
+  <meta property="og:image" content="https://www.hanschke-consulting.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    :root {
+      --red: #E94545; --red-dk: #c83030; --black: #0a0a0a; --g900: #141414;
+      --g800: #282828; --g700: #3c3c3c; --g600: #666; --g400: #999;
+      --g200: #e0e0e0; --g100: #f5f5f5; --g50: #fafafa; --white: #fff;
+      --teal: #1a7d8b; --f: 'Inter', sans-serif; --max: 1200px; --r: 2px;
+      --ease: cubic-bezier(.25,.1,.25,1);
+    }
+    body { font-family: var(--f); background: var(--white); color: var(--black); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 48px; }
+    .ey { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--red); }
+    .ey::before { content:''; display:block; width:20px; height:2px; background:var(--red); flex-shrink:0; }
+    h1 { font-size: clamp(2.4rem,5.5vw,4rem); font-weight: 900; line-height: 1.08; letter-spacing: -.035em; }
+    h2 { font-size: clamp(1.8rem,3vw,2.6rem); font-weight: 700; line-height: 1.1; letter-spacing: -.025em; }
+    h3 { font-size: 1rem; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; }
+    .lead { font-size: 1.05rem; line-height: 1.72; color: var(--g700); }
+    em.r { font-style: normal; color: var(--red); }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; font-family: var(--f); font-size: 13px; font-weight: 600; letter-spacing: .01em; border-radius: var(--r); transition: background .15s var(--ease), color .15s var(--ease), border-color .15s var(--ease), transform .1s; cursor: pointer; border: 1.5px solid transparent; white-space: nowrap; }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--red); color: var(--white); border-color: var(--red); }
+    .btn-primary:hover { background: var(--red-dk); border-color: var(--red-dk); }
+    .btn-dark { background: var(--black); color: var(--white); border-color: var(--black); }
+    .btn-dark:hover { background: var(--g800); border-color: var(--g800); }
+    .btn-outline { background: transparent; color: var(--black); border-color: var(--g200); }
+    .btn-outline:hover { border-color: var(--black); }
+    .btn-outline-w { background: transparent; color: var(--white); border-color: rgba(255,255,255,.35); }
+    .btn-outline-w:hover { background: var(--white); color: var(--black); border-color: var(--white); }
+    .sec { padding: 96px 0; }
+    .sec-sm { padding: 64px 0; }
+
+    /* NAV */
+    #nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; background: rgba(255,255,255,.96); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--g200); transition: box-shadow .2s; }
+    #nav.sc { box-shadow: 0 2px 24px rgba(0,0,0,.07); }
+    .nav-w { max-width: var(--max); margin: 0 auto; padding: 0 48px; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-logo { display:flex; flex-direction:column; flex-shrink:0; }
+    .nav-logo-n { font-size: 14.5px; font-weight: 800; letter-spacing: -.02em; color: var(--black); line-height: 1.1; }
+    .nav-logo-s { font-size: 9.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--red); margin-top: 2px; }
+    .nav-links { display:flex; align-items:center; gap:26px; }
+    .nav-links a { font-size: 13px; font-weight: 500; color: var(--g600); transition: color .14s; }
+    .nav-links a:hover { color: var(--black); }
+    .nav-links a.active { color: var(--black); font-weight: 600; }
+    .nav-act { display:flex; align-items:center; gap:8px; flex-shrink:0; }
+    .hbg { display:none; flex-direction:column; justify-content:center; gap:5px; cursor:pointer; padding:6px; background:none; border:none; width:36px; height:36px; }
+    .hbg span { display:block; width:22px; height:1.5px; background:var(--black); transition:transform .22s var(--ease),opacity .22s; transform-origin:center; }
+    .hbg.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+    .hbg.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+    .hbg.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+    .mmenu { display:none; position:fixed; top:60px; left:0; right:0; bottom:0; background:var(--white); z-index:199; padding:32px 24px 48px; flex-direction:column; gap:4px; overflow-y:auto; }
+    .mmenu.open { display:flex; }
+    .mmenu a { font-size:1.05rem; font-weight:600; color:var(--black); padding:13px 0; border-bottom:1px solid var(--g100); }
+    .mmenu .btn { margin-top:20px; align-self:flex-start; }
+
+    /* PAGE HERO */
+    #page-hero { padding-top: 60px; background: var(--white); position: relative; overflow: hidden; }
+    #page-hero::before { content:''; position:absolute; inset:0; background-image: linear-gradient(var(--g200) 1px,transparent 1px), linear-gradient(90deg,var(--g200) 1px,transparent 1px); background-size: 64px 64px; opacity: .35; pointer-events:none; }
+    #page-hero::after { content:''; position:absolute; inset:0; background: radial-gradient(ellipse 80% 100% at 50% 100%,transparent 40%,var(--white) 100%); pointer-events:none; }
+    .page-hero-in { position: relative; z-index: 1; padding: 80px 0 88px; max-width: 760px; }
+    .page-hero-bc { font-size: 12px; font-weight: 500; color: var(--g400); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .page-hero-bc a { color: var(--g400); transition: color .14s; }
+    .page-hero-bc a:hover { color: var(--black); }
+    .page-hero-bc span { color: var(--g200); }
+
+    /* TRUST BAR */
+    #trust { background: var(--black); border-top: 1px solid rgba(255,255,255,.06); }
+    .trust-in { display: flex; align-items: center; gap: 0; padding: 0; overflow-x: auto; scrollbar-width: none; }
+    .trust-in::-webkit-scrollbar { display: none; }
+    .trust-item { display: flex; align-items: center; gap: 12px; padding: 20px 40px; border-right: 1px solid rgba(255,255,255,.07); flex-shrink: 0; }
+    .trust-item:last-child { border-right: none; }
+    .trust-v { font-size: 1.6rem; font-weight: 900; color: var(--white); letter-spacing: -.05em; line-height: 1; }
+    .trust-v sup { font-size: .85rem; color: var(--red); }
+    .trust-l { font-size: 11px; color: rgba(255,255,255,.35); text-transform: uppercase; letter-spacing: .06em; max-width: 90px; line-height: 1.4; }
+
+    /* HIGHLIGHT BOOK (Neuerscheinung) */
+    #highlight { background: var(--g900); }
+    .highlight-inner { display: grid; grid-template-columns: 280px 1fr; gap: 72px; align-items: center; }
+    .highlight-cover { position: relative; }
+    .highlight-cover-img { width: 100%; aspect-ratio: 3/4; background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; border: 1px solid rgba(255,255,255,.1); box-shadow: 12px 12px 40px rgba(0,0,0,.6), -4px -4px 20px rgba(255,255,255,.03); position: relative; overflow: hidden; }
+    .highlight-cover-img::before { content:''; position:absolute; left:0; top:0; bottom:0; width:6px; background: var(--red); }
+    .highlight-cover-img::after { content:''; position:absolute; inset:0; background: linear-gradient(180deg,transparent 60%,rgba(233,69,69,.07) 100%); }
+    .hc-series { font-size: 9px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.3); }
+    .hc-title { font-size: .95rem; font-weight: 800; color: var(--white); text-align: center; padding: 0 16px; line-height: 1.3; letter-spacing: -.01em; }
+    .hc-author { font-size: 10px; font-weight: 600; color: rgba(255,255,255,.4); letter-spacing: .06em; text-transform: uppercase; }
+    .hc-logo { margin-top: 8px; }
+    .new-badge { position: absolute; top: 16px; right: -10px; background: var(--red); color: var(--white); font-size: 9px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: 4px 12px; border-radius: 2px; }
+    .highlight-text .ey { color: var(--red); }
+    .highlight-text .ey::before { background: var(--red); }
+    .highlight-text h2 { color: var(--white); margin: 18px 0 16px; }
+    .highlight-text p { font-size: .95rem; line-height: 1.72; color: rgba(255,255,255,.55); margin-bottom: 14px; }
+    .highlight-text strong { color: rgba(255,255,255,.85); }
+    .highlight-langs { display: flex; gap: 8px; margin: 20px 0 28px; flex-wrap: wrap; }
+    .lang-tag { font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 4px 10px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1); border-radius: 2px; color: rgba(255,255,255,.6); }
+    .lang-tag.active { background: rgba(233,69,69,.15); border-color: rgba(233,69,69,.3); color: var(--red); }
+
+    /* BOOKS GRID */
+    #buecher-grid { background: var(--white); }
+    .books-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--g200); border: 1px solid var(--g200); }
+    .book-card { background: var(--white); display: flex; flex-direction: column; transition: background .14s; }
+    .book-card:hover { background: var(--g50); }
+    .book-cover { aspect-ratio: 3/4; background: var(--g100); position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
+    .book-cover::before { content:''; position:absolute; left:0; top:0; bottom:0; width:4px; background: var(--red); }
+    .book-cover-title { font-size: .78rem; font-weight: 800; color: var(--black); text-align: center; padding: 0 18px; line-height: 1.35; letter-spacing: -.01em; }
+    .book-cover-sub { font-size: .65rem; font-weight: 600; color: var(--g600); text-align: center; padding: 0 16px; line-height: 1.4; }
+    .book-cover-author { font-size: .62rem; font-weight: 700; color: var(--g400); text-transform: uppercase; letter-spacing: .07em; }
+    .book-cover-edition { position: absolute; top: 10px; right: 10px; font-size: 9px; font-weight: 800; letter-spacing: .08em; color: var(--red); background: rgba(233,69,69,.1); padding: 2px 6px; border-radius: 2px; }
+    .book-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+    .book-tag { font-size: 9.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
+    .book-body h3 { font-size: .92rem; font-weight: 700; color: var(--black); margin-bottom: 8px; line-height: 1.35; letter-spacing: -.01em; }
+    .book-body p { font-size: .82rem; line-height: 1.65; color: var(--g600); flex: 1; margin-bottom: 16px; }
+    .book-meta { display: flex; flex-direction: column; gap: 3px; margin-bottom: 16px; }
+    .book-meta-row { font-size: 11px; color: var(--g400); }
+    .book-meta-row strong { color: var(--black); font-weight: 600; }
+
+    /* VERLAG SECTION */
+    #verlag { background: var(--g100); border-top: 1px solid var(--g200); }
+    .verlag-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+    .verlag-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--g200); border: 1px solid var(--g200); margin-top: 32px; }
+    .verlag-stat { background: var(--white); padding: 24px 20px; }
+    .verlag-stat-v { font-size: 2.2rem; font-weight: 900; color: var(--black); letter-spacing: -.06em; line-height: 1; }
+    .verlag-stat-v sup { font-size: 1rem; color: var(--red); }
+    .verlag-stat-l { font-size: 11px; color: var(--g600); text-transform: uppercase; letter-spacing: .06em; margin-top: 5px; }
+    .verlag-quote { background: var(--black); border-left: 3px solid var(--red); padding: 28px 32px; }
+    .verlag-quote p { font-size: 1rem; line-height: 1.68; color: rgba(255,255,255,.65); font-style: italic; }
+    .verlag-quote cite { display: block; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--red); margin-top: 14px; font-style: normal; }
+
+    /* CTA */
+    #page-cta { background: var(--black); }
+    .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 48px; padding: 72px 0; }
+    #page-cta .ey { color: var(--red); }
+    #page-cta .ey::before { background: var(--red); }
+    .cta-text h2 { color: var(--white); margin: 16px 0 12px; }
+    .cta-text p { font-size: .95rem; color: rgba(255,255,255,.5); max-width: 480px; line-height: 1.72; }
+    .cta-acts { display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap; align-items: center; }
+
+    /* IMPRESSUM */
+    #impressum-page { display: none; position: fixed; inset: 0; z-index: 500; background: var(--white); overflow-y: auto; padding: 80px 0 60px; }
+    #impressum-page.open { display: block; }
+    .imp-close { position:fixed; top:20px; right:20px; width:40px; height:40px; background:var(--black); color:var(--white); border:none; border-radius:50%; font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:501; }
+    .imp-content h1 { font-size:1.8rem; margin-bottom:32px; }
+    .imp-content h2 { font-size:1.1rem; margin:28px 0 10px; color:var(--black); }
+    .imp-content h3 { font-size:.95rem; margin:20px 0 8px; }
+    .imp-content p { font-size:.9rem; line-height:1.75; color:var(--g700); margin-bottom:12px; }
+    .imp-content address { font-style:normal; font-size:.9rem; line-height:1.75; color:var(--g700); margin-bottom:12px; }
+
+    /* FOOTER */
+    footer { background: var(--g900); padding: 28px 0; border-top: 1px solid rgba(255,255,255,.06); }
+    .fi-w { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .fcopy { font-size: 12px; color: rgba(255,255,255,.25); }
+    .fnav { display: flex; gap: 24px; }
+    .fnav a { font-size: 12px; color: rgba(255,255,255,.3); transition: color .14s; cursor: pointer; }
+    .fnav a:hover { color: rgba(255,255,255,.7); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1100px) {
+      .highlight-inner { grid-template-columns: 200px 1fr; gap: 48px; }
+      .books-grid { grid-template-columns: repeat(3, 1fr); }
+      .verlag-inner { grid-template-columns: 1fr; gap: 40px; }
+      .cta-inner { flex-direction: column; align-items: flex-start; gap: 32px; }
+    }
+    @media (max-width: 800px) {
+      .wrap { padding: 0 20px; }
+      .nav-w { padding: 0 20px; }
+      .nav-links, .nav-act .btn-outline { display: none; }
+      .hbg { display: flex; }
+      .sec { padding: 56px 0; }
+      .sec-sm { padding: 40px 0; }
+      .page-hero-in { padding: 48px 0 56px; }
+      .fi-w { flex-direction: column; gap: 10px; text-align: center; }
+      .highlight-inner { grid-template-columns: 1fr; gap: 36px; }
+      .highlight-cover { max-width: 220px; }
+      .books-grid { grid-template-columns: repeat(2, 1fr); }
+      .trust-item { padding: 16px 24px; }
+      .verlag-stats { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-w">
+    <a href="../" class="nav-logo">
+      <span class="nav-logo-n">Inge Hanschke</span>
+      <span class="nav-logo-s">Hanschke Consulting</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../leistungen/">Beratung</a></li>
+      <li><a href="../ueber-inge/">Über mich</a></li>
+      <li><a href="../trainings/">Schulungen</a></li>
+      <li><a href="#" class="active">Bücher</a></li>
+      <li><a href="../partner/">Partner</a></li>
+      <li><a href="../events/">Events</a></li>
+    </ul>
+    <div class="nav-act">
+      <a href="../events/" class="btn btn-outline" style="padding:8px 16px;font-size:12.5px;">Termine</a>
+      <a href="../#kontakt" class="btn btn-primary" style="padding:8px 16px;font-size:12.5px;">Kontakt</a>
+    </div>
+    <button class="hbg" id="hbgBtn" onclick="toggleMenu()" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <a href="../leistungen/" onclick="closeMenu()">Beratung</a>
+  <a href="../ueber-inge/" onclick="closeMenu()">Über mich</a>
+  <a href="../trainings/" onclick="closeMenu()">Schulungen &amp; Webinare</a>
+  <a href="#" onclick="closeMenu()">Bücher</a>
+  <a href="../partner/" onclick="closeMenu()">Partner</a>
+  <a href="../events/" onclick="closeMenu()">Events</a>
+  <a href="../#kontakt" class="btn btn-primary" onclick="closeMenu()">Kontakt aufnehmen</a>
+</div>
+
+<!-- PAGE HERO -->
+<section id="page-hero">
+  <div class="wrap">
+    <div class="page-hero-in">
+      <div class="page-hero-bc">
+        <a href="../">Startseite</a>
+        <span>›</span>
+        <span style="color:var(--black);">Fachbücher</span>
+      </div>
+      <span class="ey">Carl Hanser Verlag</span>
+      <h1 style="margin-top:18px;">Fachbücher,<br>die <em class="r">wirken.</em></h1>
+      <p class="lead" style="margin-top:20px;max-width:600px;">
+        10+ Fachbücher im Carl Hanser Verlag — die Standardwerke für IT-Management,
+        Enterprise Architecture, Business-Analyse und Informationssicherheit im D-A-CH-Raum.
+        Einfach &amp; effektiv: Komplexes ohne Overhead erklärt.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div id="trust">
+  <div class="wrap">
+    <div class="trust-in">
+      <div class="trust-item">
+        <div>
+          <div class="trust-v">10<sup>+</sup></div>
+          <div class="trust-l">Fachbücher veröffentlicht</div>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div>
+          <div class="trust-v">35<sup>+</sup></div>
+          <div class="trust-l">Jahre IT-Praxis in den Büchern</div>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div>
+          <div class="trust-v">90<sup>%</sup></div>
+          <div class="trust-l">Bekanntheitsgrad im D-A-CH EAM-Markt</div>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div>
+          <div class="trust-v">3</div>
+          <div class="trust-l">Sprachen (DE · EN · ES)</div>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div>
+          <div class="trust-v" style="font-size:1.1rem;font-weight:800;letter-spacing:-.02em;color:rgba(255,255,255,.8);">Carl Hanser</div>
+          <div class="trust-l">Verlag — alle Titel</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEUERSCHEINUNG HIGHLIGHT -->
+<section id="highlight" class="sec">
+  <div class="wrap">
+    <div class="highlight-inner">
+      <div class="highlight-cover">
+        <div class="highlight-cover-img">
+          <div class="new-badge">NEU 2027</div>
+          <span class="hc-series">Hanschke Consulting</span>
+          <span class="hc-title">Wirksames strategisches IT-Management</span>
+          <span style="font-size:.65rem;color:rgba(255,255,255,.3);text-align:center;padding:0 12px;line-height:1.4;">lean · agil · systematisch</span>
+          <span class="hc-author">Inge Hanschke</span>
+          <div class="hc-logo" style="margin-top:12px;">
+            <span style="font-size:9px;font-weight:800;letter-spacing:.1em;color:rgba(255,255,255,.2);text-transform:uppercase;">Carl Hanser Verlag</span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight-text">
+        <span class="ey">Neuerscheinung 2027</span>
+        <h2 style="color:var(--white);margin-top:18px;">Wirksames strategisches<br>IT-Management —<br><span style="color:var(--red);">lean, agil &amp; systematisch.</span></h2>
+        <p style="margin-top:16px;">
+          Das neue Standardwerk von Inge Hanschke erscheint <strong>2027 im Carl Hanser Verlag</strong> —
+          und erstmals in drei Sprachen gleichzeitig.
+          IT strategisch ausrichten: von der IT-Strategie über das Ziel-Bild bis zur umsetzbaren Roadmap.
+        </p>
+        <p>
+          Lean, agil und systematisch — das Buch überträgt die bewährte Hanschke-Methodik
+          auf das strategische IT-Management: <strong>kein theoretischer Überbau, sondern praxiserprobte Methoden</strong>
+          für IT-Leiter, CIOs und Unternehmensarchitekten.
+        </p>
+        <div class="highlight-langs">
+          <span class="lang-tag active">Deutsch</span>
+          <span class="lang-tag active">English</span>
+          <span class="lang-tag active">Español</span>
+        </div>
+        <a href="../#kontakt" class="btn btn-primary">
+          Bei Erscheinen informiert werden
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BÜCHER GRID -->
+<section id="buecher-grid" class="sec">
+  <div class="wrap">
+    <div style="margin-bottom:48px;">
+      <span class="ey">Alle Fachbücher</span>
+      <h2 style="margin-top:18px;">Die Hanschke-Bibliothek.</h2>
+      <p style="font-size:.95rem;line-height:1.72;color:var(--g700);margin-top:14px;max-width:600px;">
+        Alle Bücher sind im Carl Hanser Verlag erschienen und über den Buchhandel
+        sowie den Hanser-Online-Shop erhältlich.
+      </p>
+    </div>
+
+    <div class="books-grid">
+
+      <!-- Buch 1: EAM (Flaggschiff, 4. Auflage 2026) -->
+      <div class="book-card">
+        <div class="book-cover" style="background:linear-gradient(160deg,#1a1a1a,#2e1a1a);">
+          <div class="book-cover-edition">4. Aufl. 2026</div>
+          <span class="book-cover-title">Enterprise Architecture Management einfach &amp; effektiv</span>
+          <span class="book-cover-sub">Schritt für Schritt zu Ihrem EAM</span>
+          <span class="book-cover-author">Inge Hanschke</span>
+        </div>
+        <div class="book-body">
+          <div class="book-tag">EAM · Flaggschiff</div>
+          <h3>Enterprise Architecture Management einfach &amp; effektiv</h3>
+          <p>Das meistgenutzte deutschsprachige EAM-Standardwerk — jetzt in der 4. Auflage (2026). Schritt für Schritt zu einem pragmatischen, wirksamen Enterprise Architecture Management. Von der Einführung über Governance bis zur KI-Transformation.</p>
+          <div class="book-meta">
+            <div class="book-meta-row"><strong>Verlag:</strong> Carl Hanser Verlag</div>
+            <div class="book-meta-row"><strong>Auflage:</strong> 4., überarbeitete Auflage 2026</div>
+            <div class="book-meta-row"><strong>Sprache:</strong> Deutsch</div>
+          </div>
+          <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener" class="btn btn-dark" style="align-self:flex-start;font-size:12px;padding:9px 18px;">
+            Beim Hanser Verlag ansehen
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H7M12 4v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Buch 2: Strategisches Management der IT-Landschaft -->
+      <div class="book-card">
+        <div class="book-cover" style="background:linear-gradient(160deg,#1a1a24,#1e1e2e);">
+          <span class="book-cover-title">Strategisches Management der IT-Landschaft</span>
+          <span class="book-cover-sub">Praktischer Leitfaden für das Enterprise Architecture Management</span>
+          <span class="book-cover-author">Inge Hanschke</span>
+        </div>
+        <div class="book-body">
+          <div class="book-tag">EAM · Strategisch</div>
+          <h3>Strategisches Management der IT-Landschaft</h3>
+          <p>Praktischer Leitfaden für das Enterprise Architecture Management. Wie IT-Landschaften strategisch gesteuert und weiterentwickelt werden — von der Architekturgovernance bis zur Transformationsplanung.</p>
+          <div class="book-meta">
+            <div class="book-meta-row"><strong>Verlag:</strong> Carl Hanser Verlag</div>
+            <div class="book-meta-row"><strong>Sprache:</strong> Deutsch</div>
+          </div>
+          <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener" class="btn btn-outline" style="align-self:flex-start;font-size:12px;padding:9px 18px;">
+            Beim Hanser Verlag ansehen
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H7M12 4v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Buch 3: Einfache & Effektive Strategische Planung -->
+      <div class="book-card">
+        <div class="book-cover" style="background:linear-gradient(160deg,#1a1f1a,#1e281e);">
+          <span class="book-cover-title">Einfache &amp; Effektive Strategische Planung</span>
+          <span class="book-cover-sub">IT strategisch ausrichten — lean &amp; pragmatisch</span>
+          <span class="book-cover-author">Inge Hanschke</span>
+        </div>
+        <div class="book-body">
+          <div class="book-tag">Strategisches IT-Management</div>
+          <h3>Einfache &amp; Effektive Strategische Planung</h3>
+          <p>IT-Strategieentwicklung, Ziel-Bild-Gestaltung und Roadmapping lean und pragmatisch. Für IT-Leiter und Unternehmensarchitekten, die strategische Planung ohne überdimensionierten Aufwand umsetzen wollen.</p>
+          <div class="book-meta">
+            <div class="book-meta-row"><strong>Verlag:</strong> Carl Hanser Verlag</div>
+            <div class="book-meta-row"><strong>Sprache:</strong> Deutsch</div>
+          </div>
+          <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener" class="btn btn-outline" style="align-self:flex-start;font-size:12px;padding:9px 18px;">
+            Beim Hanser Verlag ansehen
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H7M12 4v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Buch 4: Business Analyse -->
+      <div class="book-card">
+        <div class="book-cover" style="background:linear-gradient(160deg,#1a1a14,#28261a);">
+          <span class="book-cover-title">Business Analyse — einfach &amp; effektiv</span>
+          <span class="book-cover-sub">Anforderungen lean aufnehmen und steuern</span>
+          <span class="book-cover-author">Inge Hanschke</span>
+        </div>
+        <div class="book-body">
+          <div class="book-tag">Business-Analyse · BA4D</div>
+          <h3>Business Analyse — einfach &amp; effektiv</h3>
+          <p>Business-Analyse lean und systematisch: Anforderungen aufnehmen, strukturieren und in Lösungen überführen. Der BA4D-Ansatz für die Praxis — von der Prozessanalyse bis zur Spezifikation.</p>
+          <div class="book-meta">
+            <div class="book-meta-row"><strong>Verlag:</strong> Carl Hanser Verlag</div>
+            <div class="book-meta-row"><strong>Sprache:</strong> Deutsch</div>
+          </div>
+          <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener" class="btn btn-outline" style="align-self:flex-start;font-size:12px;padding:9px 18px;">
+            Beim Hanser Verlag ansehen
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H7M12 4v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Buch 5: Informationssicherheit -->
+      <div class="book-card">
+        <div class="book-cover" style="background:linear-gradient(160deg,#141a1e,#1a222c);">
+          <span class="book-cover-title">Informationssicherheit und Datenschutz — einfach &amp; effektiv</span>
+          <span class="book-cover-sub">ISMS, ISO 27001, DSGVO pragmatisch einführen</span>
+          <span class="book-cover-author">Inge Hanschke</span>
+        </div>
+        <div class="book-body">
+          <div class="book-tag">Informationssicherheit · ISMS</div>
+          <h3>Informationssicherheit und Datenschutz — einfach &amp; effektiv</h3>
+          <p>ISMS aufbauen, ISO 27001 zertifizieren, DSGVO umsetzen — ohne bürokratischen Overhead. Das Standardwerk für pragmatische Informationssicherheit im deutschsprachigen Raum.</p>
+          <div class="book-meta">
+            <div class="book-meta-row"><strong>Verlag:</strong> Carl Hanser Verlag</div>
+            <div class="book-meta-row"><strong>Sprache:</strong> Deutsch</div>
+          </div>
+          <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener" class="btn btn-outline" style="align-self:flex-start;font-size:12px;padding:9px 18px;">
+            Beim Hanser Verlag ansehen
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H7M12 4v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Buch 6: Lean IT-Management -->
+      <div class="book-card">
+        <div class="book-cover" style="background:linear-gradient(160deg,#1a1414,#241e1e);">
+          <span class="book-cover-title">Lean IT-Management — einfach &amp; effektiv</span>
+          <span class="book-cover-sub">IT-Organisation schlanker und wirksamer gestalten</span>
+          <span class="book-cover-author">Inge Hanschke</span>
+        </div>
+        <div class="book-body">
+          <div class="book-tag">IT-Management · Lean</div>
+          <h3>Lean IT-Management — einfach &amp; effektiv</h3>
+          <p>IT-Management nach Lean-Prinzipien: Verschwendung eliminieren, Prozesse straffen, Wert für das Business maximieren. Für IT-Leiter, die ihr IT-Management nachhaltig effizienter gestalten wollen.</p>
+          <div class="book-meta">
+            <div class="book-meta-row"><strong>Verlag:</strong> Carl Hanser Verlag</div>
+            <div class="book-meta-row"><strong>Sprache:</strong> Deutsch</div>
+          </div>
+          <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener" class="btn btn-outline" style="align-self:flex-start;font-size:12px;padding:9px 18px;">
+            Beim Hanser Verlag ansehen
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H7M12 4v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Buch 7: Digitalisierung und Industrie 4.0 -->
+      <div class="book-card">
+        <div class="book-cover" style="background:linear-gradient(160deg,#141a1a,#1a2424);">
+          <span class="book-cover-title">Digitalisierung und Industrie 4.0 — einfach und effektiv</span>
+          <span class="book-cover-sub">Digitale Transformation pragmatisch gestalten</span>
+          <span class="book-cover-author">Inge Hanschke</span>
+        </div>
+        <div class="book-body">
+          <div class="book-tag">Digitalisierung · Industrie 4.0</div>
+          <h3>Digitalisierung und Industrie 4.0 — einfach und effektiv</h3>
+          <p>Digitale Transformation und Industrie 4.0 pragmatisch gestalten: Strategie, Geschäftsmodelle, Prozesse und IT-Landschaft systematisch weiterentwickeln — ohne theoretischen Überbau.</p>
+          <div class="book-meta">
+            <div class="book-meta-row"><strong>Verlag:</strong> Carl Hanser Verlag</div>
+            <div class="book-meta-row"><strong>Sprache:</strong> Deutsch</div>
+          </div>
+          <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener" class="btn btn-outline" style="align-self:flex-start;font-size:12px;padding:9px 18px;">
+            Beim Hanser Verlag ansehen
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H7M12 4v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Buch 8: Digitaler Wandel -->
+      <div class="book-card">
+        <div class="book-cover" style="background:linear-gradient(160deg,#1a1a1a,#222222);">
+          <span class="book-cover-title">Digitaler Wandel — lean &amp; systematisch</span>
+          <span class="book-cover-sub">IT-Transformation strukturiert umsetzen</span>
+          <span class="book-cover-author">Inge Hanschke</span>
+        </div>
+        <div class="book-body">
+          <div class="book-tag">Digitaler Wandel · Transformation</div>
+          <h3>Digitaler Wandel — lean &amp; systematisch</h3>
+          <p>IT-Transformation lean und systematisch steuern: Strukturiertes Vorgehen statt Aktionismus. Methoden, Prozesse und Werkzeuge für einen nachhaltigen digitalen Wandel im Unternehmen.</p>
+          <div class="book-meta">
+            <div class="book-meta-row"><strong>Verlag:</strong> Carl Hanser Verlag</div>
+            <div class="book-meta-row"><strong>Sprache:</strong> Deutsch</div>
+          </div>
+          <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener" class="btn btn-outline" style="align-self:flex-start;font-size:12px;padding:9px 18px;">
+            Beim Hanser Verlag ansehen
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H7M12 4v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="font-size:.85rem;color:var(--g400);margin-top:16px;text-align:center;">
+      <!-- Buch 9: Lean Management -->
+      <div class="book-card">
+        <div class="book-cover" style="background:linear-gradient(160deg,#1a1e14,#222a1a);">
+          <span class="book-cover-title">Lean Management — einfach und effektiv</span>
+          <span class="book-cover-sub">Lean-Prinzipien in der Unternehmenspraxis</span>
+          <span class="book-cover-author">Inge Hanschke</span>
+        </div>
+        <div class="book-body">
+          <div class="book-tag">Lean Management</div>
+          <h3>Lean Management — einfach und effektiv</h3>
+          <p>Lean-Prinzipien konsequent anwenden: Verschwendung eliminieren, Wertströme optimieren, Prozesse schlanker gestalten. Für Führungskräfte und IT-Manager, die Lean nicht als Modeerscheinung, sondern als Arbeitsweise verstehen.</p>
+          <div class="book-meta">
+            <div class="book-meta-row"><strong>Verlag:</strong> Carl Hanser Verlag</div>
+            <div class="book-meta-row"><strong>Sprache:</strong> Deutsch</div>
+          </div>
+          <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener" class="btn btn-outline" style="align-self:flex-start;font-size:12px;padding:9px 18px;">
+            Beim Hanser Verlag ansehen
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H7M12 4v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Buch 10: Agile in der Unternehmenspraxis -->
+      <div class="book-card">
+        <div class="book-cover" style="background:linear-gradient(160deg,#141e1a,#1a2822);">
+          <span class="book-cover-title">Agile in der Unternehmenspraxis</span>
+          <span class="book-cover-sub">Agile Methoden wirkungsvoll einsetzen</span>
+          <span class="book-cover-author">Inge Hanschke</span>
+        </div>
+        <div class="book-body">
+          <div class="book-tag">Agile · Methodik</div>
+          <h3>Agile in der Unternehmenspraxis</h3>
+          <p>Agile Methoden im Unternehmenskontext pragmatisch einsetzen — jenseits von Scrum-Lehrbüchern. Wie agiles Arbeiten in IT-Organisationen, Projekten und Portfolios wirklich funktioniert und nachhaltig verankert wird.</p>
+          <div class="book-meta">
+            <div class="book-meta-row"><strong>Verlag:</strong> Carl Hanser Verlag</div>
+            <div class="book-meta-row"><strong>Sprache:</strong> Deutsch</div>
+          </div>
+          <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener" class="btn btn-outline" style="align-self:flex-start;font-size:12px;padding:9px 18px;">
+            Beim Hanser Verlag ansehen
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H7M12 4v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Buch 11: Strategisches Prozessmanagement -->
+      <div class="book-card">
+        <div class="book-cover" style="background:linear-gradient(160deg,#1e1a14,#2a2214);">
+          <span class="book-cover-title">Strategisches Prozessmanagement — einfach und effektiv</span>
+          <span class="book-cover-sub">Prozesse strategisch steuern und optimieren</span>
+          <span class="book-cover-author">Inge Hanschke</span>
+        </div>
+        <div class="book-body">
+          <div class="book-tag">Prozessmanagement</div>
+          <h3>Strategisches Prozessmanagement — einfach und effektiv</h3>
+          <p>Prozesse nicht nur dokumentieren, sondern strategisch steuern und kontinuierlich verbessern. Der Hanschke-Ansatz: Prozessmanagement als Führungsaufgabe — mit klarem Bezug zur Unternehmensstrategie und messbarem Nutzen.</p>
+          <div class="book-meta">
+            <div class="book-meta-row"><strong>Verlag:</strong> Carl Hanser Verlag</div>
+            <div class="book-meta-row"><strong>Sprache:</strong> Deutsch</div>
+          </div>
+          <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener" class="btn btn-outline" style="align-self:flex-start;font-size:12px;padding:9px 18px;">
+            Beim Hanser Verlag ansehen
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H7M12 4v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Buch 12: Spanisch — in Vorbereitung -->
+      <div class="book-card" style="position:relative;">
+        <div class="book-cover" style="background:linear-gradient(160deg,#1a1a1a,#1e1e1e);border:2px dashed rgba(255,255,255,.1);box-shadow:none;">
+          <div style="position:absolute;top:12px;right:12px;background:rgba(233,69,69,.15);border:1px solid rgba(233,69,69,.3);border-radius:2px;padding:3px 8px;">
+            <span style="font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--red);">Demnächst</span>
+          </div>
+          <span class="book-cover-title" style="color:rgba(255,255,255,.5);">Wirksames strategisches IT-Management</span>
+          <span class="book-cover-sub" style="color:rgba(255,255,255,.25);">lean · agil · systematisch</span>
+          <span class="book-cover-author" style="color:rgba(255,255,255,.3);">Inge Hanschke</span>
+        </div>
+        <div class="book-body" style="border:2px dashed var(--g200);border-top:none;background:var(--g50);">
+          <div class="book-tag" style="color:var(--g400);">Spanisch · In Vorbereitung</div>
+          <h3 style="color:var(--g600);">Wirksames strategisches IT-Management</h3>
+          <p style="color:var(--g400);">Die spanischsprachige Ausgabe erscheint voraussichtlich Ende 2026 im Carl Hanser Verlag — als Teil der dreisprachen Veröffentlichung (DE/EN/ES) des neuen Standardwerks zu strategischem IT-Management.</p>
+          <div class="book-meta">
+            <div class="book-meta-row" style="color:var(--g400);"><strong style="color:var(--g600);">Sprache:</strong> Español</div>
+            <div class="book-meta-row" style="color:var(--g400);"><strong style="color:var(--g600);">Erscheint:</strong> ca. Ende 2026</div>
+          </div>
+          <a href="../#kontakt" class="btn btn-outline" style="align-self:flex-start;font-size:12px;padding:9px 18px;color:var(--g600);border-color:var(--g200);">
+            Bei Erscheinen informiert werden
+          </a>
+        </div>
+      </div>
+
+      Alle Bücher sind im Carl Hanser Verlag erschienen und im Buchhandel sowie unter
+      <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener" style="color:var(--black);text-decoration:underline;text-underline-offset:3px;">hanser-fachbuch.de</a>
+      erhältlich.
+    </p>
+  </div>
+</section>
+
+<!-- VERLAG & ZAHLEN -->
+<section id="verlag" class="sec">
+  <div class="wrap">
+    <div class="verlag-inner">
+      <div>
+        <span class="ey">Über die Autorin</span>
+        <h2 style="margin-top:18px;">Autorschaft als<br>Qualitätsversprechen.</h2>
+        <p style="font-size:.95rem;line-height:1.72;color:var(--g700);margin-top:16px;">
+          Inge Hanschkes Bücher sind keine Begleitpublikationen zu ihren Beratungsleistungen —
+          sie sind der Ursprung der Methodik. Die „einfach &amp; effektiv"-Reihe im Carl Hanser Verlag
+          hat die Art verändert, wie IT-Manager in Deutschland, Österreich und der Schweiz
+          Enterprise Architecture und IT-Governance angehen.
+        </p>
+        <p style="font-size:.95rem;line-height:1.72;color:var(--g700);margin-top:12px;">
+          Regelmäßige Neuauflagen zeigen: Die Bücher sind keine theoretischen Konzepte,
+          sondern Praxiswerke, die mit der Realität Schritt halten.
+        </p>
+        <div class="verlag-stats">
+          <div class="verlag-stat">
+            <div class="verlag-stat-v">10<sup>+</sup></div>
+            <div class="verlag-stat-l">Fachbücher</div>
+          </div>
+          <div class="verlag-stat">
+            <div class="verlag-stat-v">4.</div>
+            <div class="verlag-stat-l">Auflage EAM-Buch 2026</div>
+          </div>
+          <div class="verlag-stat">
+            <div class="verlag-stat-v">90<sup>%</sup></div>
+            <div class="verlag-stat-l">Bekanntheitsgrad D-A-CH</div>
+          </div>
+          <div class="verlag-stat">
+            <div class="verlag-stat-v">3</div>
+            <div class="verlag-stat-l">Sprachen ab 2027</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="verlag-quote">
+          <p>„Nahezu alle deutschsprachigen EAM-Fachleute kennen mindestens eines meiner Bücher. Das ist der Maßstab, an dem ich mich messe — nicht an Beratungspreisen oder LinkedIn-Followern."</p>
+          <cite>Inge Hanschke — Dipl.-Inf., Gründerin Hanschke Consulting</cite>
+        </div>
+        <div style="margin-top:32px;padding:28px 32px;background:var(--white);border:1px solid var(--g200);">
+          <div class="ey" style="margin-bottom:14px;">Hanser Verlag</div>
+          <p style="font-size:.9rem;line-height:1.72;color:var(--g700);">
+            Der Carl Hanser Verlag München ist einer der renommiertesten deutschen Fachverlage
+            für IT, Technik und Wirtschaft. Alle Bücher von Inge Hanschke erscheinen
+            ausschließlich im Hanser Verlag — als Zeichen für fachliche Qualität und Verlässlichkeit.
+          </p>
+          <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:20px;font-size:12px;padding:9px 18px;">
+            hanser-fachbuch.de
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H7M12 4v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="page-cta">
+  <div class="wrap">
+    <div class="cta-inner">
+      <div class="cta-text">
+        <span class="ey">Methodik in der Praxis</span>
+        <h2>Bücher lesen.<br>Beratung buchen.</h2>
+        <p>
+          Die Bücher sind die Grundlage — die Beratung ist die Umsetzung.
+          Hanschke Consulting überträgt die Methodik aus den Büchern
+          direkt in Ihre Organisation. Beratungsanfrage jederzeit möglich.
+        </p>
+      </div>
+      <div class="cta-acts">
+        <a href="../#kontakt" class="btn btn-primary">
+          Beratung anfragen
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="../leistungen/" class="btn btn-outline-w">Alle Leistungen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fi-w">
+      <span class="fcopy">© 2026 Hanschke Consulting · Inge Hanschke · Alle Rechte vorbehalten.</span>
+      <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+        <nav class="fnav">
+          <a onclick="openImpressum()">Impressum</a>
+          <a onclick="openImpressum('datenschutz')">Datenschutz</a>
+          <a href="https://www.linkedin.com/in/ingehanschke/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener">Hanser Verlag</a>
+        </nav>
+        <div style="display:flex;gap:6px;align-items:center;border-left:1px solid rgba(255,255,255,.1);padding-left:20px;">
+          <a href="#" style="font-size:11px;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.85);padding:3px 8px;background:rgba(255,255,255,.12);border-radius:2px;">DE</a>
+          <a href="#" title="English version coming soon" style="font-size:11px;font-weight:600;letter-spacing:.06em;color:rgba(255,255,255,.3);padding:3px 8px;border-radius:2px;">EN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- IMPRESSUM OVERLAY -->
+<div id="impressum-page">
+  <button class="imp-close" onclick="closeImpressum()">✕</button>
+  <div class="wrap">
+    <div class="imp-content">
+      <h1 id="imp-title">Impressum</h1>
+      <div id="imp-main">
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <address>Inge Hanschke<br>Straßl ins Holz 15<br>81829 München<br>Deutschland</address>
+        <h2>Kontakt</h2>
+        <p>E-Mail: <a href="mailto:info@hanschke-consulting.com">info@hanschke-consulting.com</a><br>Mobil: <a href="tel:+4915221000172">+49 (0)152 210 001 72</a></p>
+        <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+        <p>Inge Hanschke</p>
+        <h2>Haftungsausschluss</h2>
+        <h3>Haftung für Inhalte</h3>
+        <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
+        <h3>Haftung für Links</h3>
+        <p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+        <h3>Urheberrecht</h3>
+        <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+      </div>
+      <div id="imp-datenschutz" style="display:none;">
+        <h2>Datenschutzerklärung</h2>
+        <p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten erhoben werden, erfolgt dies stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.</p>
+        <p>Wir weisen darauf hin, dass die Datenübertragung im Internet Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
+        <p>Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung wird hiermit ausdrücklich widersprochen.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('sc', scrollY > 16), {passive:true});
+
+  function toggleMenu() {
+    const m = document.getElementById('mmenu'), b = document.getElementById('hbgBtn');
+    const open = m.classList.toggle('open');
+    b.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  function closeMenu() {
+    document.getElementById('mmenu').classList.remove('open');
+    document.getElementById('hbgBtn').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function openImpressum(section) {
+    const page = document.getElementById('impressum-page');
+    document.getElementById('imp-main').style.display = section === 'datenschutz' ? 'none' : 'block';
+    document.getElementById('imp-datenschutz').style.display = section === 'datenschutz' ? 'block' : 'none';
+    document.getElementById('imp-title').textContent = section === 'datenschutz' ? 'Datenschutz' : 'Impressum';
+    page.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeImpressum() {
+    document.getElementById('impressum-page').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if(e.key==='Escape') closeImpressum(); });
+</script>
+<script src="https://visual-feedback-tool.vercel.app/api/embed.js?key=3d1b3cb26e7e52347690a5348e94a491c2b71b858fdd1a18"></script>
+</body>
+</html>

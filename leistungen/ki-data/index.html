@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KI &amp; Data — Beratung, Schulung | Hanschke Consulting</title>
+  <meta name="description" content="KI-Strategie, Lean Datenmanagement, Data Governance, Data Mesh, KI-Readiness-Assessment. Mehrwert aus KI und Daten — fundiert aufbauen statt hype-getrieben starten. Hanschke Consulting.">
+  <meta property="og:title" content="KI &amp; Data — Hanschke Consulting">
+  <meta property="og:description" content="KI-/BI-Strategie, Lean Datenmanagement, individuelle KI-Beratung. Fundament zuerst — dann KI. Inge Hanschke, 35+ Jahre IT-Praxis.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.hanschke-consulting.com/leistungen/ki-data/">
+  <meta property="og:image" content="https://www.hanschke-consulting.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    :root {
+      --red: #E94545; --red-dk: #c83030; --black: #0a0a0a; --g900: #141414;
+      --g800: #282828; --g700: #3c3c3c; --g600: #666; --g400: #999;
+      --g200: #e0e0e0; --g100: #f5f5f5; --g50: #fafafa; --white: #fff;
+      --teal: #1a7d8b; --teal-dk: #155f6b; --f: 'Inter', sans-serif;
+      --max: 1200px; --r: 2px; --ease: cubic-bezier(.25,.1,.25,1);
+    }
+    body { font-family: var(--f); background: var(--white); color: var(--black); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 48px; }
+    .ey { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--red); }
+    .ey::before { content:''; display:block; width:20px; height:2px; background:var(--red); flex-shrink:0; }
+    .ey.teal { color: var(--teal); }
+    .ey.teal::before { background: var(--teal); }
+    h1 { font-size: clamp(2.4rem,5.5vw,4rem); font-weight: 900; line-height: 1.08; letter-spacing: -.035em; }
+    h2 { font-size: clamp(1.8rem,3vw,2.6rem); font-weight: 700; line-height: 1.1; letter-spacing: -.025em; }
+    h3 { font-size: 1rem; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; }
+    h4 { font-size: .875rem; font-weight: 600; }
+    .lead { font-size: 1.05rem; line-height: 1.72; color: var(--g700); }
+    em.r { font-style: normal; color: var(--red); }
+    em.t { font-style: normal; color: var(--teal); }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; font-family: var(--f); font-size: 13px; font-weight: 600; letter-spacing: .01em; border-radius: var(--r); transition: background .15s var(--ease), color .15s var(--ease), border-color .15s var(--ease), transform .1s; cursor: pointer; border: 1.5px solid transparent; white-space: nowrap; }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--red); color: var(--white); border-color: var(--red); }
+    .btn-primary:hover { background: var(--red-dk); border-color: var(--red-dk); }
+    .btn-teal { background: var(--teal); color: var(--white); border-color: var(--teal); }
+    .btn-teal:hover { background: var(--teal-dk); border-color: var(--teal-dk); }
+    .btn-dark { background: var(--black); color: var(--white); border-color: var(--black); }
+    .btn-dark:hover { background: var(--g800); border-color: var(--g800); }
+    .btn-outline { background: transparent; color: var(--black); border-color: var(--g200); }
+    .btn-outline:hover { border-color: var(--black); }
+    .btn-outline-w { background: transparent; color: var(--white); border-color: rgba(255,255,255,.35); }
+    .btn-outline-w:hover { background: var(--white); color: var(--black); border-color: var(--white); }
+    .sec { padding: 96px 0; }
+    .sec-sm { padding: 64px 0; }
+
+    /* NAV */
+    #nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; background: rgba(255,255,255,.96); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--g200); transition: box-shadow .2s; }
+    #nav.sc { box-shadow: 0 2px 24px rgba(0,0,0,.07); }
+    .nav-w { max-width: var(--max); margin: 0 auto; padding: 0 48px; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-logo { display:flex; flex-direction:column; flex-shrink:0; }
+    .nav-logo-n { font-size: 14.5px; font-weight: 800; letter-spacing: -.02em; color: var(--black); line-height: 1.1; }
+    .nav-logo-s { font-size: 9.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--red); margin-top: 2px; }
+    .nav-links { display:flex; align-items:center; gap:26px; }
+    .nav-links a { font-size: 13px; font-weight: 500; color: var(--g600); transition: color .14s; }
+    .nav-links a:hover { color: var(--black); }
+    .nav-links a.active { color: var(--black); font-weight: 600; }
+    .nav-act { display:flex; align-items:center; gap:8px; flex-shrink:0; }
+    .hbg { display:none; flex-direction:column; justify-content:center; gap:5px; cursor:pointer; padding:6px; background:none; border:none; width:36px; height:36px; }
+    .hbg span { display:block; width:22px; height:1.5px; background:var(--black); transition:transform .22s var(--ease),opacity .22s; transform-origin:center; }
+    .hbg.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+    .hbg.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+    .hbg.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+    .mmenu { display:none; position:fixed; top:60px; left:0; right:0; bottom:0; background:var(--white); z-index:199; padding:32px 24px 48px; flex-direction:column; gap:4px; overflow-y:auto; }
+    .mmenu.open { display:flex; }
+    .mmenu a { font-size:1.05rem; font-weight:600; color:var(--black); padding:13px 0; border-bottom:1px solid var(--g100); }
+    .mmenu .btn { margin-top:20px; align-self:flex-start; }
+
+    /* PAGE HERO — Teal-Akzent für KI/Zukunft */
+    #page-hero { padding-top: 60px; background: var(--white); position: relative; overflow: hidden; }
+    #page-hero::before { content:''; position:absolute; inset:0; background-image: linear-gradient(var(--g200) 1px,transparent 1px), linear-gradient(90deg,var(--g200) 1px,transparent 1px); background-size: 64px 64px; opacity: .35; pointer-events:none; }
+    #page-hero::after { content:''; position:absolute; inset:0; background: radial-gradient(ellipse 80% 100% at 50% 100%,transparent 40%,var(--white) 100%); pointer-events:none; }
+    .page-hero-in { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 360px; gap: 72px; align-items: center; padding: 80px 0 88px; }
+    .page-hero-bc { font-size: 12px; font-weight: 500; color: var(--g400); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .page-hero-bc a { color: var(--g400); transition: color .14s; }
+    .page-hero-bc a:hover { color: var(--black); }
+    .page-hero-bc span { color: var(--g200); }
+
+    /* Expert Badge — teal accent für KI-Block */
+    .expert-badge { background: var(--black); border-radius: var(--r); padding: 28px; border-left: 3px solid var(--teal); }
+    .eb-label { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
+    .eb-stat { display: flex; align-items: baseline; gap: 6px; margin-bottom: 8px; }
+    .eb-v { font-size: 2rem; font-weight: 900; color: var(--white); letter-spacing: -.05em; line-height: 1; }
+    .eb-v sup { font-size: .9rem; color: var(--teal); font-weight: 700; }
+    .eb-l { font-size: 12px; color: rgba(255,255,255,.45); }
+    .eb-sep { height: 1px; background: rgba(255,255,255,.08); margin: 14px 0; }
+    .eb-quote { font-size: .82rem; line-height: 1.55; color: rgba(255,255,255,.5); font-style: italic; }
+    .eb-quote strong { color: rgba(255,255,255,.82); font-style: normal; font-weight: 600; }
+
+    /* ANCHOR NAV */
+    #anav { background: var(--g100); border-top: 1px solid var(--g200); border-bottom: 1px solid var(--g200); position: sticky; top: 60px; z-index: 100; }
+    .anav-in { display: flex; align-items: center; overflow-x: auto; scrollbar-width: none; }
+    .anav-in::-webkit-scrollbar { display: none; }
+    .anav-link { padding: 14px 20px; font-size: 12.5px; font-weight: 600; color: var(--g600); white-space: nowrap; border-bottom: 2px solid transparent; transition: color .14s, border-color .14s; }
+    .anav-link:hover { color: var(--black); }
+    .anav-link.active { color: var(--black); border-bottom-color: var(--teal); }
+
+    /* FUNDAMENT-ERKLÄRUNG (Intro-Sektion — KI-spezifisch) */
+    #fundament { background: var(--black); border-top: 3px solid var(--teal); }
+    .fund-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,.06); }
+    .fund-item { background: var(--black); padding: 32px 24px; }
+    .fund-num { font-size: 10px; font-weight: 800; letter-spacing: .12em; color: var(--teal); margin-bottom: 10px; }
+    .fund-item h3 { font-size: .95rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .fund-item p { font-size: .84rem; line-height: 1.65; color: rgba(255,255,255,.45); }
+    .fund-arrow { font-size: 1.4rem; font-weight: 900; color: var(--teal); line-height: 1; display: flex; align-items: center; justify-content: center; }
+
+    /* LEISTUNGSBLÖCKE */
+    #beratung { background: var(--white); }
+    .l-intro { font-size: .95rem; line-height: 1.78; color: var(--g700); max-width: 720px; margin-bottom: 48px; }
+    .l-intro strong { color: var(--black); font-weight: 600; }
+    .lblock-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--g200); border: 1px solid var(--g200); margin-bottom: 2px; }
+    .lblock { background: var(--white); padding: 36px 32px; transition: background .15s; position: relative; overflow: hidden; }
+    .lblock:hover { background: var(--g50); }
+    .lblock::after { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--teal); transform: scaleY(0); transform-origin: top; transition: transform .22s var(--ease); }
+    .lblock:hover::after { transform: scaleY(1); }
+    .lblock-num { font-size: 11px; font-weight: 800; letter-spacing: .1em; color: var(--g200); margin-bottom: 10px; }
+    .lblock h3 { font-size: 1.05rem; font-weight: 700; color: var(--black); margin-bottom: 12px; letter-spacing: -.015em; }
+    .lblock p { font-size: .9rem; line-height: 1.72; color: var(--g600); margin-bottom: 16px; }
+    .lblock-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .ltag { font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--g600); padding: 3px 8px; background: var(--g100); border-radius: 2px; }
+    .ltag.t { color: var(--teal); background: rgba(26,125,139,.08); }
+    .l-list { list-style: none; padding: 0; margin-top: 8px; }
+    .l-list li { font-size: .87rem; line-height: 1.6; color: var(--g600); padding: 5px 0 5px 16px; position: relative; }
+    .l-list li::before { content: '—'; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
+    .lblock-full { background: var(--white); border: 1px solid var(--g200); border-top: none; padding: 36px 32px; transition: background .15s; position: relative; overflow: hidden; }
+    .lblock-full:hover { background: var(--g50); }
+    .lblock-full::after { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--teal); transform: scaleY(0); transform-origin: top; transition: transform .22s var(--ease); }
+    .lblock-full:hover::after { transform: scaleY(1); }
+    .lblock-full-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .lblock-full .lblock-num { font-size: 11px; font-weight: 800; letter-spacing: .1em; color: var(--g200); margin-bottom: 10px; }
+    .lblock-full h3 { font-size: 1.05rem; font-weight: 700; color: var(--black); margin-bottom: 12px; letter-spacing: -.015em; }
+    .lblock-full p { font-size: .9rem; line-height: 1.72; color: var(--g600); margin-bottom: 16px; }
+
+    /* WEBINAR — Teal für KI-Block */
+    #webinar { background: var(--g100); border-top: 1px solid var(--g200); }
+    .webinar-card { background: var(--white); border: 1px solid var(--g200); border-top: 3px solid var(--teal); border-radius: var(--r); padding: 36px; display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
+    .wc-label { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--g400); margin-bottom: 8px; }
+    .wc-code { font-size: 10px; font-weight: 800; letter-spacing: .14em; color: var(--teal); text-transform: uppercase; }
+    .webinar-card h3 { font-size: 1.2rem; font-weight: 700; color: var(--black); margin: 8px 0 10px; letter-spacing: -.015em; }
+    .webinar-card p { font-size: .9rem; line-height: 1.72; color: var(--g600); max-width: 540px; }
+    .wc-meta { display: flex; gap: 20px; margin-top: 16px; flex-wrap: wrap; }
+    .wc-meta-item { display: flex; flex-direction: column; gap: 2px; }
+    .wc-meta-label { font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--g400); }
+    .wc-meta-val { font-size: 13px; font-weight: 600; color: var(--black); }
+    .wc-acts { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; flex-shrink: 0; min-width: 180px; }
+    .wc-coming { background: rgba(26,125,139,.08); border: 1px solid rgba(26,125,139,.2); border-radius: var(--r); padding: 10px 14px; font-size: 11px; color: var(--teal); font-weight: 600; }
+
+    /* SCHULUNGEN */
+    #schulungen { background: var(--white); border-top: 1px solid var(--g200); }
+    .s-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--g200); border: 1px solid var(--g200); }
+    .s-card { background: var(--white); padding: 32px; display: flex; flex-direction: column; transition: background .15s; }
+    .s-card:hover { background: var(--g50); }
+    .s-card-code { font-size: 10px; font-weight: 800; letter-spacing: .14em; color: var(--teal); margin-bottom: 10px; }
+    .s-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--black); margin-bottom: 10px; letter-spacing: -.015em; }
+    .s-card p { font-size: .88rem; line-height: 1.68; color: var(--g600); flex: 1; margin-bottom: 20px; }
+    .s-card-details { display: flex; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; }
+    .s-detail { display: flex; flex-direction: column; gap: 2px; }
+    .s-detail-l { font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--g400); }
+    .s-detail-v { font-size: 13px; font-weight: 600; color: var(--black); }
+    .s-content { list-style: none; padding: 0; margin-bottom: 20px; }
+    .s-content li { font-size: .85rem; color: var(--g600); padding: 4px 0 4px 14px; position: relative; line-height: 1.5; }
+    .s-content li::before { content: '—'; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
+    .s-cta-dark { background: var(--black); padding: 32px; display: flex; flex-direction: column; justify-content: space-between; }
+    .s-cta-dark h3 { font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .s-cta-dark p { font-size: .88rem; color: rgba(255,255,255,.45); margin-bottom: 20px; line-height: 1.65; }
+
+    /* PARTNER (codecentric) */
+    #ki-partner { background: var(--g100); border-top: 1px solid var(--g200); }
+    .kp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--g200); border: 1px solid var(--g200); }
+    .kp-item { background: var(--white); padding: 28px 24px; }
+    .kp-item h4 { font-size: .95rem; font-weight: 700; color: var(--black); margin-bottom: 8px; }
+    .kp-item p { font-size: .84rem; line-height: 1.6; color: var(--g600); }
+
+    /* EXPERTE */
+    #experte { background: var(--g900); color: var(--white); }
+    #experte .ey { color: var(--teal); }
+    #experte .ey::before { background: var(--teal); }
+    .exp-grid { display: grid; grid-template-columns: 260px 1fr; gap: 64px; align-items: center; }
+    .exp-portrait { aspect-ratio: 3/4; background: var(--g800); border-radius: var(--r); overflow: hidden; border: 1px solid var(--g700); }
+    .exp-portrait svg { width: 100%; height: 100%; display: block; }
+    .exp-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,.06); margin: 24px 0; }
+    .exp-kpi { background: rgba(255,255,255,.03); padding: 16px 14px; }
+    .exp-kpi-v { font-size: 1.5rem; font-weight: 900; color: var(--teal); letter-spacing: -.04em; }
+    .exp-kpi-l { font-size: 10px; color: rgba(255,255,255,.35); margin-top: 3px; text-transform: uppercase; letter-spacing: .06em; }
+    .exp-text p { font-size: .92rem; line-height: 1.75; color: rgba(255,255,255,.6); margin-bottom: 14px; }
+    .exp-text strong { color: rgba(255,255,255,.9); font-weight: 600; }
+
+    /* CTA */
+    #page-cta { background: var(--black); border-top: 3px solid var(--teal); }
+    .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 48px; padding: 72px 0; }
+    #page-cta .ey { color: var(--teal); }
+    #page-cta .ey::before { background: var(--teal); }
+    .cta-text h2 { color: var(--white); margin: 16px 0 12px; }
+    .cta-text p { font-size: .95rem; color: rgba(255,255,255,.5); max-width: 480px; line-height: 1.72; }
+    .cta-acts { display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap; align-items: center; }
+
+    /* IMPRESSUM */
+    #impressum-page { display: none; position: fixed; inset: 0; z-index: 500; background: var(--white); overflow-y: auto; padding: 80px 0 60px; }
+    #impressum-page.open { display: block; }
+    .imp-close { position:fixed; top:20px; right:20px; width:40px; height:40px; background:var(--black); color:var(--white); border:none; border-radius:50%; font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:501; }
+    .imp-content h1 { font-size:1.8rem; margin-bottom:32px; }
+    .imp-content h2 { font-size:1.1rem; margin:28px 0 10px; color:var(--black); }
+    .imp-content h3 { font-size:.95rem; margin:20px 0 8px; }
+    .imp-content p { font-size:.9rem; line-height:1.75; color:var(--g700); margin-bottom:12px; }
+    .imp-content address { font-style:normal; font-size:.9rem; line-height:1.75; color:var(--g700); margin-bottom:12px; }
+
+    /* FOOTER */
+    footer { background: var(--g900); padding: 28px 0; border-top: 1px solid rgba(255,255,255,.06); }
+    .fi-w { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .fcopy { font-size: 12px; color: rgba(255,255,255,.25); }
+    .fnav { display: flex; gap: 24px; }
+    .fnav a { font-size: 12px; color: rgba(255,255,255,.3); transition: color .14s; cursor: pointer; }
+    .fnav a:hover { color: rgba(255,255,255,.7); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1100px) {
+      .page-hero-in { grid-template-columns: 1fr; gap: 40px; }
+      .lblock-grid { grid-template-columns: 1fr; }
+      .lblock-full-inner { grid-template-columns: 1fr; gap: 28px; }
+      .fund-grid { grid-template-columns: 1fr; }
+      .s-grid { grid-template-columns: 1fr; }
+      .kp-grid { grid-template-columns: 1fr; }
+      .exp-grid { grid-template-columns: 1fr; gap: 36px; }
+      .exp-portrait { max-width: 240px; }
+      .webinar-card { grid-template-columns: 1fr; gap: 28px; }
+      .cta-inner { flex-direction: column; align-items: flex-start; gap: 32px; }
+    }
+    @media (max-width: 800px) {
+      .wrap { padding: 0 20px; }
+      .nav-w { padding: 0 20px; }
+      .nav-links, .nav-act .btn-outline { display: none; }
+      .hbg { display: flex; }
+      .sec { padding: 56px 0; }
+      .sec-sm { padding: 40px 0; }
+      .page-hero-in { padding: 48px 0 56px; }
+      .fi-w { flex-direction: column; gap: 10px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-w">
+    <a href="../../" class="nav-logo">
+      <span class="nav-logo-n">Inge Hanschke</span>
+      <span class="nav-logo-s">Hanschke Consulting</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../" class="active">Beratung</a></li>
+      <li><a href="../../ueber-inge/">Über mich</a></li>
+      <li><a href="../../trainings/">Schulungen</a></li>
+      <li><a href="../../buecher/">Bücher</a></li>
+      <li><a href="../../partner/">Partner</a></li>
+      <li><a href="../../#events">Events</a></li>
+    </ul>
+    <div class="nav-act">
+      <a href="../../#evstrip" class="btn btn-outline" style="padding:8px 16px;font-size:12.5px;">Termine</a>
+      <a href="../../#kontakt" class="btn btn-primary" style="padding:8px 16px;font-size:12.5px;">Kontakt</a>
+    </div>
+    <button class="hbg" id="hbgBtn" onclick="toggleMenu()" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <a href="../" onclick="closeMenu()">Beratung</a>
+  <a href="../../ueber-inge/" onclick="closeMenu()">Über mich</a>
+  <a href="../../trainings/" onclick="closeMenu()">Schulungen &amp; Webinare</a>
+  <a href="../../buecher/" onclick="closeMenu()">Bücher</a>
+  <a href="../../partner/" onclick="closeMenu()">Partner</a>
+  <a href="../../#events" onclick="closeMenu()">Events</a>
+  <a href="../../#kontakt" class="btn btn-primary" onclick="closeMenu()">Kontakt aufnehmen</a>
+</div>
+
+<!-- PAGE HERO -->
+<section id="page-hero">
+  <div class="wrap">
+    <div class="page-hero-in">
+      <div>
+        <div class="page-hero-bc">
+          <a href="../../">Startseite</a>
+          <span>›</span>
+          <a href="../">Beratungsleistungen</a>
+          <span>›</span>
+          <span style="color:var(--black);">KI &amp; Data</span>
+        </div>
+        <span class="ey">Beratungsleistung 04</span>
+        <h1 style="margin-top:18px;"><em class="t">KI &amp; Data.</em><br>Fundament zuerst.</h1>
+        <p class="lead" style="margin-top:20px;max-width:520px;">
+          Ohne sauberes Datenmanagement kein verlässliches BI —
+          und ohne BI fehlen der KI die strukturierten Grundlagen.
+          KI-/BI-Strategie, Lean Datenmanagement und individuelle KI-Beratung
+          für datengetriebene Unternehmenssteuerung.
+        </p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:32px;">
+          <a href="../../#kontakt" class="btn btn-teal">
+            KI &amp; Data Beratung anfragen
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#webinar" class="btn btn-outline">Webinar-Info</a>
+        </div>
+      </div>
+      <div class="expert-badge">
+        <div class="eb-label">KI &amp; Data — Hanschke Consulting</div>
+        <div class="eb-stat">
+          <span class="eb-v">35<sup>+</sup></span>
+          <span class="eb-l">Jahre IT-Praxis</span>
+        </div>
+        <div class="eb-stat">
+          <span class="eb-v">500<sup>+</sup></span>
+          <span class="eb-l">Unternehmen beraten</span>
+        </div>
+        <div class="eb-stat">
+          <span class="eb-v">10<sup>+</sup></span>
+          <span class="eb-l">Fachbücher Hanser Verlag</span>
+        </div>
+        <div class="eb-sep"></div>
+        <p class="eb-quote">
+          Daten sind das Fundament. BI der Rückspiegel. <strong>KI das Fernrohr.</strong>
+          Alle drei brauchen eine solide Basis — bevor sie nützen.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANCHOR NAV -->
+<nav id="anav">
+  <div class="wrap">
+    <div class="anav-in">
+      <a href="#fundament" class="anav-link active">Daten — BI — KI</a>
+      <a href="#beratung" class="anav-link">Beratungsleistungen</a>
+      <a href="#webinar" class="anav-link">Webinar</a>
+      <a href="#schulungen" class="anav-link">Schulungen</a>
+      <a href="#ki-partner" class="anav-link">Partner</a>
+      <a href="#experte" class="anav-link">Über die Expertin</a>
+    </div>
+  </div>
+</nav>
+
+<!-- FUNDAMENT-ERKLÄRUNG (KI-spezifisch) -->
+<section id="fundament">
+  <div class="wrap" style="padding-top:56px;padding-bottom:56px;">
+    <div style="margin-bottom:36px;">
+      <span class="ey teal">Warum Fundament zuerst</span>
+      <h2 style="color:var(--white);margin-top:16px;">Daten. BI. KI.<br>In dieser Reihenfolge.</h2>
+    </div>
+    <div class="fund-grid">
+      <div class="fund-item">
+        <div class="fund-num">01 — Daten</div>
+        <h3>Das Fundament</h3>
+        <p>Datenmanagement liefert das Fundament für alle Planungs- und Entscheidungsprozesse. Es sorgt für die Bereitstellung aller Daten in angemessener Qualität — für datengetriebene Geschäftsmodelle und optimale Nutzung.</p>
+      </div>
+      <div class="fund-item">
+        <div class="fund-num">02 — BI</div>
+        <h3>Der Rückspiegel</h3>
+        <p>Business Intelligence umfasst alle Technologien und Prozesse, die Daten sammeln, strukturieren und visualisieren. BI liefert den Blick in den Rückspiegel — was war, was ist, wo stehen wir.</p>
+      </div>
+      <div class="fund-item">
+        <div class="fund-num">03 — KI</div>
+        <h3>Das Fernrohr</h3>
+        <p>Künstliche Intelligenz ist der Blick durch das Fernrohr: Muster erkennen, Vorhersagen treffen, Automatisierung. Aber nur auf Basis sauberer Daten und belastbarer BI-Strukturen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BERATUNGSLEISTUNGEN -->
+<section id="beratung" class="sec">
+  <div class="wrap">
+    <div style="margin-bottom:40px;">
+      <span class="ey teal">Beratungsleistungen</span>
+      <h2 style="margin-top:18px;">Strategie, Fundament<br>und KI-Umsetzung.</h2>
+      <p class="l-intro" style="margin-top:14px;">
+        Hanschke Consulting begleitet den gesamten Weg — von der <strong>KI-/BI-Strategie</strong>
+        über den Aufbau eines <strong>handhabbaren Datenmanagements</strong>
+        bis zur konkreten <strong>KI-Umsetzung</strong> im Unternehmen.
+        Profitieren Sie von Best-Practice-Templates und praxiserprobten Methoden.
+      </p>
+    </div>
+
+    <div class="lblock-grid">
+      <div class="lblock">
+        <div class="lblock-num">01</div>
+        <h3>KI- &amp; BI-Strategie und Operationalisierung</h3>
+        <p>
+          Ausrichtung und Leitplanken vorgeben — Profitieren Sie von Hanschke-Consulting Templates
+          &amp; Best-Practices für eine KI-gestützte Unternehmenssteuerung.
+          Von der Strategie bis zur Roadmap: klar, umsetzbar, messbar.
+        </p>
+        <ul class="l-list">
+          <li>KI-/BI-Strategie entwickeln und mit Unternehmenszielen verknüpfen</li>
+          <li>Use-Case-Priorisierung: Welche KI-Vorhaben bringen tatsächlich Nutzen?</li>
+          <li>KI-Governance: Verantwortlichkeiten, Qualitätssicherung, Compliance</li>
+          <li>Operationalisierung: Von der Strategie zum ersten produktiven Einsatz</li>
+        </ul>
+        <div class="lblock-tags" style="margin-top:16px;">
+          <span class="ltag t">KI-Strategie</span>
+          <span class="ltag t">BI-Strategie</span>
+          <span class="ltag">Governance</span>
+        </div>
+      </div>
+      <div class="lblock">
+        <div class="lblock-num">02</div>
+        <h3>Quick-Start &amp; Ausbau Lean Datenmanagement</h3>
+        <p>
+          Datenqualität und Mehrwert aus Daten über ein handhabbares Datenmanagement.
+          Bereitstellung aller Daten in angemessener Qualität für datengetriebene Geschäftsmodelle
+          — mit Quick-Start statt jahrelangem Aufbauprojekt.
+        </p>
+        <ul class="l-list">
+          <li>Datenarchitektur: Strukturen, Plattformen, Schnittstellen</li>
+          <li>Data Governance: Verantwortlichkeiten, Richtlinien, Qualitätsprozesse</li>
+          <li>Data Mesh: Dezentrale Datenverantwortung für skalierbare Organisationen</li>
+          <li>Stammdaten-Management und Datenqualitätssicherung</li>
+        </ul>
+        <div class="lblock-tags" style="margin-top:16px;">
+          <span class="ltag t">Data Governance</span>
+          <span class="ltag t">Data Mesh</span>
+          <span class="ltag">Datenqualität</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="lblock-grid">
+      <div class="lblock">
+        <div class="lblock-num">03</div>
+        <h3>KI-Readiness-Assessment</h3>
+        <p>
+          Wie bereit ist Ihr Unternehmen für KI — wirklich?
+          Systematische Bewertung der KI-Voraussetzungen:
+          Datenbasis, Infrastruktur, Organisation, Kompetenzen und Governance.
+          Ergebnis: ein ehrliches Bild und ein priorisierter Aktionsplan.
+        </p>
+        <ul class="l-list">
+          <li>Daten-Readiness: Verfügbarkeit, Qualität, Zugänglichkeit</li>
+          <li>Infrastruktur: Plattformen, MLOps, Skalierbarkeit</li>
+          <li>Organisation: Kompetenzen, Rollen, Change-Bereitschaft</li>
+          <li>Governance: Datenschutz, KI-Ethik, Regulatorik</li>
+        </ul>
+        <div class="lblock-tags" style="margin-top:16px;">
+          <span class="ltag t">KI-Readiness</span>
+          <span class="ltag">Assessment</span>
+          <span class="ltag">Aktionsplan</span>
+        </div>
+      </div>
+      <div class="lblock">
+        <div class="lblock-num">04</div>
+        <h3>Individuelle KI-Beratung</h3>
+        <p>
+          Aufbau und Management von KI-Modellen, KI-gestützte Arbeitsweisen
+          und individuelle Beratungsleistungen für Ihr spezifisches KI-Vorhaben.
+          Kein One-Size-Fits-All — sondern maßgeschneidert auf Ihre Situation.
+        </p>
+        <ul class="l-list">
+          <li>KI-Use-Case-Entwicklung und Pilotierung</li>
+          <li>ML-Modell-Auswahl und -Implementierung begleiten</li>
+          <li>KI-gestützte Prozessautomatisierung</li>
+          <li>Generative KI: Einsatzfelder und Grenzen realistisch bewerten</li>
+        </ul>
+        <div class="lblock-tags" style="margin-top:16px;">
+          <span class="ltag t">KI-Umsetzung</span>
+          <span class="ltag t">ML-Modelle</span>
+          <span class="ltag">Gen-KI</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Full-width: Datenplattform & Cloud -->
+    <div class="lblock-full">
+      <div class="lblock-num">05</div>
+      <h3>Datenplattform-Architektur &amp; Cloud-Strategie</h3>
+      <div class="lblock-full-inner">
+        <div>
+          <p>
+            Moderne Datenplattformen sind das technische Fundament für BI und KI —
+            Lakehouse, Data Warehouse, Data Lake oder hybrider Ansatz.
+            Hanschke Consulting begleitet die <strong>Architekturentscheidung und den Aufbau</strong>
+            auf Basis konkreter Anforderungen, nicht auf Basis von Technologie-Hype.
+          </p>
+          <ul class="l-list">
+            <li>Anforderungsanalyse: Was wird wirklich gebraucht?</li>
+            <li>Architekturentscheidung: Lakehouse, Data Warehouse, Data Lake</li>
+            <li>Cloud-Plattform-Auswahl (AWS, Azure, GCP) — herstellerneutral</li>
+          </ul>
+        </div>
+        <div>
+          <p>
+            Eine Datenplattform ist kein Selbstzweck. Sie muss die Fachbereiche bei der
+            täglichen Arbeit unterstützen — nicht nur die IT begeistern.
+            Daher steht der geschäftliche Nutzen vor der technologischen Vollständigkeit.
+          </p>
+          <ul class="l-list">
+            <li>Migrationsstrategie: Von bestehender Infrastruktur zur Zielplattform</li>
+            <li>DataOps und MLOps: Betrieb und Weiterentwicklung absichern</li>
+            <li>Kosten-Transparenz und Governance in Cloud-Umgebungen</li>
+          </ul>
+          <div class="lblock-tags" style="margin-top:16px;">
+            <span class="ltag t">Datenplattform</span>
+            <span class="ltag t">Cloud</span>
+            <span class="ltag">MLOps</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WEBINAR -->
+<section id="webinar" class="sec-sm">
+  <div class="wrap">
+    <div style="margin-bottom:32px;">
+      <span class="ey teal">Webinar-Information</span>
+      <h2 style="margin-top:18px;">KI &amp; Data Webinar — geplant</h2>
+    </div>
+    <div class="webinar-card">
+      <div>
+        <div class="wc-label">Webinar · in Planung</div>
+        <div class="wc-code" style="color:var(--teal);">KI-DATA (geplant)</div>
+        <h3>KI &amp; Data — Mehrwert aus Ihren Daten</h3>
+        <p>
+          Ein dediziertes Webinar zu KI &amp; Datenmanagement ist in Planung.
+          Inhalte: KI-Strategie, Lean Datenmanagement, Data Governance und realistische
+          KI-Einstiegspunkte für Unternehmen unterschiedlicher Reifegrade.
+          Melden Sie Ihr Interesse an — Sie werden als Erstes informiert.
+        </p>
+        <div class="wc-meta">
+          <div class="wc-meta-item">
+            <span class="wc-meta-label">Format</span>
+            <span class="wc-meta-val">Online-Webinar</span>
+          </div>
+          <div class="wc-meta-item">
+            <span class="wc-meta-label">Dauer</span>
+            <span class="wc-meta-val">ca. 60 Min.</span>
+          </div>
+          <div class="wc-meta-item">
+            <span class="wc-meta-label">Termin</span>
+            <span class="wc-meta-val" style="color:var(--teal);">Folgt</span>
+          </div>
+          <div class="wc-meta-item">
+            <span class="wc-meta-label">Kosten</span>
+            <span class="wc-meta-val" style="color:var(--teal);">Kostenlos</span>
+          </div>
+        </div>
+      </div>
+      <div class="wc-acts">
+        <a href="../../#kontakt" class="btn btn-teal" style="width:100%;justify-content:center;">
+          Interesse bekunden
+        </a>
+        <p class="wc-coming">Termin wird rechtzeitig kommuniziert.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHULUNGEN -->
+<section id="schulungen" class="sec">
+  <div class="wrap">
+    <div style="margin-bottom:40px;">
+      <span class="ey teal">Schulungen</span>
+      <h2 style="margin-top:18px;">KI &amp; Data lernen.<br>In zwei Tagen.</h2>
+      <p style="font-size:.95rem;line-height:1.72;color:var(--g700);margin-top:14px;max-width:600px;">
+        Eine 2-tägige Schulung — von der KI-Strategie bis zur produktiven Dateninfrastruktur.
+        Praxisorientiert, direkt anwendbar. Für IT-Leiter, Datenverantwortliche und alle,
+        die KI fundiert einführen wollen.
+      </p>
+    </div>
+    <div class="s-grid">
+      <div class="s-card">
+        <div class="s-card-code">KI-DATA</div>
+        <h3>Mehrwert aus KI &amp; Daten</h3>
+        <p>
+          KI-Strategie, Lean Datenmanagement, BI-Grundlagen und erste KI-Anwendungsfälle.
+          Von der Strategie bis zur produktiven Dateninfrastruktur — komprimiert auf zwei Tage.
+          Nach der Schulung: ein klarer Fahrplan und die richtigen ersten Schritte.
+        </p>
+        <div class="s-card-details">
+          <div class="s-detail">
+            <span class="s-detail-l">Dauer</span>
+            <span class="s-detail-v">2 Tage</span>
+          </div>
+          <div class="s-detail">
+            <span class="s-detail-l">Zielgruppe</span>
+            <span class="s-detail-v">IT-Leiter · CDOs · Data-Teams</span>
+          </div>
+          <div class="s-detail">
+            <span class="s-detail-l">Format</span>
+            <span class="s-detail-v">Präsenz / Online</span>
+          </div>
+          <div class="s-detail">
+            <span class="s-detail-l">Nächster Termin</span>
+            <span class="s-detail-v">Auf Anfrage</span>
+          </div>
+        </div>
+        <ul class="s-content">
+          <li>KI-Strategie: Ausrichtung, Leitplanken, Use-Case-Priorisierung</li>
+          <li>Lean Datenmanagement: Grundlagen, Architekturoptionen, Quick-Start</li>
+          <li>Data Governance: Verantwortlichkeiten, Richtlinien, Qualitätsprozesse</li>
+          <li>BI-Grundlagen: Überblick Technologien, Auswahl-Kriterien</li>
+          <li>KI-Readiness: Voraussetzungen schaffen, Risiken kennen</li>
+          <li>Praxisbeispiele &amp; Transferübungen</li>
+        </ul>
+        <a href="../../#kontakt" class="btn btn-teal" style="align-self:flex-start;">
+          Zur KI-DATA-Schulung anmelden
+        </a>
+      </div>
+
+      <div class="s-cta-dark">
+        <div>
+          <h3>Schulung individuell buchen</h3>
+          <p>
+            Inhouse-Schulungen für Ihr Data-Team, thematische Anpassung, Kombination
+            mit EAM oder Strategischem IT-Management —
+            Anfrage direkt über das Kontaktformular.
+          </p>
+        </div>
+        <div>
+          <a href="../../#kontakt" class="btn btn-teal">Inhouse-Schulung anfragen</a>
+          <p style="font-size:.83rem;color:rgba(255,255,255,.3);margin-top:20px;line-height:1.6;">
+            Kombination mit EAM (EAM1/EAM2) oder Strategischem IT-Management (STRAT) möglich.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNER -->
+<section id="ki-partner" class="sec-sm">
+  <div class="wrap">
+    <div style="margin-bottom:32px;">
+      <span class="ey teal">Partner</span>
+      <h2 style="margin-top:18px;">KI-Kompetenz<br>aus dem Netzwerk.</h2>
+      <p style="font-size:.9rem;color:var(--g600);margin-top:12px;max-width:560px;line-height:1.7;">
+        Für komplexe KI- und Datenprojekte arbeitet Hanschke Consulting mit spezialisierten Partnern zusammen.
+      </p>
+    </div>
+    <div class="kp-grid">
+      <div class="kp-item">
+        <h4>codecentric AG</h4>
+        <p>Spezialist für KI, Machine Learning, Data Engineering und Cloud-native Software.
+          Kombination aus strategischer Beratung durch Hanschke Consulting
+          und technischer Umsetzungskompetenz durch codecentric.</p>
+      </div>
+      <div class="kp-item">
+        <h4>Weitere Partnerkompetenzen</h4>
+        <p>Das Hanschke-Consulting-Netzwerk umfasst weitere Spezialisten für
+          Datenplattformen, BI-Tools und KI-Implementierung.
+          Für Ihr spezifisches Vorhaben empfehlen wir den passenden Partner.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTIN -->
+<section id="experte" class="sec">
+  <div class="wrap">
+    <div class="exp-grid">
+      <div>
+        <div class="exp-portrait">
+          <svg viewBox="0 0 260 325" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="260" height="325" fill="#282828"/>
+            <circle cx="130" cy="112" r="54" fill="#363636"/>
+            <ellipse cx="130" cy="270" rx="96" ry="76" fill="#363636"/>
+            <text x="130" y="316" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="500" fill="#4a4a4a">Foto folgt</text>
+          </svg>
+        </div>
+      </div>
+      <div>
+        <span class="ey teal">Über die Expertin</span>
+        <h2 style="color:var(--white);margin:16px 0 8px;">Inge Hanschke.<br>KI &amp; Data<br>auf solidem Fundament.</h2>
+        <p style="font-size:11px;font-weight:500;color:rgba(255,255,255,.3);letter-spacing:.06em;text-transform:uppercase;margin-bottom:24px;">Dipl.-Inf. · Gründerin Hanschke Consulting</p>
+        <div class="exp-kpis">
+          <div class="exp-kpi"><div class="exp-kpi-v">35+</div><div class="exp-kpi-l">Jahre IT-Praxis</div></div>
+          <div class="exp-kpi"><div class="exp-kpi-v">500+</div><div class="exp-kpi-l">Unternehmen</div></div>
+          <div class="exp-kpi"><div class="exp-kpi-v">10+</div><div class="exp-kpi-l">Fachbücher</div></div>
+        </div>
+        <div class="exp-text">
+          <p>
+            Inge Hanschke begleitet KI- und Datenprojekte nicht als Technologie-Enthusiastin,
+            sondern als <strong>IT-Strategin</strong>: Was ist der geschäftliche Nutzen?
+            Was sind die realistischen Voraussetzungen? Was scheitert regelmäßig — und warum?
+          </p>
+          <p>
+            Ihr neues Buch <strong>„Wirksames strategisches IT-Management"</strong> erscheint <strong>NEU 2027</strong>
+            und widmet sich auch den Themen KI-Strategie und datengetriebenes IT-Management.
+          </p>
+        </div>
+        <a href="../../ueber-inge/" class="btn btn-outline-w">Vollständige Biografie</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="page-cta">
+  <div class="wrap">
+    <div class="cta-inner">
+      <div class="cta-text">
+        <span class="ey teal">KI &amp; Data anfragen</span>
+        <h2>KI fundiert einführen.<br>Jetzt anfragen.</h2>
+        <p>
+          KI-Strategie, Datenmanagement-Beratung oder Schulungsanmeldung —
+          Rückmeldung innerhalb von 24 Stunden.
+          Direkt und ohne Umweg.
+        </p>
+      </div>
+      <div class="cta-acts">
+        <a href="../../#kontakt" class="btn btn-teal">
+          Beratung anfragen
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="../" class="btn btn-outline-w">Alle Leistungen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fi-w">
+      <span class="fcopy">© 2026 Hanschke Consulting · Inge Hanschke · Alle Rechte vorbehalten.</span>
+      <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+        <nav class="fnav">
+          <a onclick="openImpressum()">Impressum</a>
+          <a onclick="openImpressum('datenschutz')">Datenschutz</a>
+          <a href="https://www.linkedin.com/in/ingehanschke/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener">Hanser Verlag</a>
+        </nav>
+        <div style="display:flex;gap:6px;align-items:center;border-left:1px solid rgba(255,255,255,.1);padding-left:20px;">
+          <a href="#" style="font-size:11px;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.85);padding:3px 8px;background:rgba(255,255,255,.12);border-radius:2px;">DE</a>
+          <a href="#" title="English version coming soon" style="font-size:11px;font-weight:600;letter-spacing:.06em;color:rgba(255,255,255,.3);padding:3px 8px;border-radius:2px;">EN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- IMPRESSUM OVERLAY -->
+<div id="impressum-page">
+  <button class="imp-close" onclick="closeImpressum()">✕</button>
+  <div class="wrap">
+    <div class="imp-content">
+      <h1 id="imp-title">Impressum</h1>
+      <div id="imp-main">
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <address>Inge Hanschke<br>Straßl ins Holz 15<br>81829 München<br>Deutschland</address>
+        <h2>Kontakt</h2>
+        <p>E-Mail: <a href="mailto:info@hanschke-consulting.com">info@hanschke-consulting.com</a><br>Mobil: <a href="tel:+4915221000172">+49 (0)152 210 001 72</a></p>
+        <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+        <p>Inge Hanschke</p>
+        <h2>Haftungsausschluss</h2>
+        <h3>Haftung für Inhalte</h3>
+        <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+        <h3>Haftung für Links</h3>
+        <p>Unser Angebot enthält Links zu externen Webseiten Dritter. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+        <h3>Urheberrecht</h3>
+        <p>Die durch die Seitenbetreiber erstellten Inhalte unterliegen dem deutschen Urheberrecht. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+      </div>
+      <div id="imp-datenschutz" style="display:none;">
+        <h2>Datenschutzerklärung</h2>
+        <p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Erhobene Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.</p>
+        <p>Wir weisen darauf hin, dass die Datenübertragung im Internet Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
+        <p>Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung wird hiermit ausdrücklich widersprochen.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('sc', scrollY > 16), {passive:true});
+  function toggleMenu() {
+    const m = document.getElementById('mmenu'), b = document.getElementById('hbgBtn');
+    const open = m.classList.toggle('open');
+    b.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  function closeMenu() {
+    document.getElementById('mmenu').classList.remove('open');
+    document.getElementById('hbgBtn').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  const sections = ['fundament','beratung','webinar','schulungen','ki-partner','experte'];
+  const anavLinks = document.querySelectorAll('.anav-link');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        anavLinks.forEach(l => l.classList.remove('active'));
+        const link = document.querySelector(`.anav-link[href="#${entry.target.id}"]`);
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(id => { const el = document.getElementById(id); if(el) observer.observe(el); });
+  function openImpressum(section) {
+    const page = document.getElementById('impressum-page');
+    document.getElementById('imp-main').style.display = section === 'datenschutz' ? 'none' : 'block';
+    document.getElementById('imp-datenschutz').style.display = section === 'datenschutz' ? 'block' : 'none';
+    document.getElementById('imp-title').textContent = section === 'datenschutz' ? 'Datenschutz' : 'Impressum';
+    page.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeImpressum() {
+    document.getElementById('impressum-page').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if(e.key==='Escape') closeImpressum(); });
+</script>
+<script src="https://visual-feedback-tool.vercel.app/api/embed.js?key=3d1b3cb26e7e52347690a5348e94a491c2b71b858fdd1a18"></script>
+</body>
+</html>

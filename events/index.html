@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events &amp; Termine — Webinare, Schulungen, Keynotes | Hanschke Consulting</title>
+  <meta name="description" content="Alle Termine von Hanschke Consulting: kostenlose Freitags-Webinare, Schulungen, Keynotes und LinkedIn Events. Jetzt Platz sichern oder individuellen Termin anfragen.">
+  <meta property="og:title" content="Events &amp; Termine — Hanschke Consulting">
+  <meta property="og:description" content="Webinare, Schulungen, Keynotes und LinkedIn Events. Alle Termine von Inge Hanschke auf einen Blick.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.hanschke-consulting.com/events/">
+  <meta property="og:image" content="https://www.hanschke-consulting.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    :root {
+      --red: #E94545; --red-dk: #c83030; --black: #0a0a0a; --g900: #141414;
+      --g800: #282828; --g700: #3c3c3c; --g600: #666; --g400: #999;
+      --g200: #e0e0e0; --g100: #f5f5f5; --g50: #fafafa; --white: #fff;
+      --teal: #1a7d8b; --f: 'Inter', sans-serif; --max: 1200px; --r: 2px;
+      --ease: cubic-bezier(.25,.1,.25,1);
+    }
+    body { font-family: var(--f); background: var(--white); color: var(--black); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 48px; }
+    .ey { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--red); }
+    .ey::before { content:''; display:block; width:20px; height:2px; background:var(--red); flex-shrink:0; }
+    h1 { font-size: clamp(2.4rem,5.5vw,4rem); font-weight: 900; line-height: 1.08; letter-spacing: -.035em; }
+    h2 { font-size: clamp(1.8rem,3vw,2.6rem); font-weight: 700; line-height: 1.1; letter-spacing: -.025em; }
+    h3 { font-size: 1rem; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; }
+    .lead { font-size: 1.05rem; line-height: 1.72; color: var(--g700); }
+    em.r { font-style: normal; color: var(--red); }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; font-family: var(--f); font-size: 13px; font-weight: 600; letter-spacing: .01em; border-radius: var(--r); transition: background .15s var(--ease), color .15s var(--ease), border-color .15s var(--ease), transform .1s; cursor: pointer; border: 1.5px solid transparent; white-space: nowrap; }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--red); color: var(--white); border-color: var(--red); }
+    .btn-primary:hover { background: var(--red-dk); border-color: var(--red-dk); }
+    .btn-dark { background: var(--black); color: var(--white); border-color: var(--black); }
+    .btn-dark:hover { background: var(--g800); border-color: var(--g800); }
+    .btn-outline { background: transparent; color: var(--black); border-color: var(--g200); }
+    .btn-outline:hover { border-color: var(--black); }
+    .btn-outline-w { background: transparent; color: var(--white); border-color: rgba(255,255,255,.35); }
+    .btn-outline-w:hover { background: var(--white); color: var(--black); border-color: var(--white); }
+    .sec { padding: 96px 0; }
+    .sec-sm { padding: 64px 0; }
+
+    /* NAV */
+    #nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; background: rgba(255,255,255,.96); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--g200); transition: box-shadow .2s; }
+    #nav.sc { box-shadow: 0 2px 24px rgba(0,0,0,.07); }
+    .nav-w { max-width: var(--max); margin: 0 auto; padding: 0 48px; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-logo { display:flex; flex-direction:column; flex-shrink:0; }
+    .nav-logo-n { font-size: 14.5px; font-weight: 800; letter-spacing: -.02em; color: var(--black); line-height: 1.1; }
+    .nav-logo-s { font-size: 9.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--red); margin-top: 2px; }
+    .nav-links { display:flex; align-items:center; gap:26px; }
+    .nav-links a { font-size: 13px; font-weight: 500; color: var(--g600); transition: color .14s; }
+    .nav-links a:hover { color: var(--black); }
+    .nav-links a.active { color: var(--black); font-weight: 600; }
+    .nav-act { display:flex; align-items:center; gap:8px; flex-shrink:0; }
+    .hbg { display:none; flex-direction:column; justify-content:center; gap:5px; cursor:pointer; padding:6px; background:none; border:none; width:36px; height:36px; }
+    .hbg span { display:block; width:22px; height:1.5px; background:var(--black); transition:transform .22s var(--ease),opacity .22s; transform-origin:center; }
+    .hbg.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+    .hbg.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+    .hbg.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+    .mmenu { display:none; position:fixed; top:60px; left:0; right:0; bottom:0; background:var(--white); z-index:199; padding:32px 24px 48px; flex-direction:column; gap:4px; overflow-y:auto; }
+    .mmenu.open { display:flex; }
+    .mmenu a { font-size:1.05rem; font-weight:600; color:var(--black); padding:13px 0; border-bottom:1px solid var(--g100); }
+    .mmenu .btn { margin-top:20px; align-self:flex-start; }
+
+    /* PAGE HERO */
+    #page-hero { padding-top: 60px; background: var(--white); position: relative; overflow: hidden; }
+    #page-hero::before { content:''; position:absolute; inset:0; background-image: linear-gradient(var(--g200) 1px,transparent 1px), linear-gradient(90deg,var(--g200) 1px,transparent 1px); background-size: 64px 64px; opacity: .35; pointer-events:none; }
+    #page-hero::after { content:''; position:absolute; inset:0; background: radial-gradient(ellipse 80% 100% at 50% 100%,transparent 40%,var(--white) 100%); pointer-events:none; }
+    .page-hero-in { position: relative; z-index: 1; padding: 80px 0 88px; max-width: 720px; }
+    .page-hero-bc { font-size: 12px; font-weight: 500; color: var(--g400); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .page-hero-bc a { color: var(--g400); transition: color .14s; }
+    .page-hero-bc a:hover { color: var(--black); }
+    .page-hero-bc span { color: var(--g200); }
+
+    /* FILTER BAR */
+    #filter-bar { background: var(--g100); border-bottom: 1px solid var(--g200); position: sticky; top: 60px; z-index: 100; }
+    .filter-bar-in { display: flex; align-items: center; gap: 0; overflow-x: auto; scrollbar-width: none; padding: 0; }
+    .filter-bar-in::-webkit-scrollbar { display: none; }
+    .filter-btn { padding: 14px 22px; font-size: 12.5px; font-weight: 600; color: var(--g600); background: none; border: none; border-bottom: 2px solid transparent; cursor: pointer; white-space: nowrap; transition: color .14s, border-color .14s; font-family: var(--f); }
+    .filter-btn:hover { color: var(--black); }
+    .filter-btn.active { color: var(--black); border-bottom-color: var(--red); }
+
+    /* EVENTS GRID */
+    #events { background: var(--white); }
+    .events-section { margin-bottom: 64px; }
+    .events-section:last-child { margin-bottom: 0; }
+    .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--g200); }
+    .section-head h2 { font-size: 1.3rem; font-weight: 700; letter-spacing: -.02em; }
+    .section-head-count { font-size: 12px; font-weight: 600; color: var(--g400); }
+
+    /* Event Card */
+    .event-card { border: 1px solid var(--g200); border-radius: var(--r); background: var(--white); display: grid; grid-template-columns: 80px 1fr auto; gap: 0; margin-bottom: 1px; transition: background .14s; overflow: hidden; }
+    .event-card:hover { background: var(--g50); }
+    .event-date { background: var(--black); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px 16px; text-align: center; flex-shrink: 0; }
+    .event-date-day { font-size: 1.6rem; font-weight: 900; color: var(--white); line-height: 1; letter-spacing: -.04em; }
+    .event-date-mon { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-top: 4px; }
+    .event-date.tbd { background: var(--g800); }
+    .event-date.tbd .event-date-day { font-size: .75rem; font-weight: 700; letter-spacing: .04em; color: rgba(255,255,255,.5); text-transform: uppercase; }
+    .event-body { padding: 20px 24px; }
+    .event-type-badge { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 2px 8px; border-radius: 2px; margin-bottom: 8px; }
+    .badge-webinar { background: rgba(233,69,69,.1); color: var(--red); }
+    .badge-schulung { background: rgba(10,10,10,.07); color: var(--black); }
+    .badge-extern { background: rgba(26,125,139,.12); color: var(--teal); }
+    .badge-keynote { background: rgba(10,10,10,.07); color: var(--black); }
+    .event-body h3 { font-size: .98rem; font-weight: 700; color: var(--black); margin-bottom: 6px; letter-spacing: -.01em; }
+    .event-body p { font-size: .87rem; line-height: 1.65; color: var(--g600); max-width: 560px; margin-bottom: 12px; }
+    .event-meta { display: flex; gap: 20px; flex-wrap: wrap; }
+    .event-meta-item { display: flex; align-items: center; gap: 5px; font-size: 11.5px; color: var(--g400); font-weight: 500; }
+    .event-meta-item svg { flex-shrink: 0; }
+    .event-act { display: flex; flex-direction: column; align-items: flex-end; justify-content: center; padding: 20px 24px; gap: 8px; flex-shrink: 0; }
+    .event-free { font-size: 11px; font-weight: 700; color: var(--red); letter-spacing: .04em; text-transform: uppercase; }
+    .event-price { font-size: 11px; font-weight: 600; color: var(--g600); }
+
+    /* On-Demand / Placeholder cards */
+    .event-card.placeholder { opacity: .6; }
+    .event-card.placeholder:hover { opacity: 1; background: var(--g50); }
+
+    /* No-match CTA */
+    .no-match-cta { background: var(--g100); border: 1px solid var(--g200); border-radius: var(--r); padding: 36px 40px; display: flex; align-items: center; justify-content: space-between; gap: 40px; margin-top: 40px; }
+    .no-match-cta h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+    .no-match-cta p { font-size: .9rem; color: var(--g600); line-height: 1.65; max-width: 440px; }
+    .no-match-acts { display: flex; gap: 10px; flex-shrink: 0; flex-wrap: wrap; }
+
+    /* IMPRESSIONEN */
+    #impressionen { background: var(--g900); }
+    #impressionen .ey { color: var(--red); }
+    #impressionen .ey::before { background: var(--red); }
+    .impressionen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 40px; }
+    .impression-item { aspect-ratio: 4/3; background: var(--g800); position: relative; overflow: hidden; border-radius: var(--r); }
+    .impression-item:first-child { grid-column: span 2; aspect-ratio: 2/1; }
+    .impression-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: rgba(255,255,255,.2); }
+    .impression-placeholder svg { opacity: .3; }
+    .impression-placeholder span { font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+    .impression-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.7) 0%, transparent 50%); display: flex; align-items: flex-end; padding: 16px; opacity: 0; transition: opacity .2s; }
+    .impression-item:hover .impression-overlay { opacity: 1; }
+    .impression-overlay span { font-size: 12px; font-weight: 600; color: var(--white); }
+
+    /* CTA */
+    #page-cta { background: var(--black); }
+    .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 48px; padding: 72px 0; }
+    #page-cta .ey { color: var(--red); }
+    #page-cta .ey::before { background: var(--red); }
+    .cta-text h2 { color: var(--white); margin: 16px 0 12px; }
+    .cta-text p { font-size: .95rem; color: rgba(255,255,255,.5); max-width: 480px; line-height: 1.72; }
+    .cta-acts { display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap; align-items: center; }
+
+    /* IMPRESSUM */
+    #impressum-page { display: none; position: fixed; inset: 0; z-index: 500; background: var(--white); overflow-y: auto; padding: 80px 0 60px; }
+    #impressum-page.open { display: block; }
+    .imp-close { position:fixed; top:20px; right:20px; width:40px; height:40px; background:var(--black); color:var(--white); border:none; border-radius:50%; font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:501; }
+    .imp-content h1 { font-size:1.8rem; margin-bottom:32px; }
+    .imp-content h2 { font-size:1.1rem; margin:28px 0 10px; color:var(--black); }
+    .imp-content h3 { font-size:.95rem; margin:20px 0 8px; }
+    .imp-content p { font-size:.9rem; line-height:1.75; color:var(--g700); margin-bottom:12px; }
+    .imp-content address { font-style:normal; font-size:.9rem; line-height:1.75; color:var(--g700); margin-bottom:12px; }
+
+    /* FOOTER */
+    footer { background: var(--g900); padding: 28px 0; border-top: 1px solid rgba(255,255,255,.06); }
+    .fi-w { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .fcopy { font-size: 12px; color: rgba(255,255,255,.25); }
+    .fnav { display: flex; gap: 24px; }
+    .fnav a { font-size: 12px; color: rgba(255,255,255,.3); transition: color .14s; cursor: pointer; }
+    .fnav a:hover { color: rgba(255,255,255,.7); }
+
+    /* hidden for filter */
+    .ev-section[data-hidden] { display: none; }
+    .event-card[data-hidden] { display: none; }
+
+    /* RESPONSIVE */
+    @media (max-width: 1100px) {
+      .event-card { grid-template-columns: 72px 1fr; }
+      .event-act { display: none; }
+      .event-body { padding-bottom: 24px; }
+      .impressionen-grid { grid-template-columns: 1fr 1fr; }
+      .impression-item:first-child { grid-column: span 2; }
+      .cta-inner { flex-direction: column; align-items: flex-start; gap: 32px; }
+      .no-match-cta { flex-direction: column; align-items: flex-start; gap: 24px; }
+    }
+    @media (max-width: 800px) {
+      .wrap { padding: 0 20px; }
+      .nav-w { padding: 0 20px; }
+      .nav-links, .nav-act .btn-outline { display: none; }
+      .hbg { display: flex; }
+      .sec { padding: 56px 0; }
+      .sec-sm { padding: 40px 0; }
+      .page-hero-in { padding: 48px 0 56px; }
+      .fi-w { flex-direction: column; gap: 10px; text-align: center; }
+      .event-card { grid-template-columns: 64px 1fr; }
+      .event-date { padding: 16px 10px; }
+      .event-body { padding: 16px; }
+      .impressionen-grid { grid-template-columns: 1fr; }
+      .impression-item:first-child { grid-column: span 1; aspect-ratio: 4/3; }
+      .section-head { flex-direction: column; gap: 4px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-w">
+    <a href="../" class="nav-logo">
+      <span class="nav-logo-n">Inge Hanschke</span>
+      <span class="nav-logo-s">Hanschke Consulting</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../leistungen/">Beratung</a></li>
+      <li><a href="../ueber-inge/">Über mich</a></li>
+      <li><a href="../trainings/">Schulungen</a></li>
+      <li><a href="../buecher/">Bücher</a></li>
+      <li><a href="../partner/">Partner</a></li>
+      <li><a href="#" class="active">Events</a></li>
+    </ul>
+    <div class="nav-act">
+      <a href="#" class="btn btn-outline" style="padding:8px 16px;font-size:12.5px;">Termine</a>
+      <a href="../#kontakt" class="btn btn-primary" style="padding:8px 16px;font-size:12.5px;">Kontakt</a>
+    </div>
+    <button class="hbg" id="hbgBtn" onclick="toggleMenu()" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <a href="../leistungen/" onclick="closeMenu()">Beratung</a>
+  <a href="../ueber-inge/" onclick="closeMenu()">Über mich</a>
+  <a href="../trainings/" onclick="closeMenu()">Schulungen &amp; Webinare</a>
+  <a href="../buecher/" onclick="closeMenu()">Bücher</a>
+  <a href="../partner/" onclick="closeMenu()">Partner</a>
+  <a href="#" onclick="closeMenu()">Events</a>
+  <a href="../#kontakt" class="btn btn-primary" onclick="closeMenu()">Kontakt aufnehmen</a>
+</div>
+
+<!-- PAGE HERO -->
+<section id="page-hero">
+  <div class="wrap">
+    <div class="page-hero-in">
+      <div class="page-hero-bc">
+        <a href="../">Startseite</a>
+        <span>›</span>
+        <span style="color:var(--black);">Events &amp; Termine</span>
+      </div>
+      <span class="ey">Veranstaltungen 2026</span>
+      <h1 style="margin-top:18px;">Events &amp;<br><em class="r">Termine.</em></h1>
+      <p class="lead" style="margin-top:20px;max-width:560px;">
+        Kostenlose Freitags-Webinare, offene Schulungen, Keynotes und LinkedIn Events —
+        alle Termine von Hanschke Consulting auf einen Blick.
+        Kein passender Termin? Individuellen Termin anfragen.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER BAR -->
+<div id="filter-bar">
+  <div class="wrap">
+    <div class="filter-bar-in">
+      <button class="filter-btn active" onclick="filterEvents('alle', this)">Alle Termine</button>
+      <button class="filter-btn" onclick="filterEvents('webinar', this)">Webinare</button>
+      <button class="filter-btn" onclick="filterEvents('schulung', this)">Schulungen</button>
+      <button class="filter-btn" onclick="filterEvents('extern', this)">Externe Events</button>
+      <button class="filter-btn" onclick="filterEvents('keynote', this)">Keynotes</button>
+    </div>
+  </div>
+</div>
+
+<!-- EVENTS -->
+<section id="events" class="sec">
+  <div class="wrap">
+
+    <!-- WEBINARE -->
+    <div class="events-section ev-section" data-type="webinar">
+      <div class="section-head">
+        <h2>Kostenlose Webinare</h2>
+        <span class="section-head-count">5 Webinare · Freitags · kostenlos</span>
+      </div>
+
+      <!-- BPEAM -->
+      <div class="event-card" data-type="webinar">
+        <div class="event-date tbd">
+          <div class="event-date-day">Auf<br>Anfrage</div>
+        </div>
+        <div class="event-body">
+          <span class="event-type-badge badge-webinar">Webinar · kostenlos</span>
+          <h3>Best-Practice EAM — Enterprise Architecture Management einfach &amp; effektiv</h3>
+          <p>Einstieg in Enterprise Architecture Management: Methodik, Werkzeuge, Erfahrungen aus über 500 Projekten. Für IT-Architekten, IT-Leiter und alle, die EAM pragmatisch einführen wollen.</p>
+          <div class="event-meta">
+            <div class="event-meta-item">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.3"/><path d="M8 5v3.5l2 1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+              30–60 Min.
+            </div>
+            <div class="event-meta-item">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5 2v2M11 2v2M2 7h12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+              Freitags
+            </div>
+            <div class="event-meta-item">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2 12s2-3 6-3 6 3 6 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="8" cy="6" r="2.5" stroke="currentColor" stroke-width="1.3"/></svg>
+              Online · unbegrenzte Teilnehmer
+            </div>
+            <div class="event-meta-item">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 6h4l-3.3 2.4L11.5 13 8 10.5 4.5 13l1.3-4.6L2.5 6h4z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+              Code: BPEAM
+            </div>
+          </div>
+        </div>
+        <div class="event-act">
+          <span class="event-free">Kostenlos</span>
+          <a href="../#kontakt" class="btn btn-dark" style="font-size:12px;padding:9px 18px;">Termin anfragen</a>
+        </div>
+      </div>
+
+      <!-- DIG -->
+      <div class="event-card" data-type="webinar">
+        <div class="event-date tbd">
+          <div class="event-date-day">Auf<br>Anfrage</div>
+        </div>
+        <div class="event-body">
+          <span class="event-type-badge badge-webinar">Webinar · kostenlos</span>
+          <h3>Wirksame Digitale Transformation — Methodik, Stolperfallen, Erfolgsfaktoren</h3>
+          <p>Digitale Transformation scheitert selten an der Technologie. Dieses Webinar zeigt, was wirklich funktioniert: Methodik aus der Praxis, häufige Fehler und konkrete Einstiegspunkte.</p>
+          <div class="event-meta">
+            <div class="event-meta-item">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.3"/><path d="M8 5v3.5l2 1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+              30–60 Min.
+            </div>
+            <div class="event-meta-item">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5 2v2M11 2v2M2 7h12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+              Freitags
+            </div>
+            <div class="event-meta-item">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 6h4l-3.3 2.4L11.5 13 8 10.5 4.5 13l1.3-4.6L2.5 6h4z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+              Code: DIG
+            </div>
+          </div>
+        </div>
+        <div class="event-act">
+          <span class="event-free">Kostenlos</span>
+          <a href="../#kontakt" class="btn btn-dark" style="font-size:12px;padding:9px 18px;">Termin anfragen</a>
+        </div>
+      </div>
+
+      <!-- LDM -->
+      <div class="event-card" data-type="webinar">
+        <div class="event-date tbd">
+          <div class="event-date-day">Auf<br>Anfrage</div>
+        </div>
+        <div class="event-body">
+          <span class="event-type-badge badge-webinar">Webinar · kostenlos</span>
+          <h3>Lean Datenmanagement — Datenstrategie, Datenarchitektur &amp; KI-Readiness</h3>
+          <p>Daten als strategische Ressource nutzen — ohne Datenchaos. Lean Datenmanagement, KI-Readiness und Datenarchitektur kompakt und direkt anwendbar.</p>
+          <div class="event-meta">
+            <div class="event-meta-item">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.3"/><path d="M8 5v3.5l2 1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+              30–60 Min.
+            </div>
+            <div class="event-meta-item">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5 2v2M11 2v2M2 7h12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+              Freitags
+            </div>
+            <div class="event-meta-item">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 6h4l-3.3 2.4L11.5 13 8 10.5 4.5 13l1.3-4.6L2.5 6h4z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+              Code: LDM
+            </div>
+          </div>
+        </div>
+        <div class="event-act">
+          <span class="event-free">Kostenlos</span>
+          <a href="../#kontakt" class="btn btn-dark" style="font-size:12px;padding:9px 18px;">Termin anfragen</a>
+        </div>
+      </div>
+
+      <!-- AGILE -->
+      <div class="event-card" data-type="webinar">
+        <div class="event-date tbd">
+          <div class="event-date-day">Auf<br>Anfrage</div>
+        </div>
+        <div class="event-body">
+          <span class="event-type-badge badge-webinar">Webinar · kostenlos</span>
+          <h3>Agiles IT-Management in der Praxis — Methoden, Stolperfallen, Erfolgsfaktoren</h3>
+          <p>Wie agile Methoden im IT-Management gezielt eingesetzt werden: Lean-Prinzipien im Portfolio, iterative Planung, Demand-Steuerung in agilen Teams. Direkt aus der Praxis.</p>
+          <div class="event-meta">
+            <div class="event-meta-item">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.3"/><path d="M8 5v3.5l2 1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+              30–60 Min.
+            </div>
+            <div class="event-meta-item">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5 2v2M11 2v2M2 7h12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+              Freitags
+            </div>
+            <div class="event-meta-item">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 6h4l-3.3 2.4L11.5 13 8 10.5 4.5 13l1.3-4.6L2.5 6h4z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+              Code: AGILE
+            </div>
+          </div>
+        </div>
+        <div class="event-act">
+          <span class="event-free">Kostenlos</span>
+          <a href="../#kontakt" class="btn btn-dark" style="font-size:12px;padding:9px 18px;">Termin anfragen</a>
+        </div>
+      </div>
+
+      <!-- ISMS -->
+      <div class="event-card" data-type="webinar">
+        <div class="event-date tbd">
+          <div class="event-date-day">Auf<br>Anfrage</div>
+        </div>
+        <div class="event-body">
+          <span class="event-type-badge badge-webinar">Webinar · kostenlos</span>
+          <h3>Informationssicherheit &amp; Datenschutz — einfach &amp; effektiv einführen</h3>
+          <p>Grundkonzepte von ISMS, ISO 27001, DSGVO und NIS-2. Wie führt man ein ISMS pragmatisch ein, ohne bürokratischen Overhead? Strukturierter Überblick mit konkreten Einstiegspunkten.</p>
+          <div class="event-meta">
+            <div class="event-meta-item">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.3"/><path d="M8 5v3.5l2 1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+              30–60 Min.
+            </div>
+            <div class="event-meta-item">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5 2v2M11 2v2M2 7h12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+              Freitags
+            </div>
+            <div class="event-meta-item">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 6h4l-3.3 2.4L11.5 13 8 10.5 4.5 13l1.3-4.6L2.5 6h4z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+              Code: ISMS
+            </div>
+          </div>
+        </div>
+        <div class="event-act">
+          <span class="event-free">Kostenlos</span>
+          <a href="../#kontakt" class="btn btn-dark" style="font-size:12px;padding:9px 18px;">Termin anfragen</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCHULUNGEN -->
+    <div class="events-section ev-section" data-type="schulung">
+      <div class="section-head">
+        <h2>Offene Schulungen</h2>
+        <span class="section-head-count">9 Schulungen · 2 Tage · Präsenz / Online</span>
+      </div>
+
+      <div class="event-card" data-type="schulung">
+        <div class="event-date tbd"><div class="event-date-day">Auf<br>Anfrage</div></div>
+        <div class="event-body">
+          <span class="event-type-badge badge-schulung">Schulung · 2 Tage</span>
+          <h3>EAM1 — Enterprise Architecture Management Grundlagen</h3>
+          <p>EAM von Grund auf verstehen: Konzepte, Methoden, Werkzeuge. Für IT-Architekten und alle, die EAM in ihrem Unternehmen einführen oder weiterentwickeln wollen.</p>
+          <div class="event-meta">
+            <div class="event-meta-item">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.3"/><path d="M8 5v3.5l2 1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+              2 Tage
+            </div>
+            <div class="event-meta-item">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2 12s2-3 6-3 6 3 6 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="8" cy="6" r="2.5" stroke="currentColor" stroke-width="1.3"/></svg>
+              Präsenz / Online
+            </div>
+            <div class="event-meta-item">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 6h4l-3.3 2.4L11.5 13 8 10.5 4.5 13l1.3-4.6L2.5 6h4z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+              Code: EAM1
+            </div>
+          </div>
+        </div>
+        <div class="event-act">
+          <a href="../#kontakt" class="btn btn-primary" style="font-size:12px;padding:9px 18px;">Anmelden</a>
+        </div>
+      </div>
+
+      <div class="event-card" data-type="schulung">
+        <div class="event-date tbd"><div class="event-date-day">Auf<br>Anfrage</div></div>
+        <div class="event-body">
+          <span class="event-type-badge badge-schulung">Schulung · 2 Tage</span>
+          <h3>EAM2 — Enterprise Architecture Management Vertiefung</h3>
+          <p>Aufbauend auf EAM1: Governance, Tool-Evaluierung, KI-Transformation, BA4D. Für EAM-Praktiker, die ihre Methodik vertiefen und skalieren wollen.</p>
+          <div class="event-meta">
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.3"/><path d="M8 5v3.5l2 1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>2 Tage</div>
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2 12s2-3 6-3 6 3 6 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="8" cy="6" r="2.5" stroke="currentColor" stroke-width="1.3"/></svg>Präsenz / Online</div>
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 6h4l-3.3 2.4L11.5 13 8 10.5 4.5 13l1.3-4.6L2.5 6h4z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>Code: EAM2</div>
+          </div>
+        </div>
+        <div class="event-act"><a href="../#kontakt" class="btn btn-primary" style="font-size:12px;padding:9px 18px;">Anmelden</a></div>
+      </div>
+
+      <div class="event-card" data-type="schulung">
+        <div class="event-date tbd"><div class="event-date-day">Auf<br>Anfrage</div></div>
+        <div class="event-body">
+          <span class="event-type-badge badge-schulung">Schulung · 2 Tage</span>
+          <h3>STRAT — Zukunft gestalten: Strategisches IT-Management</h3>
+          <p>IT-Strategie entwickeln, Zielbild gestalten, Roadmap ableiten, Innovationsmanagement aufsetzen. Für IT-Leiter, CIOs und Unternehmensarchitekten.</p>
+          <div class="event-meta">
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.3"/><path d="M8 5v3.5l2 1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>2 Tage</div>
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2 12s2-3 6-3 6 3 6 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="8" cy="6" r="2.5" stroke="currentColor" stroke-width="1.3"/></svg>Präsenz / Online</div>
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 6h4l-3.3 2.4L11.5 13 8 10.5 4.5 13l1.3-4.6L2.5 6h4z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>Code: STRAT</div>
+          </div>
+        </div>
+        <div class="event-act"><a href="../#kontakt" class="btn btn-primary" style="font-size:12px;padding:9px 18px;">Anmelden</a></div>
+      </div>
+
+      <div class="event-card" data-type="schulung">
+        <div class="event-date tbd"><div class="event-date-day">Auf<br>Anfrage</div></div>
+        <div class="event-body">
+          <span class="event-type-badge badge-schulung">Schulung · 2 Tage</span>
+          <h3>BADM — Business-Analyse &amp; Demand Management lean &amp; systematisch</h3>
+          <p>BA4D-Methodik, Demand-to-Value-Prozesse und Lean Portfolio Management. Für Business-Analysten, IT-Projektleiter und Product Owner.</p>
+          <div class="event-meta">
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.3"/><path d="M8 5v3.5l2 1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>2 Tage</div>
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2 12s2-3 6-3 6 3 6 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="8" cy="6" r="2.5" stroke="currentColor" stroke-width="1.3"/></svg>Präsenz / Online</div>
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 6h4l-3.3 2.4L11.5 13 8 10.5 4.5 13l1.3-4.6L2.5 6h4z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>Code: BADM</div>
+          </div>
+        </div>
+        <div class="event-act"><a href="../#kontakt" class="btn btn-primary" style="font-size:12px;padding:9px 18px;">Anmelden</a></div>
+      </div>
+
+      <div class="event-card" data-type="schulung">
+        <div class="event-date tbd"><div class="event-date-day">Auf<br>Anfrage</div></div>
+        <div class="event-body">
+          <span class="event-type-badge badge-schulung">Schulung · 2 Tage</span>
+          <h3>ISMS — Informationssicherheits-Management einfach &amp; effektiv</h3>
+          <p>ISMS aufbauen, ISO 27001 verstehen, DSGVO und NIS-2 pragmatisch umsetzen. Für IT-Sicherheitsbeauftragte, Datenschutzkoordinatoren und IT-Verantwortliche.</p>
+          <div class="event-meta">
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.3"/><path d="M8 5v3.5l2 1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>2 Tage</div>
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2 12s2-3 6-3 6 3 6 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="8" cy="6" r="2.5" stroke="currentColor" stroke-width="1.3"/></svg>Präsenz / Online</div>
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 6h4l-3.3 2.4L11.5 13 8 10.5 4.5 13l1.3-4.6L2.5 6h4z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>Code: ISMS</div>
+          </div>
+        </div>
+        <div class="event-act"><a href="../#kontakt" class="btn btn-primary" style="font-size:12px;padding:9px 18px;">Anmelden</a></div>
+      </div>
+
+      <div class="event-card" data-type="schulung">
+        <div class="event-date tbd"><div class="event-date-day">Auf<br>Anfrage</div></div>
+        <div class="event-body">
+          <span class="event-type-badge badge-schulung">Schulung · 2 Tage</span>
+          <h3>ZBR — Zielorientiertes Business Requirements Management</h3>
+          <p>Anforderungen zielorientiert aufnehmen, strukturieren und steuern. Lean Requirements Engineering für Projekte und Produktentwicklung.</p>
+          <div class="event-meta">
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.3"/><path d="M8 5v3.5l2 1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>2 Tage</div>
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2 12s2-3 6-3 6 3 6 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="8" cy="6" r="2.5" stroke="currentColor" stroke-width="1.3"/></svg>Präsenz / Online</div>
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 6h4l-3.3 2.4L11.5 13 8 10.5 4.5 13l1.3-4.6L2.5 6h4z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>Code: ZBR</div>
+          </div>
+        </div>
+        <div class="event-act"><a href="../#kontakt" class="btn btn-primary" style="font-size:12px;padding:9px 18px;">Anmelden</a></div>
+      </div>
+    </div>
+
+    <!-- EXTERNE EVENTS / LINKEDIN -->
+    <div class="events-section ev-section" data-type="extern">
+      <div class="section-head">
+        <h2>LinkedIn Events &amp; Externe Auftritte</h2>
+        <span class="section-head-count">Termine folgen</span>
+      </div>
+
+      <div class="event-card placeholder" data-type="extern">
+        <div class="event-date tbd"><div class="event-date-day">Demnächst</div></div>
+        <div class="event-body">
+          <span class="event-type-badge badge-extern">LinkedIn Event</span>
+          <h3>LinkedIn Live: EAM und KI — was bleibt, was ändert sich?</h3>
+          <p>Inge Hanschke diskutiert live auf LinkedIn: Welche Rolle spielt Enterprise Architecture Management in einer KI-geprägten IT-Landschaft? Fragen aus dem Publikum willkommen.</p>
+          <div class="event-meta">
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.3"/><path d="M8 5v3.5l2 1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>ca. 45 Min.</div>
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5 2v2M11 2v2M2 7h12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Termin wird bekanntgegeben</div>
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2 12s2-3 6-3 6 3 6 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="8" cy="6" r="2.5" stroke="currentColor" stroke-width="1.3"/></svg>Online · LinkedIn</div>
+          </div>
+        </div>
+        <div class="event-act">
+          <span class="event-free">Kostenlos</span>
+          <a href="https://www.linkedin.com/in/ingehanschke/" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:12px;padding:9px 18px;">LinkedIn folgen</a>
+        </div>
+      </div>
+
+      <div class="event-card placeholder" data-type="extern">
+        <div class="event-date tbd"><div class="event-date-day">Demnächst</div></div>
+        <div class="event-body">
+          <span class="event-type-badge badge-extern">Externe Konferenz</span>
+          <h3>Gastbeitrag: IT-Governance in der Praxis — Konferenz IT-Management</h3>
+          <p>Inge Hanschke als Referentin bei externen Fachkonferenzen und Branchenevents. Konkrete Termine werden laufend ergänzt. Für Konferenz-Organisatoren: Buchungsanfrage jederzeit möglich.</p>
+          <div class="event-meta">
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5 2v2M11 2v2M2 7h12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Termin folgt</div>
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2 12s2-3 6-3 6 3 6 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="8" cy="6" r="2.5" stroke="currentColor" stroke-width="1.3"/></svg>D-A-CH</div>
+          </div>
+        </div>
+        <div class="event-act">
+          <a href="../#kontakt" class="btn btn-outline" style="font-size:12px;padding:9px 18px;">Referentin buchen</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- KEYNOTES -->
+    <div class="events-section ev-section" data-type="keynote">
+      <div class="section-head">
+        <h2>Keynotes &amp; Vorträge</h2>
+        <span class="section-head-count">Buchung auf Anfrage</span>
+      </div>
+
+      <div class="event-card" data-type="keynote">
+        <div class="event-date tbd"><div class="event-date-day">Auf<br>Anfrage</div></div>
+        <div class="event-body">
+          <span class="event-type-badge badge-keynote">Keynote</span>
+          <h3>KI in der IT-Organisation — Chancen, Risiken, Gestaltungsoptionen</h3>
+          <p>Wie verändert KI IT-Management, EAM und Business-Analyse? Inge Hanschke beleuchtet Chancen und Risiken aus der Praxis — ohne Hype, mit konkreten Handlungsempfehlungen für Entscheider.</p>
+          <div class="event-meta">
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.3"/><path d="M8 5v3.5l2 1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>30–60 Min.</div>
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2 12s2-3 6-3 6 3 6 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="8" cy="6" r="2.5" stroke="currentColor" stroke-width="1.3"/></svg>Präsenz / Online</div>
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5 2v2M11 2v2M2 7h12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>D-A-CH · Unternehmensveranstaltungen</div>
+          </div>
+        </div>
+        <div class="event-act">
+          <a href="../#kontakt" class="btn btn-primary" style="font-size:12px;padding:9px 18px;">Keynote buchen</a>
+        </div>
+      </div>
+
+      <div class="event-card" data-type="keynote">
+        <div class="event-date tbd"><div class="event-date-day">Auf<br>Anfrage</div></div>
+        <div class="event-body">
+          <span class="event-type-badge badge-keynote">Keynote</span>
+          <h3>Einfach &amp; effektiv — IT-Transformation ohne Overhead</h3>
+          <p>Das Hanschke-Motto als Keynote: Warum IT-Transformation oft scheitert und wie es besser geht. Methoden, Erfahrungen und Muster aus über 500 Projekten im D-A-CH-Raum.</p>
+          <div class="event-meta">
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.3"/><path d="M8 5v3.5l2 1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>30–60 Min.</div>
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2 12s2-3 6-3 6 3 6 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="8" cy="6" r="2.5" stroke="currentColor" stroke-width="1.3"/></svg>Präsenz / Online</div>
+            <div class="event-meta-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5 2v2M11 2v2M2 7h12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>D-A-CH · Konferenzen</div>
+          </div>
+        </div>
+        <div class="event-act">
+          <a href="../#kontakt" class="btn btn-primary" style="font-size:12px;padding:9px 18px;">Keynote buchen</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- KEIN PASSENDER TERMIN -->
+    <div class="no-match-cta">
+      <div>
+        <h3>Kein passender Termin dabei?</h3>
+        <p>Webinare, Schulungen und Keynotes sind auf Anfrage buchbar — als offenes Format oder Inhouse für Ihr Team. Rückmeldung innerhalb von 24 Stunden. Direkt und ohne Umwege.</p>
+      </div>
+      <div class="no-match-acts">
+        <a href="../#kontakt" class="btn btn-primary">
+          Termin anfragen
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="../leistungen/" class="btn btn-outline">Alle Leistungen</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- IMPRESSIONEN -->
+<section id="impressionen" class="sec">
+  <div class="wrap">
+    <span class="ey">Inge auf Events</span>
+    <h2 style="color:var(--white);margin-top:18px;margin-bottom:8px;">Aus dem<br>Veranstaltungskalender.</h2>
+    <p style="font-size:.95rem;color:rgba(255,255,255,.45);max-width:560px;line-height:1.72;">
+      Inge Hanschke als Referentin, Trainerin und Keynote-Speaker —
+      bei Webinaren, Konferenzen und Unternehmensveranstaltungen im D-A-CH-Raum.
+    </p>
+    <div class="impressionen-grid">
+      <div class="impression-item">
+        <div class="impression-placeholder">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.3"/><circle cx="8.5" cy="8.5" r="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M21 15l-5-5L5 21" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Foto folgt</span>
+        </div>
+        <div class="impression-overlay"><span>Keynote — IT-Management Konferenz D-A-CH</span></div>
+      </div>
+      <div class="impression-item">
+        <div class="impression-placeholder">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.3"/><circle cx="8.5" cy="8.5" r="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M21 15l-5-5L5 21" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Foto folgt</span>
+        </div>
+        <div class="impression-overlay"><span>EAM-Schulung Inhouse</span></div>
+      </div>
+      <div class="impression-item">
+        <div class="impression-placeholder">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.3"/><circle cx="8.5" cy="8.5" r="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M21 15l-5-5L5 21" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Foto folgt</span>
+        </div>
+        <div class="impression-overlay"><span>LinkedIn Live Event</span></div>
+      </div>
+      <div class="impression-item">
+        <div class="impression-placeholder">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.3"/><circle cx="8.5" cy="8.5" r="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M21 15l-5-5L5 21" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Foto folgt</span>
+        </div>
+        <div class="impression-overlay"><span>Webinar-Session Online</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="page-cta">
+  <div class="wrap">
+    <div class="cta-inner">
+      <div class="cta-text">
+        <span class="ey">Termin anfragen</span>
+        <h2>Nächsten Termin<br>jetzt sichern.</h2>
+        <p>
+          Webinar-Termin, Schulungsanmeldung oder Keynote-Buchung —
+          Rückmeldung innerhalb von 24 Stunden. Direkt und sachlich.
+        </p>
+      </div>
+      <div class="cta-acts">
+        <a href="../#kontakt" class="btn btn-primary">
+          Termin anfragen
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="../leistungen/" class="btn btn-outline-w">Alle Leistungen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fi-w">
+      <span class="fcopy">© 2026 Hanschke Consulting · Inge Hanschke · Alle Rechte vorbehalten.</span>
+      <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+        <nav class="fnav">
+          <a onclick="openImpressum()">Impressum</a>
+          <a onclick="openImpressum('datenschutz')">Datenschutz</a>
+          <a href="https://www.linkedin.com/in/ingehanschke/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener">Hanser Verlag</a>
+        </nav>
+        <div style="display:flex;gap:6px;align-items:center;border-left:1px solid rgba(255,255,255,.1);padding-left:20px;">
+          <a href="#" style="font-size:11px;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.85);padding:3px 8px;background:rgba(255,255,255,.12);border-radius:2px;">DE</a>
+          <a href="#" title="English version coming soon" style="font-size:11px;font-weight:600;letter-spacing:.06em;color:rgba(255,255,255,.3);padding:3px 8px;border-radius:2px;">EN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- IMPRESSUM OVERLAY -->
+<div id="impressum-page">
+  <button class="imp-close" onclick="closeImpressum()">✕</button>
+  <div class="wrap">
+    <div class="imp-content">
+      <h1 id="imp-title">Impressum</h1>
+      <div id="imp-main">
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <address>Inge Hanschke<br>Straßl ins Holz 15<br>81829 München<br>Deutschland</address>
+        <h2>Kontakt</h2>
+        <p>E-Mail: <a href="mailto:info@hanschke-consulting.com">info@hanschke-consulting.com</a><br>Mobil: <a href="tel:+4915221000172">+49 (0)152 210 001 72</a></p>
+        <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+        <p>Inge Hanschke</p>
+        <h2>Haftungsausschluss</h2>
+        <h3>Haftung für Inhalte</h3>
+        <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
+        <h3>Haftung für Links</h3>
+        <p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+        <h3>Urheberrecht</h3>
+        <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+      </div>
+      <div id="imp-datenschutz" style="display:none;">
+        <h2>Datenschutzerklärung</h2>
+        <p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten erhoben werden, erfolgt dies stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.</p>
+        <p>Wir weisen darauf hin, dass die Datenübertragung im Internet Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
+        <p>Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung wird hiermit ausdrücklich widersprochen.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('sc', scrollY > 16), {passive:true});
+
+  function toggleMenu() {
+    const m = document.getElementById('mmenu'), b = document.getElementById('hbgBtn');
+    const open = m.classList.toggle('open');
+    b.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  function closeMenu() {
+    document.getElementById('mmenu').classList.remove('open');
+    document.getElementById('hbgBtn').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function filterEvents(type, btn) {
+    // Update filter buttons
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    // Show/hide sections
+    document.querySelectorAll('.ev-section').forEach(section => {
+      if (type === 'alle' || section.dataset.type === type) {
+        delete section.dataset.hidden;
+      } else {
+        section.dataset.hidden = '1';
+      }
+    });
+  }
+
+  function openImpressum(section) {
+    const page = document.getElementById('impressum-page');
+    document.getElementById('imp-main').style.display = section === 'datenschutz' ? 'none' : 'block';
+    document.getElementById('imp-datenschutz').style.display = section === 'datenschutz' ? 'block' : 'none';
+    document.getElementById('imp-title').textContent = section === 'datenschutz' ? 'Datenschutz' : 'Impressum';
+    page.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeImpressum() {
+    document.getElementById('impressum-page').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if(e.key==='Escape') closeImpressum(); });
+</script>
+<script src="https://visual-feedback-tool.vercel.app/api/embed.js?key=3d1b3cb26e7e52347690a5348e94a491c2b71b858fdd1a18"></script>
+</body>
+</html>

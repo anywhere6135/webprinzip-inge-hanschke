@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schulungen — 2-tägige Fachschulungen | Hanschke Consulting</title>
+  <meta name="description" content="7 Fachschulungen von Inge Hanschke: EAM1, EAM2, STRAT, BADM, ITMGMT, ISMS, ZBR. 2 Tage, Präsenz oder Online. Termin auf Anfrage. Offen oder Inhouse.">
+  <meta property="og:title" content="Schulungen — 2-tägige Fachschulungen | Hanschke Consulting">
+  <meta property="og:description" content="EAM1, EAM2, STRAT, BADM, ITMGMT, ISMS, ZBR — 7 praxisorientierte 2-Tage-Schulungen. Präsenz oder Online. Offen oder Inhouse.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.hanschke-consulting.com/trainings/schulungen/">
+  <meta property="og:image" content="https://www.hanschke-consulting.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    :root {
+      --red: #E94545; --red-dk: #c83030; --black: #0a0a0a; --g900: #141414;
+      --g800: #282828; --g700: #3c3c3c; --g600: #666; --g400: #999;
+      --g200: #e0e0e0; --g100: #f5f5f5; --g50: #fafafa; --white: #fff;
+      --teal: #1a7d8b; --f: 'Inter', sans-serif; --max: 1200px; --r: 2px;
+      --ease: cubic-bezier(.25,.1,.25,1);
+    }
+    body { font-family: var(--f); background: var(--white); color: var(--black); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 48px; }
+    .ey { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--red); }
+    .ey::before { content:''; display:block; width:20px; height:2px; background:var(--red); flex-shrink:0; }
+    h1 { font-size: clamp(2.4rem,5.5vw,4rem); font-weight: 900; line-height: 1.08; letter-spacing: -.035em; }
+    h2 { font-size: clamp(1.6rem,2.8vw,2.2rem); font-weight: 700; line-height: 1.1; letter-spacing: -.025em; }
+    h3 { font-size: 1rem; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; }
+    .lead { font-size: 1.05rem; line-height: 1.72; color: var(--g700); }
+    em.r { font-style: normal; color: var(--red); }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; font-family: var(--f); font-size: 13px; font-weight: 600; letter-spacing: .01em; border-radius: var(--r); transition: background .15s var(--ease), color .15s var(--ease), border-color .15s var(--ease), transform .1s; cursor: pointer; border: 1.5px solid transparent; white-space: nowrap; }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--red); color: var(--white); border-color: var(--red); }
+    .btn-primary:hover { background: var(--red-dk); border-color: var(--red-dk); }
+    .btn-dark { background: var(--black); color: var(--white); border-color: var(--black); }
+    .btn-dark:hover { background: var(--g800); border-color: var(--g800); }
+    .btn-outline { background: transparent; color: var(--black); border-color: var(--g200); }
+    .btn-outline:hover { border-color: var(--black); }
+    .btn-outline-w { background: transparent; color: var(--white); border-color: rgba(255,255,255,.35); }
+    .btn-outline-w:hover { background: var(--white); color: var(--black); border-color: var(--white); }
+    .sec { padding: 96px 0; }
+    .sec-sm { padding: 64px 0; }
+
+    /* NAV */
+    #nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; background: rgba(255,255,255,.96); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--g200); transition: box-shadow .2s; }
+    #nav.sc { box-shadow: 0 2px 24px rgba(0,0,0,.07); }
+    .nav-w { max-width: var(--max); margin: 0 auto; padding: 0 48px; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-logo { display:flex; flex-direction:column; flex-shrink:0; }
+    .nav-logo-n { font-size: 14.5px; font-weight: 800; letter-spacing: -.02em; color: var(--black); line-height: 1.1; }
+    .nav-logo-s { font-size: 9.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--red); margin-top: 2px; }
+    .nav-links { display:flex; align-items:center; gap:26px; }
+    .nav-links a { font-size: 13px; font-weight: 500; color: var(--g600); transition: color .14s; }
+    .nav-links a:hover { color: var(--black); }
+    .nav-links a.active { color: var(--black); font-weight: 600; }
+    .nav-act { display:flex; align-items:center; gap:8px; flex-shrink:0; }
+    .hbg { display:none; flex-direction:column; justify-content:center; gap:5px; cursor:pointer; padding:6px; background:none; border:none; width:36px; height:36px; }
+    .hbg span { display:block; width:22px; height:1.5px; background:var(--black); transition:transform .22s var(--ease),opacity .22s; transform-origin:center; }
+    .hbg.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+    .hbg.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+    .hbg.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+    .mmenu { display:none; position:fixed; top:60px; left:0; right:0; bottom:0; background:var(--white); z-index:199; padding:32px 24px 48px; flex-direction:column; gap:4px; overflow-y:auto; }
+    .mmenu.open { display:flex; }
+    .mmenu a { font-size:1.05rem; font-weight:600; color:var(--black); padding:13px 0; border-bottom:1px solid var(--g100); }
+    .mmenu .btn { margin-top:20px; align-self:flex-start; }
+
+    /* PAGE HERO */
+    #page-hero { padding-top: 60px; background: var(--white); position: relative; overflow: hidden; }
+    #page-hero::before { content:''; position:absolute; inset:0; background-image: linear-gradient(var(--g200) 1px,transparent 1px), linear-gradient(90deg,var(--g200) 1px,transparent 1px); background-size: 64px 64px; opacity: .35; pointer-events:none; }
+    #page-hero::after { content:''; position:absolute; inset:0; background: radial-gradient(ellipse 80% 100% at 50% 100%,transparent 40%,var(--white) 100%); pointer-events:none; }
+    .page-hero-in { position: relative; z-index: 1; padding: 72px 0 64px; max-width: 680px; }
+    .page-hero-bc { font-size: 12px; font-weight: 500; color: var(--g400); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .page-hero-bc a { color: var(--g400); transition: color .14s; }
+    .page-hero-bc a:hover { color: var(--black); }
+    .page-hero-bc span { color: var(--g200); }
+
+    /* SCHULUNG CARDS */
+    #schulungen { background: var(--white); }
+    .schulung-card { border: 1px solid var(--g200); margin-bottom: 2px; overflow: hidden; }
+    .schulung-card:hover { background: var(--g50); }
+
+    .sc-header { display: grid; grid-template-columns: 72px 1fr auto; gap: 0; }
+    .sc-code-col { background: var(--black); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 28px 12px; text-align: center; flex-shrink: 0; }
+    .sc-code { font-size: .7rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; color: var(--white); line-height: 1.3; }
+    .sc-code span { display: block; font-size: .55rem; color: rgba(255,255,255,.35); margin-top: 4px; font-weight: 600; }
+
+    .sc-body { padding: 24px 28px; }
+    .sc-meta-row { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+    .sc-badge { font-size: 9.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: 2px 8px; border-radius: 2px; }
+    .sc-badge-block { background: var(--g100); color: var(--g600); }
+    .sc-badge-zg { background: rgba(10,10,10,.06); color: var(--black); }
+    .sc-body h2 { font-size: 1.12rem; font-weight: 800; color: var(--black); letter-spacing: -.02em; margin-bottom: 10px; }
+    .sc-desc { font-size: .9rem; line-height: 1.72; color: var(--g600); max-width: 640px; margin-bottom: 16px; }
+
+    .sc-detail-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; background: var(--g200); border: 1px solid var(--g200); margin-bottom: 16px; }
+    .sc-detail { background: var(--white); padding: 12px 14px; }
+    .sc-detail-l { font-size: 9.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--g400); margin-bottom: 4px; }
+    .sc-detail-v { font-size: .85rem; font-weight: 600; color: var(--black); }
+
+    .sc-content h3 { font-size: 10.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--g400); margin-bottom: 10px; }
+    .sc-content-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }
+    .sc-list { list-style: none; padding: 0; }
+    .sc-list li { font-size: .85rem; color: var(--g600); padding: 4px 0 4px 14px; position: relative; line-height: 1.5; }
+    .sc-list li::before { content: '—'; position: absolute; left: 0; color: var(--red); font-weight: 700; }
+
+    .sc-act-col { display: flex; flex-direction: column; align-items: flex-end; justify-content: center; padding: 24px; gap: 10px; flex-shrink: 0; min-width: 180px; border-left: 1px solid var(--g100); }
+
+    /* Termine */
+    .sc-termine { border-top: 1px solid var(--g100); background: var(--g50); padding: 16px 28px 16px 100px; }
+    .sc-termine-head { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--g400); margin-bottom: 10px; }
+    .termin-row { display: flex; align-items: center; gap: 16px; padding: 10px 16px; background: var(--white); border: 1px solid var(--g200); border-radius: var(--r); margin-bottom: 4px; }
+    .termin-date { font-size: .88rem; font-weight: 700; color: var(--black); min-width: 160px; }
+    .termin-date.tbd { color: var(--g600); font-weight: 600; }
+    .termin-format-tag { font-size: .82rem; color: var(--g600); flex: 1; }
+    .termin-cta { margin-left: auto; flex-shrink: 0; }
+
+    /* Voraussetzungen */
+    .sc-vorraus { display: flex; align-items: flex-start; gap: 8px; margin-top: 10px; padding: 10px 14px; background: var(--g100); border-radius: var(--r); }
+    .sc-vorraus-label { font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--g400); white-space: nowrap; padding-top: 2px; }
+    .sc-vorraus-text { font-size: .85rem; color: var(--g600); line-height: 1.55; }
+
+    /* CTA dark */
+    #cta-bottom { background: var(--black); }
+    .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 48px; padding: 72px 0; }
+    #cta-bottom .ey { color: var(--red); }
+    #cta-bottom .ey::before { background: var(--red); }
+    .cta-text h2 { color: var(--white); margin: 16px 0 12px; font-size: clamp(1.6rem,2.8vw,2.2rem); }
+    .cta-text p { font-size: .95rem; color: rgba(255,255,255,.5); max-width: 480px; line-height: 1.72; }
+    .cta-acts { display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap; align-items: center; }
+
+    /* IMPRESSUM */
+    #impressum-page { display: none; position: fixed; inset: 0; z-index: 500; background: var(--white); overflow-y: auto; padding: 80px 0 60px; }
+    #impressum-page.open { display: block; }
+    .imp-close { position:fixed; top:20px; right:20px; width:40px; height:40px; background:var(--black); color:var(--white); border:none; border-radius:50%; font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:501; }
+    .imp-content h1 { font-size:1.8rem; margin-bottom:32px; }
+    .imp-content h2 { font-size:1.1rem; margin:28px 0 10px; color:var(--black); }
+    .imp-content h3 { font-size:.95rem; margin:20px 0 8px; }
+    .imp-content p { font-size:.9rem; line-height:1.75; color:var(--g700); margin-bottom:12px; }
+    .imp-content address { font-style:normal; font-size:.9rem; line-height:1.75; color:var(--g700); margin-bottom:12px; }
+
+    /* FOOTER */
+    footer { background: var(--g900); padding: 28px 0; border-top: 1px solid rgba(255,255,255,.06); }
+    .fi-w { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .fcopy { font-size: 12px; color: rgba(255,255,255,.25); }
+    .fnav { display: flex; gap: 24px; }
+    .fnav a { font-size: 12px; color: rgba(255,255,255,.3); transition: color .14s; cursor: pointer; }
+    .fnav a:hover { color: rgba(255,255,255,.7); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1100px) {
+      .sc-header { grid-template-columns: 64px 1fr; }
+      .sc-act-col { display: none; }
+      .sc-detail-grid { grid-template-columns: 1fr 1fr; }
+      .sc-content-cols { grid-template-columns: 1fr; }
+      .sc-termine { padding-left: 92px; }
+      .cta-inner { flex-direction: column; align-items: flex-start; gap: 32px; }
+    }
+    @media (max-width: 800px) {
+      .wrap { padding: 0 20px; }
+      .nav-w { padding: 0 20px; }
+      .nav-links, .nav-act .btn-outline { display: none; }
+      .hbg { display: flex; }
+      .sec { padding: 56px 0; }
+      .page-hero-in { padding: 48px 0 48px; }
+      .fi-w { flex-direction: column; gap: 10px; text-align: center; }
+      .sc-header { grid-template-columns: 56px 1fr; }
+      .sc-detail-grid { grid-template-columns: 1fr 1fr; }
+      .sc-termine { padding-left: 20px; }
+      .termin-row { flex-direction: column; align-items: flex-start; gap: 6px; }
+      .termin-cta { margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-w">
+    <a href="../../" class="nav-logo">
+      <span class="nav-logo-n">Inge Hanschke</span>
+      <span class="nav-logo-s">Hanschke Consulting</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../../leistungen/">Beratung</a></li>
+      <li><a href="../../ueber-inge/">Über mich</a></li>
+      <li><a href="../" class="active">Schulungen</a></li>
+      <li><a href="../../buecher/">Bücher</a></li>
+      <li><a href="../../partner/">Partner</a></li>
+      <li><a href="../../events/">Events</a></li>
+    </ul>
+    <div class="nav-act">
+      <a href="../../events/" class="btn btn-outline" style="padding:8px 16px;font-size:12.5px;">Termine</a>
+      <a href="../../kontakt/" class="btn btn-primary" style="padding:8px 16px;font-size:12.5px;">Kontakt</a>
+    </div>
+    <button class="hbg" id="hbgBtn" onclick="toggleMenu()" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <a href="../../leistungen/" onclick="closeMenu()">Beratung</a>
+  <a href="../../ueber-inge/" onclick="closeMenu()">Über mich</a>
+  <a href="../" onclick="closeMenu()">Schulungen &amp; Webinare</a>
+  <a href="../../buecher/" onclick="closeMenu()">Bücher</a>
+  <a href="../../partner/" onclick="closeMenu()">Partner</a>
+  <a href="../../events/" onclick="closeMenu()">Events</a>
+  <a href="../../kontakt/" class="btn btn-primary" onclick="closeMenu()">Kontakt aufnehmen</a>
+</div>
+
+<!-- PAGE HERO -->
+<section id="page-hero">
+  <div class="wrap">
+    <div class="page-hero-in">
+      <div class="page-hero-bc">
+        <a href="../../">Startseite</a>
+        <span>›</span>
+        <a href="../">Trainings</a>
+        <span>›</span>
+        <span style="color:var(--black);">Schulungen</span>
+      </div>
+      <span class="ey">2 Tage · Präsenz / Online</span>
+      <h1 style="margin-top:18px;">Schulungen von<br>Inge <em class="r">Hanschke.</em></h1>
+      <p class="lead" style="margin-top:20px;max-width:600px;">
+        7 praxisorientierte 2-Tages-Schulungen — direkt anwendbar, ohne Theorie-Overhead.
+        Offen oder als Inhouse-Format für Ihr Team. Alle Termine auf Anfrage.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SCHULUNGEN -->
+<section id="schulungen" class="sec" style="padding-top:48px;">
+  <div class="wrap">
+
+    <!-- EAM1 -->
+    <div class="schulung-card" id="eam1">
+      <div class="sc-header">
+        <div class="sc-code-col">
+          <span class="sc-code">EAM1<span>Grundlagen</span></span>
+        </div>
+        <div class="sc-body">
+          <div class="sc-meta-row">
+            <span class="sc-badge sc-badge-block">Enterprise Architecture Management</span>
+            <span class="sc-badge sc-badge-zg">IT-Architekten · Einsteiger</span>
+          </div>
+          <h2>Enterprise Architecture Management — Grundlagen</h2>
+          <p class="sc-desc">
+            EAM von Grund auf verstehen: Konzepte, Methodik und Werkzeuge für ein wirksames Enterprise Architecture Management.
+            Für IT-Architekten, IT-Leiter und Unternehmensarchitekten, die EAM einführen oder systematisch ausbauen wollen.
+            Nach zwei Tagen: ein klares Bild der EAM-Methodik und konkrete nächste Schritte für das eigene Unternehmen.
+          </p>
+          <div class="sc-detail-grid">
+            <div class="sc-detail"><div class="sc-detail-l">Dauer</div><div class="sc-detail-v">2 Tage</div></div>
+            <div class="sc-detail"><div class="sc-detail-l">Format</div><div class="sc-detail-v">Präsenz / Online</div></div>
+            <div class="sc-detail"><div class="sc-detail-l">Nächster Termin</div><div class="sc-detail-v">Auf Anfrage</div></div>
+            <div class="sc-detail"><div class="sc-detail-l">Voraussetzung</div><div class="sc-detail-v">Keine</div></div>
+          </div>
+          <div class="sc-content">
+            <h3>Schulungsinhalte</h3>
+            <div class="sc-content-cols">
+              <ul class="sc-list">
+                <li>Grundlagen EAM: Ziele, Nutzen, Prinzipien</li>
+                <li>EAM-Methodik: Architekturebenen und -sichten</li>
+                <li>Einführung von EAM: Quick-Start und Reifegrad</li>
+              </ul>
+              <ul class="sc-list">
+                <li>EAM-Governance: Rollen und Prozesse</li>
+                <li>Tool-Überblick: ADOit, Ardoq, LeanIX</li>
+                <li>Praxisbeispiele und Transferübungen</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="sc-act-col">
+          <a href="../../leistungen/eam/" class="btn btn-outline" style="font-size:12px;padding:8px 16px;">Details</a>
+          <a href="../../kontakt/" class="btn btn-primary" style="font-size:12px;padding:8px 16px;">Anmelden</a>
+        </div>
+      </div>
+      <div class="sc-termine">
+        <div class="sc-termine-head">Termine</div>
+        <div class="termin-row">
+          <span class="termin-date tbd">Auf Anfrage</span>
+          <span class="termin-format-tag">Präsenz oder Online · 2 Tage</span>
+          <div class="termin-cta"><a href="../../kontakt/" class="btn btn-primary" style="font-size:11.5px;padding:8px 16px;">Anmelden</a></div>
+        </div>
+        <p style="font-size:.82rem;color:var(--g400);margin-top:8px;">Termine werden nach Anfrage abgestimmt. Inhouse-Format für Ihr Team buchbar.</p>
+      </div>
+    </div>
+
+    <!-- EAM2 -->
+    <div class="schulung-card" id="eam2">
+      <div class="sc-header">
+        <div class="sc-code-col">
+          <span class="sc-code">EAM2<span>Vertiefung</span></span>
+        </div>
+        <div class="sc-body">
+          <div class="sc-meta-row">
+            <span class="sc-badge sc-badge-block">Enterprise Architecture Management</span>
+            <span class="sc-badge sc-badge-zg">EAM-Praktiker</span>
+          </div>
+          <h2>Enterprise Architecture Management — Vertiefung</h2>
+          <p class="sc-desc">
+            Aufbauend auf EAM1: EAM-Nutzen erhöhen, Governance stärken, Tools evaluieren und KI-Transformation planen.
+            Für IT-Architekten mit EAM-Grundkenntnissen, die ihre Methodik vertiefen und den EAM-Reifegrad steigern wollen.
+          </p>
+          <div class="sc-detail-grid">
+            <div class="sc-detail"><div class="sc-detail-l">Dauer</div><div class="sc-detail-v">2 Tage</div></div>
+            <div class="sc-detail"><div class="sc-detail-l">Format</div><div class="sc-detail-v">Präsenz / Online</div></div>
+            <div class="sc-detail"><div class="sc-detail-l">Nächster Termin</div><div class="sc-detail-v">Auf Anfrage</div></div>
+            <div class="sc-detail"><div class="sc-detail-l">Voraussetzung</div><div class="sc-detail-v">EAM1 oder gleichwertig</div></div>
+          </div>
+          <div class="sc-content">
+            <h3>Schulungsinhalte</h3>
+            <div class="sc-content-cols">
+              <ul class="sc-list">
+                <li>EAM-Nutzen erhöhen: Leanisieren und optimieren</li>
+                <li>EAM-Tool-Evaluierung: Kriterien und Prozess</li>
+                <li>BA4D — Business Architecture for Digitalization</li>
+              </ul>
+              <ul class="sc-list">
+                <li>KI-Transformation mit EAM steuern</li>
+                <li>EAM-Governance: Aufbau und Weiterentwicklung</li>
+                <li>Praxisfallstudien und Transferübungen</li>
+              </ul>
+            </div>
+          </div>
+          <div class="sc-vorraus">
+            <span class="sc-vorraus-label">Voraussetzung</span>
+            <span class="sc-vorraus-text">Grundkenntnisse in EAM (EAM1 oder vergleichbare Praxiserfahrung)</span>
+          </div>
+        </div>
+        <div class="sc-act-col">
+          <a href="../../leistungen/eam/" class="btn btn-outline" style="font-size:12px;padding:8px 16px;">Details</a>
+          <a href="../../kontakt/" class="btn btn-primary" style="font-size:12px;padding:8px 16px;">Anmelden</a>
+        </div>
+      </div>
+      <div class="sc-termine">
+        <div class="sc-termine-head">Termine</div>
+        <div class="termin-row">
+          <span class="termin-date tbd">Auf Anfrage</span>
+          <span class="termin-format-tag">Präsenz oder Online · 2 Tage</span>
+          <div class="termin-cta"><a href="../../kontakt/" class="btn btn-primary" style="font-size:11.5px;padding:8px 16px;">Anmelden</a></div>
+        </div>
+        <p style="font-size:.82rem;color:var(--g400);margin-top:8px;">Kombination EAM1 + EAM2 als Paket buchbar. Inhouse-Format verfügbar.</p>
+      </div>
+    </div>
+
+    <!-- STRAT -->
+    <div class="schulung-card" id="strat">
+      <div class="sc-header">
+        <div class="sc-code-col">
+          <span class="sc-code">STRAT<span>Strategie</span></span>
+        </div>
+        <div class="sc-body">
+          <div class="sc-meta-row">
+            <span class="sc-badge sc-badge-block">Strategisches IT-Management</span>
+            <span class="sc-badge sc-badge-zg">IT-Leiter · CIOs · Architekten</span>
+          </div>
+          <h2>Zukunft gestalten — Strategisches IT-Management</h2>
+          <p class="sc-desc">
+            IT-Strategie entwickeln, Zielbild gestalten, Roadmap ableiten, Lean Innovationsmanagement aufsetzen.
+            Für IT-Leiter, CIOs und Unternehmensarchitekten, die die IT strategisch ausrichten wollen.
+            Nach zwei Tagen: ein klarer Rahmen und konkrete nächste Schritte.
+          </p>
+          <div class="sc-detail-grid">
+            <div class="sc-detail"><div class="sc-detail-l">Dauer</div><div class="sc-detail-v">2 Tage</div></div>
+            <div class="sc-detail"><div class="sc-detail-l">Format</div><div class="sc-detail-v">Präsenz / Online</div></div>
+            <div class="sc-detail"><div class="sc-detail-l">Nächster Termin</div><div class="sc-detail-v">Auf Anfrage</div></div>
+            <div class="sc-detail"><div class="sc-detail-l">Voraussetzung</div><div class="sc-detail-v">Keine</div></div>
+          </div>
+          <div class="sc-content">
+            <h3>Schulungsinhalte</h3>
+            <div class="sc-content-cols">
+              <ul class="sc-list">
+                <li>IT-Strategie: Aufbau, Inhalte, Abstimmungsprozesse</li>
+                <li>Ziel-Bild-Gestaltung: Von der Strategie zum Zielbild</li>
+                <li>Roadmapping: Priorisierung und Investitionsplanung</li>
+              </ul>
+              <ul class="sc-list">
+                <li>Lean Innovationsmanagement: Grundlagen &amp; Prozesse</li>
+                <li>Business Capability Management als Bindeglied</li>
+                <li>Praxisbeispiele &amp; Transferübungen</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="sc-act-col">
+          <a href="../../leistungen/strategisches-it-management/" class="btn btn-outline" style="font-size:12px;padding:8px 16px;">Details</a>
+          <a href="../../kontakt/" class="btn btn-primary" style="font-size:12px;padding:8px 16px;">Anmelden</a>
+        </div>
+      </div>
+      <div class="sc-termine">
+        <div class="sc-termine-head">Termine</div>
+        <div class="termin-row">
+          <span class="termin-date tbd">Auf Anfrage</span>
+          <span class="termin-format-tag">Präsenz oder Online · 2 Tage</span>
+          <div class="termin-cta"><a href="../../kontakt/" class="btn btn-primary" style="font-size:11.5px;padding:8px 16px;">Anmelden</a></div>
+        </div>
+        <p style="font-size:.82rem;color:var(--g400);margin-top:8px;">Kombination mit EAM (EAM1/EAM2) oder BADM buchbar.</p>
+      </div>
+    </div>
+
+    <!-- BADM -->
+    <div class="schulung-card" id="badm">
+      <div class="sc-header">
+        <div class="sc-code-col">
+          <span class="sc-code">BADM<span>Business-Analyse</span></span>
+        </div>
+        <div class="sc-body">
+          <div class="sc-meta-row">
+            <span class="sc-badge sc-badge-block">Lean Value Management</span>
+            <span class="sc-badge sc-badge-zg">Business-Analysten · Product Owner</span>
+          </div>
+          <h2>Business-Analyse &amp; Demand Management — lean &amp; systematisch</h2>
+          <p class="sc-desc">
+            BA4D-Methodik in der Praxis: Anforderungen aufnehmen, strukturieren und priorisieren,
+            Demand-Prozesse einführen und Portfolio lean steuern.
+            Für Business-Analysten, IT-Projektleiter und Product Owner, die Anforderungen und Mehrwert systematisch managen wollen.
+          </p>
+          <div class="sc-detail-grid">
+            <div class="sc-detail"><div class="sc-detail-l">Dauer</div><div class="sc-detail-v">2 Tage</div></div>
+            <div class="sc-detail"><div class="sc-detail-l">Format</div><div class="sc-detail-v">Präsenz / Online</div></div>
+            <div class="sc-detail"><div class="sc-detail-l">Nächster Termin</div><div class="sc-detail-v">Auf Anfrage</div></div>
+            <div class="sc-detail"><div class="sc-detail-l">Voraussetzung</div><div class="sc-detail-v">Keine</div></div>
+          </div>
+          <div class="sc-content">
+            <h3>Schulungsinhalte</h3>
+            <div class="sc-content-cols">
+              <ul class="sc-list">
+                <li>Grundlagen Business-Analyse im digitalen Kontext</li>
+                <li>BA4D-Methodik: Prozesse, Daten, Anforderungen</li>
+                <li>Demand-to-Value-Prozess einführen und steuern</li>
+              </ul>
+              <ul class="sc-list">
+                <li>Lean Portfolio Management: Aufbau und Steuerung</li>
+                <li>Priorisierungsmethoden (MoSCoW, Kano, Wertmatrix)</li>
+                <li>Praxisbeispiele, Transferübungen &amp; Templates</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="sc-act-col">
+          <a href="../../leistungen/lean-value-management/" class="btn btn-outline" style="font-size:12px;padding:8px 16px;">Details</a>
+          <a href="../../kontakt/" class="btn btn-primary" style="font-size:12px;padding:8px 16px;">Anmelden</a>
+        </div>
+      </div>
+      <div class="sc-termine">
+        <div class="sc-termine-head">Termine</div>
+        <div class="termin-row">
+          <span class="termin-date tbd">Auf Anfrage</span>
+          <span class="termin-format-tag">Präsenz oder Online · 2 Tage</span>
+          <div class="termin-cta"><a href="../../kontakt/" class="btn btn-primary" style="font-size:11.5px;padding:8px 16px;">Anmelden</a></div>
+        </div>
+        <p style="font-size:.82rem;color:var(--g400);margin-top:8px;">Inhouse-Format für Ihr Team buchbar. Kombination mit ZBR möglich.</p>
+      </div>
+    </div>
+
+    <!-- ITMGMT -->
+    <div class="schulung-card" id="itmgmt">
+      <div class="sc-header">
+        <div class="sc-code-col">
+          <span class="sc-code">ITMGMT<span>IT-Mgmt</span></span>
+        </div>
+        <div class="sc-body">
+          <div class="sc-meta-row">
+            <span class="sc-badge sc-badge-block">IT-Management</span>
+            <span class="sc-badge sc-badge-zg">IT-Manager · IT-Leiter</span>
+          </div>
+          <h2>Lean IT-Management — Effizienz &amp; Organisation</h2>
+          <p class="sc-desc">
+            IT-Management nach Lean-Prinzipien: IT-Governance aufbauen, IT-Servicemanagement einführen,
+            Application Management optimieren und den KI- &amp; digitalen Reifegrad bestimmen.
+            Für IT-Manager und IT-Leiter, die ihr operatives IT-Management nachhaltig effizienter gestalten wollen.
+          </p>
+          <div class="sc-detail-grid">
+            <div class="sc-detail"><div class="sc-detail-l">Dauer</div><div class="sc-detail-v">2 Tage</div></div>
+            <div class="sc-detail"><div class="sc-detail-l">Format</div><div class="sc-detail-v">Präsenz / Online</div></div>
+            <div class="sc-detail"><div class="sc-detail-l">Nächster Termin</div><div class="sc-detail-v">Auf Anfrage</div></div>
+            <div class="sc-detail"><div class="sc-detail-l">Voraussetzung</div><div class="sc-detail-v">Keine</div></div>
+          </div>
+          <div class="sc-content">
+            <h3>Schulungsinhalte</h3>
+            <div class="sc-content-cols">
+              <ul class="sc-list">
+                <li>IT-Governance: Rollen, Prozesse, Steuerung</li>
+                <li>IT-Servicemanagement: Einführung und Betrieb</li>
+                <li>Application Management: Portfoliosteuerung</li>
+              </ul>
+              <ul class="sc-list">
+                <li>Lean Checkup: KI- &amp; digitaler Reifegrad</li>
+                <li>IT-Organisation 4.0: Strukturen und Kompetenzen</li>
+                <li>Praxisbeispiele &amp; Transferübungen</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="sc-act-col">
+          <a href="../../leistungen/it-management/" class="btn btn-outline" style="font-size:12px;padding:8px 16px;">Details</a>
+          <a href="../../kontakt/" class="btn btn-primary" style="font-size:12px;padding:8px 16px;">Anmelden</a>
+        </div>
+      </div>
+      <div class="sc-termine">
+        <div class="sc-termine-head">Termine</div>
+        <div class="termin-row">
+          <span class="termin-date tbd">Auf Anfrage</span>
+          <span class="termin-format-tag">Präsenz oder Online · 2 Tage</span>
+          <div class="termin-cta"><a href="../../kontakt/" class="btn btn-primary" style="font-size:11.5px;padding:8px 16px;">Anmelden</a></div>
+        </div>
+        <p style="font-size:.82rem;color:var(--g400);margin-top:8px;">Kombination mit STRAT buchbar.</p>
+      </div>
+    </div>
+
+    <!-- ISMS -->
+    <div class="schulung-card" id="isms">
+      <div class="sc-header">
+        <div class="sc-code-col">
+          <span class="sc-code">ISMS<span>InfoSec</span></span>
+        </div>
+        <div class="sc-body">
+          <div class="sc-meta-row">
+            <span class="sc-badge sc-badge-block">Informationssicherheit &amp; Datenschutz</span>
+            <span class="sc-badge sc-badge-zg">CISO · IT-SB · Datenschutz</span>
+          </div>
+          <h2>Informationssicherheits-Management — einfach &amp; effektiv</h2>
+          <p class="sc-desc">
+            ISMS aufbauen, ISO 27001 verstehen, DSGVO-Anforderungen pragmatisch umsetzen und NIS-2 einordnen.
+            Für IT-Sicherheitsbeauftragte, Datenschutzkoordinatoren und IT-Verantwortliche,
+            die Informationssicherheit wirksam und ohne überdimensionierten Aufwand angehen wollen.
+          </p>
+          <div class="sc-detail-grid">
+            <div class="sc-detail"><div class="sc-detail-l">Dauer</div><div class="sc-detail-v">2 Tage</div></div>
+            <div class="sc-detail"><div class="sc-detail-l">Format</div><div class="sc-detail-v">Präsenz / Online</div></div>
+            <div class="sc-detail"><div class="sc-detail-l">Nächster Termin</div><div class="sc-detail-v">Auf Anfrage</div></div>
+            <div class="sc-detail"><div class="sc-detail-l">Voraussetzung</div><div class="sc-detail-v">Keine</div></div>
+          </div>
+          <div class="sc-content">
+            <h3>Schulungsinhalte</h3>
+            <div class="sc-content-cols">
+              <ul class="sc-list">
+                <li>Grundlagen Informationssicherheit und Datenschutz</li>
+                <li>ISMS-Aufbau und -Betrieb (ISO 27001-konform)</li>
+                <li>Schutzbedarfsanalyse und Risikobehandlung</li>
+              </ul>
+              <ul class="sc-list">
+                <li>DSGVO: wesentliche Anforderungen und TOM</li>
+                <li>NIS-2: Betroffenheit und Pflichten im Überblick</li>
+                <li>Cyber-Security-Readiness und Notfallmanagement</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="sc-act-col">
+          <a href="../../leistungen/informationssicherheit/" class="btn btn-outline" style="font-size:12px;padding:8px 16px;">Details</a>
+          <a href="../../kontakt/" class="btn btn-primary" style="font-size:12px;padding:8px 16px;">Anmelden</a>
+        </div>
+      </div>
+      <div class="sc-termine">
+        <div class="sc-termine-head">Termine</div>
+        <div class="termin-row">
+          <span class="termin-date tbd">Auf Anfrage</span>
+          <span class="termin-format-tag">Präsenz oder Online · 2 Tage</span>
+          <div class="termin-cta"><a href="../../kontakt/" class="btn btn-primary" style="font-size:11.5px;padding:8px 16px;">Anmelden</a></div>
+        </div>
+        <p style="font-size:.82rem;color:var(--g400);margin-top:8px;">Inhouse-Format verfügbar. Kombination mit STRAT (EAM1/EAM2) möglich.</p>
+      </div>
+    </div>
+
+    <!-- ZBR -->
+    <div class="schulung-card" id="zbr">
+      <div class="sc-header">
+        <div class="sc-code-col">
+          <span class="sc-code">ZBR<span>Requirements</span></span>
+        </div>
+        <div class="sc-body">
+          <div class="sc-meta-row">
+            <span class="sc-badge sc-badge-block">Business-Analyse</span>
+            <span class="sc-badge sc-badge-zg">BA · Projektleiter · Entwickler</span>
+          </div>
+          <h2>Zielorientiertes Business Requirements Management</h2>
+          <p class="sc-desc">
+            Anforderungen zielorientiert aufnehmen, strukturieren und steuern — lean und ohne Papier-Overhead.
+            Lean Requirements Engineering für Projekte und Produktentwicklung:
+            von der Stakeholder-Analyse bis zur abnahmereifen Spezifikation.
+          </p>
+          <div class="sc-detail-grid">
+            <div class="sc-detail"><div class="sc-detail-l">Dauer</div><div class="sc-detail-v">2 Tage</div></div>
+            <div class="sc-detail"><div class="sc-detail-l">Format</div><div class="sc-detail-v">Präsenz / Online</div></div>
+            <div class="sc-detail"><div class="sc-detail-l">Nächster Termin</div><div class="sc-detail-v">Auf Anfrage</div></div>
+            <div class="sc-detail"><div class="sc-detail-l">Voraussetzung</div><div class="sc-detail-v">Keine</div></div>
+          </div>
+          <div class="sc-content">
+            <h3>Schulungsinhalte</h3>
+            <div class="sc-content-cols">
+              <ul class="sc-list">
+                <li>Grundlagen Requirements Engineering</li>
+                <li>Stakeholder-Analyse und -Management</li>
+                <li>Anforderungstypen: funktional, nicht-funktional, Constraints</li>
+              </ul>
+              <ul class="sc-list">
+                <li>Priorisierung: MoSCoW, Kano, Wertmatrix</li>
+                <li>Anforderungs-Templates und Dokumentation</li>
+                <li>Abnahme und Qualitätssicherung</li>
+              </ul>
+            </div>
+          </div>
+          <div class="sc-vorraus">
+            <span class="sc-vorraus-label">Kombination</span>
+            <span class="sc-vorraus-text">Empfohlen in Kombination mit BADM — Business-Analyse &amp; Demand Management</span>
+          </div>
+        </div>
+        <div class="sc-act-col">
+          <a href="../../leistungen/lean-value-management/" class="btn btn-outline" style="font-size:12px;padding:8px 16px;">Details</a>
+          <a href="../../kontakt/" class="btn btn-primary" style="font-size:12px;padding:8px 16px;">Anmelden</a>
+        </div>
+      </div>
+      <div class="sc-termine">
+        <div class="sc-termine-head">Termine</div>
+        <div class="termin-row">
+          <span class="termin-date tbd">Auf Anfrage</span>
+          <span class="termin-format-tag">Präsenz oder Online · 2 Tage</span>
+          <div class="termin-cta"><a href="../../kontakt/" class="btn btn-primary" style="font-size:11.5px;padding:8px 16px;">Anmelden</a></div>
+        </div>
+        <p style="font-size:.82rem;color:var(--g400);margin-top:8px;">Kombination BADM + ZBR als Paket buchbar.</p>
+      </div>
+    </div>
+
+    <p style="font-size:.85rem;color:var(--g400);margin-top:24px;">
+      Alle Schulungen 2 Tage, Präsenz oder Online, Termin auf Anfrage. Inhouse-Format für Ihr Team buchbar.
+      <a href="../webinare/" style="color:var(--black);text-decoration:underline;text-underline-offset:3px;">Zu den kostenlosen Webinaren</a>
+    </p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta-bottom">
+  <div class="wrap">
+    <div class="cta-inner">
+      <div class="cta-text">
+        <span class="ey">Jetzt anmelden</span>
+        <h2>Schulung buchen.<br>Termin anfragen.</h2>
+        <p>
+          Offen oder Inhouse — alle Schulungen auf Anfrage buchbar.
+          Rückmeldung innerhalb 24 Stunden. Direkt und sachlich.
+        </p>
+      </div>
+      <div class="cta-acts">
+        <a href="../../kontakt/" class="btn btn-primary">
+          Schulung anfragen
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="../webinare/" class="btn btn-outline-w">Webinare (kostenlos)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fi-w">
+      <span class="fcopy">© 2026 Hanschke Consulting · Inge Hanschke · Alle Rechte vorbehalten.</span>
+      <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+        <nav class="fnav">
+          <a onclick="openImpressum()">Impressum</a>
+          <a onclick="openImpressum('datenschutz')">Datenschutz</a>
+          <a href="https://www.linkedin.com/in/ingehanschke/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener">Hanser Verlag</a>
+        </nav>
+        <div style="display:flex;gap:6px;align-items:center;border-left:1px solid rgba(255,255,255,.1);padding-left:20px;">
+          <a href="#" style="font-size:11px;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.85);padding:3px 8px;background:rgba(255,255,255,.12);border-radius:2px;">DE</a>
+          <a href="#" title="English version coming soon" style="font-size:11px;font-weight:600;letter-spacing:.06em;color:rgba(255,255,255,.3);padding:3px 8px;border-radius:2px;">EN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- IMPRESSUM OVERLAY -->
+<div id="impressum-page">
+  <button class="imp-close" onclick="closeImpressum()">✕</button>
+  <div class="wrap">
+    <div class="imp-content">
+      <h1 id="imp-title">Impressum</h1>
+      <div id="imp-main">
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <address>Inge Hanschke<br>Straßl ins Holz 15<br>81829 München<br>Deutschland</address>
+        <h2>Kontakt</h2>
+        <p>E-Mail: <a href="mailto:info@hanschke-consulting.com">info@hanschke-consulting.com</a><br>Mobil: <a href="tel:+4915221000172">+49 (0)152 210 001 72</a></p>
+        <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+        <p>Inge Hanschke</p>
+        <h2>Haftungsausschluss</h2>
+        <h3>Haftung für Inhalte</h3>
+        <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
+        <h3>Haftung für Links</h3>
+        <p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+        <h3>Urheberrecht</h3>
+        <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+      </div>
+      <div id="imp-datenschutz" style="display:none;">
+        <h2>Datenschutzerklärung</h2>
+        <p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten erhoben werden, erfolgt dies stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.</p>
+        <p>Wir weisen darauf hin, dass die Datenübertragung im Internet Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
+        <p>Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung wird hiermit ausdrücklich widersprochen.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('sc', scrollY > 16), {passive:true});
+  function toggleMenu() {
+    const m = document.getElementById('mmenu'), b = document.getElementById('hbgBtn');
+    const open = m.classList.toggle('open');
+    b.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  function closeMenu() {
+    document.getElementById('mmenu').classList.remove('open');
+    document.getElementById('hbgBtn').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function openImpressum(section) {
+    const page = document.getElementById('impressum-page');
+    document.getElementById('imp-main').style.display = section === 'datenschutz' ? 'none' : 'block';
+    document.getElementById('imp-datenschutz').style.display = section === 'datenschutz' ? 'block' : 'none';
+    document.getElementById('imp-title').textContent = section === 'datenschutz' ? 'Datenschutz' : 'Impressum';
+    page.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeImpressum() {
+    document.getElementById('impressum-page').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if(e.key==='Escape') closeImpressum(); });
+</script>
+<script src="https://visual-feedback-tool.vercel.app/api/embed.js?key=3d1b3cb26e7e52347690a5348e94a491c2b71b858fdd1a18"></script>
+</body>
+</html>

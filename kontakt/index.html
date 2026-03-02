@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt — Hanschke Consulting</title>
+  <meta name="description" content="Beratungsanfrage, Schulungsanmeldung oder Webinar-Termin — Hanschke Consulting antwortet innerhalb von 24 Stunden. Direkt und sachlich.">
+  <meta property="og:title" content="Kontakt — Hanschke Consulting">
+  <meta property="og:description" content="Beratungsanfrage, Schulungsanmeldung oder Webinar-Termin. Rückmeldung innerhalb 24 Stunden.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.hanschke-consulting.com/kontakt/">
+  <meta property="og:image" content="https://www.hanschke-consulting.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    :root {
+      --red: #E94545; --red-dk: #c83030; --black: #0a0a0a; --g900: #141414;
+      --g800: #282828; --g700: #3c3c3c; --g600: #666; --g400: #999;
+      --g200: #e0e0e0; --g100: #f5f5f5; --g50: #fafafa; --white: #fff;
+      --teal: #1a7d8b; --f: 'Inter', sans-serif; --max: 1200px; --r: 2px;
+      --ease: cubic-bezier(.25,.1,.25,1);
+    }
+    body { font-family: var(--f); background: var(--white); color: var(--black); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 48px; }
+    .ey { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--red); }
+    .ey::before { content:''; display:block; width:20px; height:2px; background:var(--red); flex-shrink:0; }
+    h1 { font-size: clamp(2.4rem,5.5vw,4rem); font-weight: 900; line-height: 1.08; letter-spacing: -.035em; }
+    h2 { font-size: clamp(1.8rem,3vw,2.6rem); font-weight: 700; line-height: 1.1; letter-spacing: -.025em; }
+    h3 { font-size: 1rem; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; }
+    .lead { font-size: 1.05rem; line-height: 1.72; color: var(--g700); }
+    em.r { font-style: normal; color: var(--red); }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; font-family: var(--f); font-size: 13px; font-weight: 600; letter-spacing: .01em; border-radius: var(--r); transition: background .15s var(--ease), color .15s var(--ease), border-color .15s var(--ease), transform .1s; cursor: pointer; border: 1.5px solid transparent; white-space: nowrap; }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--red); color: var(--white); border-color: var(--red); }
+    .btn-primary:hover { background: var(--red-dk); border-color: var(--red-dk); }
+    .btn-outline { background: transparent; color: var(--black); border-color: var(--g200); }
+    .btn-outline:hover { border-color: var(--black); }
+    .btn-outline-w { background: transparent; color: var(--white); border-color: rgba(255,255,255,.35); }
+    .btn-outline-w:hover { background: var(--white); color: var(--black); border-color: var(--white); }
+    .sec { padding: 96px 0; }
+    .sec-sm { padding: 64px 0; }
+
+    /* NAV */
+    #nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; background: rgba(255,255,255,.96); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--g200); transition: box-shadow .2s; }
+    #nav.sc { box-shadow: 0 2px 24px rgba(0,0,0,.07); }
+    .nav-w { max-width: var(--max); margin: 0 auto; padding: 0 48px; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-logo { display:flex; flex-direction:column; flex-shrink:0; }
+    .nav-logo-n { font-size: 14.5px; font-weight: 800; letter-spacing: -.02em; color: var(--black); line-height: 1.1; }
+    .nav-logo-s { font-size: 9.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--red); margin-top: 2px; }
+    .nav-links { display:flex; align-items:center; gap:26px; }
+    .nav-links a { font-size: 13px; font-weight: 500; color: var(--g600); transition: color .14s; }
+    .nav-links a:hover { color: var(--black); }
+    .nav-links a.active { color: var(--black); font-weight: 600; }
+    .nav-act { display:flex; align-items:center; gap:8px; flex-shrink:0; }
+    .hbg { display:none; flex-direction:column; justify-content:center; gap:5px; cursor:pointer; padding:6px; background:none; border:none; width:36px; height:36px; }
+    .hbg span { display:block; width:22px; height:1.5px; background:var(--black); transition:transform .22s var(--ease),opacity .22s; transform-origin:center; }
+    .hbg.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+    .hbg.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+    .hbg.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+    .mmenu { display:none; position:fixed; top:60px; left:0; right:0; bottom:0; background:var(--white); z-index:199; padding:32px 24px 48px; flex-direction:column; gap:4px; overflow-y:auto; }
+    .mmenu.open { display:flex; }
+    .mmenu a { font-size:1.05rem; font-weight:600; color:var(--black); padding:13px 0; border-bottom:1px solid var(--g100); }
+    .mmenu .btn { margin-top:20px; align-self:flex-start; }
+
+    /* PAGE HERO */
+    #page-hero { padding-top: 60px; background: var(--white); position: relative; overflow: hidden; }
+    #page-hero::before { content:''; position:absolute; inset:0; background-image: linear-gradient(var(--g200) 1px,transparent 1px), linear-gradient(90deg,var(--g200) 1px,transparent 1px); background-size: 64px 64px; opacity: .35; pointer-events:none; }
+    #page-hero::after { content:''; position:absolute; inset:0; background: radial-gradient(ellipse 80% 100% at 50% 100%,transparent 40%,var(--white) 100%); pointer-events:none; }
+    .page-hero-in { position: relative; z-index: 1; padding: 80px 0 64px; max-width: 640px; }
+    .page-hero-bc { font-size: 12px; font-weight: 500; color: var(--g400); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .page-hero-bc a { color: var(--g400); transition: color .14s; }
+    .page-hero-bc a:hover { color: var(--black); }
+    .page-hero-bc span { color: var(--g200); }
+
+    /* MAIN CONTENT */
+    #kontakt-main { background: var(--white); }
+    .kontakt-layout { display: grid; grid-template-columns: 1fr 400px; gap: 72px; align-items: start; }
+
+    /* FORM */
+    .form-wrap { }
+    .form-group { margin-bottom: 20px; }
+    .form-label { display: block; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--black); margin-bottom: 8px; }
+    .form-label span { color: var(--red); margin-left: 2px; }
+    .form-input, .form-select, .form-textarea {
+      width: 100%; background: var(--white); border: 1.5px solid var(--g200); border-radius: var(--r);
+      font-family: var(--f); font-size: .9rem; color: var(--black); padding: 11px 14px;
+      transition: border-color .15s var(--ease), box-shadow .15s;
+      -webkit-appearance: none; appearance: none;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      outline: none; border-color: var(--black); box-shadow: 0 0 0 3px rgba(10,10,10,.06);
+    }
+    .form-input::placeholder, .form-textarea::placeholder { color: var(--g400); }
+    .form-select { background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; cursor: pointer; }
+    .form-textarea { resize: vertical; min-height: 140px; line-height: 1.6; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-submit { margin-top: 8px; }
+    .form-note { font-size: .82rem; color: var(--g400); margin-top: 10px; line-height: 1.55; }
+
+    /* Success state */
+    .form-success { display: none; background: var(--g100); border: 1px solid var(--g200); border-left: 3px solid #2d8a4e; border-radius: var(--r); padding: 20px 24px; margin-top: 16px; }
+    .form-success p { font-size: .9rem; color: var(--g700); }
+    .form-success strong { color: var(--black); }
+
+    /* CONTACT SIDEBAR */
+    .contact-sidebar { display: flex; flex-direction: column; gap: 2px; }
+    .contact-block { background: var(--g100); border: 1px solid var(--g200); padding: 24px 28px; }
+    .contact-block:first-child { border-top: 3px solid var(--red); }
+    .cb-label { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--red); margin-bottom: 12px; }
+    .cb-name { font-size: 1.05rem; font-weight: 800; color: var(--black); letter-spacing: -.02em; margin-bottom: 4px; }
+    .cb-role { font-size: 11px; font-weight: 600; color: var(--g400); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 18px; }
+    .cb-contacts { display: flex; flex-direction: column; gap: 10px; }
+    .cb-contact-item { display: flex; align-items: center; gap: 10px; }
+    .cb-contact-icon { width: 32px; height: 32px; background: var(--white); border: 1px solid var(--g200); border-radius: var(--r); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .cb-contact-text { font-size: .88rem; color: var(--black); font-weight: 500; }
+    .cb-contact-sub { font-size: 11px; color: var(--g400); }
+    .cb-sep { height: 1px; background: var(--g200); margin: 16px 0; }
+    .cb-promise { font-size: .85rem; line-height: 1.6; color: var(--g700); }
+    .cb-promise strong { color: var(--black); font-weight: 600; }
+
+    /* Quick Links */
+    .quick-links { display: flex; flex-direction: column; gap: 1px; margin-top: 16px; }
+    .quick-link-item { background: var(--white); border: 1px solid var(--g200); padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; transition: background .12s; }
+    .quick-link-item:hover { background: var(--g50); }
+    .ql-text { font-size: .88rem; font-weight: 600; color: var(--black); }
+    .ql-sub { font-size: 11px; color: var(--g400); margin-top: 2px; }
+    .ql-arrow { color: var(--g400); flex-shrink: 0; }
+
+    /* ALTERNATIV */
+    #alternativ { background: var(--g900); }
+    #alternativ .ey { color: var(--red); }
+    #alternativ .ey::before { background: var(--red); }
+    .alt-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,.06); margin-top: 40px; }
+    .alt-item { background: rgba(255,255,255,.02); padding: 28px 24px; }
+    .alt-item h3 { font-size: .95rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .alt-item p { font-size: .85rem; line-height: 1.65; color: rgba(255,255,255,.45); margin-bottom: 16px; }
+
+    /* IMPRESSUM */
+    #impressum-page { display: none; position: fixed; inset: 0; z-index: 500; background: var(--white); overflow-y: auto; padding: 80px 0 60px; }
+    #impressum-page.open { display: block; }
+    .imp-close { position:fixed; top:20px; right:20px; width:40px; height:40px; background:var(--black); color:var(--white); border:none; border-radius:50%; font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:501; }
+    .imp-content h1 { font-size:1.8rem; margin-bottom:32px; }
+    .imp-content h2 { font-size:1.1rem; margin:28px 0 10px; color:var(--black); }
+    .imp-content h3 { font-size:.95rem; margin:20px 0 8px; }
+    .imp-content p { font-size:.9rem; line-height:1.75; color:var(--g700); margin-bottom:12px; }
+    .imp-content address { font-style:normal; font-size:.9rem; line-height:1.75; color:var(--g700); margin-bottom:12px; }
+
+    /* FOOTER */
+    footer { background: var(--g900); padding: 28px 0; border-top: 1px solid rgba(255,255,255,.06); }
+    .fi-w { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .fcopy { font-size: 12px; color: rgba(255,255,255,.25); }
+    .fnav { display: flex; gap: 24px; }
+    .fnav a { font-size: 12px; color: rgba(255,255,255,.3); transition: color .14s; cursor: pointer; }
+    .fnav a:hover { color: rgba(255,255,255,.7); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1100px) {
+      .kontakt-layout { grid-template-columns: 1fr; gap: 48px; }
+      .contact-sidebar { max-width: 480px; }
+      .alt-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 800px) {
+      .wrap { padding: 0 20px; }
+      .nav-w { padding: 0 20px; }
+      .nav-links, .nav-act .btn-outline { display: none; }
+      .hbg { display: flex; }
+      .sec { padding: 56px 0; }
+      .sec-sm { padding: 40px 0; }
+      .page-hero-in { padding: 48px 0 48px; }
+      .fi-w { flex-direction: column; gap: 10px; text-align: center; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-w">
+    <a href="../" class="nav-logo">
+      <span class="nav-logo-n">Inge Hanschke</span>
+      <span class="nav-logo-s">Hanschke Consulting</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../leistungen/">Beratung</a></li>
+      <li><a href="../ueber-inge/">Über mich</a></li>
+      <li><a href="../trainings/">Schulungen</a></li>
+      <li><a href="../buecher/">Bücher</a></li>
+      <li><a href="../partner/">Partner</a></li>
+      <li><a href="../events/">Events</a></li>
+    </ul>
+    <div class="nav-act">
+      <a href="../events/" class="btn btn-outline" style="padding:8px 16px;font-size:12.5px;">Termine</a>
+      <a href="#" class="btn btn-primary active" style="padding:8px 16px;font-size:12.5px;">Kontakt</a>
+    </div>
+    <button class="hbg" id="hbgBtn" onclick="toggleMenu()" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <a href="../leistungen/" onclick="closeMenu()">Beratung</a>
+  <a href="../ueber-inge/" onclick="closeMenu()">Über mich</a>
+  <a href="../trainings/" onclick="closeMenu()">Schulungen &amp; Webinare</a>
+  <a href="../buecher/" onclick="closeMenu()">Bücher</a>
+  <a href="../partner/" onclick="closeMenu()">Partner</a>
+  <a href="../events/" onclick="closeMenu()">Events</a>
+  <a href="#" class="btn btn-primary" onclick="closeMenu()">Kontakt aufnehmen</a>
+</div>
+
+<!-- PAGE HERO -->
+<section id="page-hero">
+  <div class="wrap">
+    <div class="page-hero-in">
+      <div class="page-hero-bc">
+        <a href="../">Startseite</a>
+        <span>›</span>
+        <span style="color:var(--black);">Kontakt</span>
+      </div>
+      <span class="ey">Direkt &amp; sachlich</span>
+      <h1 style="margin-top:18px;">Kontakt<br>aufnehmen.</h1>
+      <p class="lead" style="margin-top:20px;max-width:520px;">
+        Beratungsanfrage, Schulungsanmeldung, Webinar-Termin oder Keynote-Buchung —
+        Rückmeldung innerhalb von 24 Stunden.
+        Kein Vorgespräch-Vorgespräch.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT MAIN -->
+<section id="kontakt-main" class="sec" style="padding-top:48px;">
+  <div class="wrap">
+    <div class="kontakt-layout">
+
+      <!-- FORMULAR -->
+      <div class="form-wrap">
+        <span class="ey" style="margin-bottom:20px;display:inline-flex;">Nachricht senden</span>
+
+        <form id="contact-form" action="https://formspree.io/f/placeholder" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="name">Name <span>*</span></label>
+              <input class="form-input" type="text" id="name" name="name" placeholder="Vorname Nachname" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">E-Mail <span>*</span></label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="ihre@email.de" required autocomplete="email">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="thema">Thema</label>
+            <select class="form-select" id="thema" name="thema">
+              <option value="">— Bitte wählen —</option>
+              <optgroup label="Beratung">
+                <option value="beratung-eam">Enterprise Architecture Management</option>
+                <option value="beratung-strat">Strategisches IT-Management</option>
+                <option value="beratung-it">IT-Management</option>
+                <option value="beratung-ki">KI &amp; Data</option>
+                <option value="beratung-lean">Lean Value Management</option>
+                <option value="beratung-isms">Informationssicherheit &amp; Datenschutz</option>
+              </optgroup>
+              <optgroup label="Schulungen &amp; Webinare">
+                <option value="schulung-eam1">Schulung EAM1 — Grundlagen</option>
+                <option value="schulung-eam2">Schulung EAM2 — Vertiefung</option>
+                <option value="schulung-strat">Schulung STRAT — Strategisches IT-Management</option>
+                <option value="schulung-badm">Schulung BADM — Business-Analyse &amp; Demand</option>
+                <option value="schulung-itmgmt">Schulung ITMGMT — IT-Management</option>
+                <option value="schulung-isms">Schulung ISMS — Informationssicherheit</option>
+                <option value="schulung-zbr">Schulung ZBR — Business Requirements</option>
+                <option value="webinar">Webinar-Termin anfragen</option>
+                <option value="inhouse">Inhouse-Schulung</option>
+              </optgroup>
+              <optgroup label="Sonstiges">
+                <option value="keynote">Keynote / Vortrag buchen</option>
+                <option value="buch">Buchbestellung / Fachfrage</option>
+                <option value="partner">Kooperationsanfrage</option>
+                <option value="sonstiges">Sonstiges</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="unternehmen">Unternehmen</label>
+            <input class="form-input" type="text" id="unternehmen" name="unternehmen" placeholder="Ihr Unternehmen (optional)" autocomplete="organization">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="nachricht">Nachricht <span>*</span></label>
+            <textarea class="form-textarea" id="nachricht" name="nachricht" placeholder="Beschreiben Sie kurz Ihr Anliegen. Was ist der Hintergrund, was ist Ihr Ziel?" required></textarea>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px 24px;font-size:14px;">
+              Nachricht senden
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <p class="form-note">Mit dem Absenden des Formulars stimmen Sie der Verarbeitung Ihrer Daten zur Bearbeitung Ihrer Anfrage zu. Weitere Informationen in der <a href="#" onclick="openImpressum('datenschutz')" style="color:var(--black);text-decoration:underline;text-underline-offset:3px;">Datenschutzerklärung</a>.</p>
+        </form>
+
+        <div class="form-success" id="form-success">
+          <p><strong>Nachricht gesendet.</strong> Vielen Dank — Rückmeldung folgt innerhalb von 24 Stunden.</p>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="contact-sidebar">
+
+        <!-- Direktkontakt -->
+        <div class="contact-block">
+          <div class="cb-label">Direktkontakt</div>
+          <div class="cb-name">Inge Hanschke</div>
+          <div class="cb-role">Dipl.-Inf. · Gründerin Hanschke Consulting</div>
+          <div class="cb-contacts">
+            <div class="cb-contact-item">
+              <div class="cb-contact-icon">
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M2 4a1 1 0 011-1h10a1 1 0 011 1v8a1 1 0 01-1 1H3a1 1 0 01-1-1V4z" stroke="currentColor" stroke-width="1.3"/><path d="M2 4l6 5 6-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <div class="cb-contact-text">
+                  <a href="mailto:info@hanschke-consulting.com" style="color:var(--black);">info@hanschke-consulting.com</a>
+                </div>
+                <div class="cb-contact-sub">E-Mail · bevorzugter Kanal</div>
+              </div>
+            </div>
+            <div class="cb-contact-item">
+              <div class="cb-contact-icon">
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 3h3l1.5 3.5-2 1.2A10 10 0 009.3 10.5l1.2-2 3.5 1.5V13A1 1 0 0113 14C7 14 2 9 2 3a1 1 0 011-1h0z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <div class="cb-contact-text">
+                  <a href="tel:+4915221000172" style="color:var(--black);">+49 (0)152 210 001 72</a>
+                </div>
+                <div class="cb-contact-sub">Mobil · nach Vereinbarung</div>
+              </div>
+            </div>
+            <div class="cb-contact-item">
+              <div class="cb-contact-icon">
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M5 6v5M5 4.5v.5M8 8v3M11 6v5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <div class="cb-contact-text">
+                  <a href="https://www.linkedin.com/in/ingehanschke/" target="_blank" rel="noopener" style="color:var(--black);">linkedin.com/in/ingehanschke</a>
+                </div>
+                <div class="cb-contact-sub">LinkedIn · Nachrichten &amp; Vernetzung</div>
+              </div>
+            </div>
+          </div>
+          <div class="cb-sep"></div>
+          <p class="cb-promise">
+            <strong>Rückmeldung innerhalb 24 Stunden.</strong>
+            Kein Callcenter, keine automatisierten Antworten.
+            Direkt von Inge Hanschke oder dem Hanschke-Consulting-Team.
+          </p>
+        </div>
+
+        <!-- Adresse -->
+        <div class="contact-block">
+          <div class="cb-label">Anschrift</div>
+          <address style="font-style:normal;font-size:.9rem;line-height:1.75;color:var(--g700);">
+            Hanschke Consulting<br>
+            Inge Hanschke<br>
+            Straßl ins Holz 15<br>
+            81829 München<br>
+            Deutschland
+          </address>
+        </div>
+
+        <!-- Quick Links -->
+        <div style="margin-top:4px;">
+          <p style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--g400);margin-bottom:8px;padding-left:2px;">Schnellzugriff</p>
+          <div class="quick-links">
+            <a href="../trainings/" class="quick-link-item">
+              <div>
+                <div class="ql-text">Schulungen &amp; Webinare</div>
+                <div class="ql-sub">Alle Formate und Codes</div>
+              </div>
+              <svg class="ql-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="../events/" class="quick-link-item">
+              <div>
+                <div class="ql-text">Events &amp; Termine</div>
+                <div class="ql-sub">Alle Webinar- und Schulungstermine</div>
+              </div>
+              <svg class="ql-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="../leistungen/" class="quick-link-item">
+              <div>
+                <div class="ql-text">Beratungsleistungen</div>
+                <div class="ql-sub">Alle 6 Leistungsblöcke</div>
+              </div>
+              <svg class="ql-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="../ueber-inge/" class="quick-link-item">
+              <div>
+                <div class="ql-text">Über Inge Hanschke</div>
+                <div class="ql-sub">Biografie, Expertise, Methodik</div>
+              </div>
+              <svg class="ql-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ALTERNATIV -->
+<section id="alternativ" class="sec">
+  <div class="wrap">
+    <span class="ey">Weitere Wege</span>
+    <h2 style="color:var(--white);margin-top:18px;max-width:560px;">Nicht das Richtige dabei?</h2>
+    <div class="alt-grid">
+      <div class="alt-item">
+        <h3>Webinar — kostenlos</h3>
+        <p>Erst reinschnuppern, bevor Sie anfragen? Alle Webinare sind kostenlos und unverbindlich — ideal zum Einstieg in ein neues Thema.</p>
+        <a href="../events/" class="btn btn-outline-w" style="font-size:12px;padding:9px 18px;">Webinar-Termin anfragen</a>
+      </div>
+      <div class="alt-item">
+        <h3>LinkedIn</h3>
+        <p>Inge Hanschke ist aktiv auf LinkedIn — Beiträge, Diskussionen, Events. Für Networking, schnelle Fragen und inhaltlichen Austausch.</p>
+        <a href="https://www.linkedin.com/in/ingehanschke/" target="_blank" rel="noopener" class="btn btn-outline-w" style="font-size:12px;padding:9px 18px;">
+          Auf LinkedIn verbinden
+          <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H7M12 4v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="alt-item">
+        <h3>Fachbücher</h3>
+        <p>Für Einsteiger und alle, die sich zunächst selbst einlesen wollen: 10+ Fachbücher im Carl Hanser Verlag — einfach &amp; effektiv.</p>
+        <a href="../buecher/" class="btn btn-outline-w" style="font-size:12px;padding:9px 18px;">Alle Bücher ansehen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fi-w">
+      <span class="fcopy">© 2026 Hanschke Consulting · Inge Hanschke · Alle Rechte vorbehalten.</span>
+      <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+        <nav class="fnav">
+          <a onclick="openImpressum()">Impressum</a>
+          <a onclick="openImpressum('datenschutz')">Datenschutz</a>
+          <a href="https://www.linkedin.com/in/ingehanschke/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener">Hanser Verlag</a>
+        </nav>
+        <div style="display:flex;gap:6px;align-items:center;border-left:1px solid rgba(255,255,255,.1);padding-left:20px;">
+          <a href="#" style="font-size:11px;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.85);padding:3px 8px;background:rgba(255,255,255,.12);border-radius:2px;">DE</a>
+          <a href="#" title="English version coming soon" style="font-size:11px;font-weight:600;letter-spacing:.06em;color:rgba(255,255,255,.3);padding:3px 8px;border-radius:2px;">EN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- IMPRESSUM OVERLAY -->
+<div id="impressum-page">
+  <button class="imp-close" onclick="closeImpressum()">✕</button>
+  <div class="wrap">
+    <div class="imp-content">
+      <h1 id="imp-title">Impressum</h1>
+      <div id="imp-main">
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <address>Inge Hanschke<br>Straßl ins Holz 15<br>81829 München<br>Deutschland</address>
+        <h2>Kontakt</h2>
+        <p>E-Mail: <a href="mailto:info@hanschke-consulting.com">info@hanschke-consulting.com</a><br>Mobil: <a href="tel:+4915221000172">+49 (0)152 210 001 72</a></p>
+        <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+        <p>Inge Hanschke</p>
+        <h2>Haftungsausschluss</h2>
+        <h3>Haftung für Inhalte</h3>
+        <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
+        <h3>Haftung für Links</h3>
+        <p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+        <h3>Urheberrecht</h3>
+        <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+      </div>
+      <div id="imp-datenschutz" style="display:none;">
+        <h2>Datenschutzerklärung</h2>
+        <p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten erhoben werden, erfolgt dies stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.</p>
+        <p>Wir weisen darauf hin, dass die Datenübertragung im Internet Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
+        <p>Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung wird hiermit ausdrücklich widersprochen.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('sc', scrollY > 16), {passive:true});
+
+  function toggleMenu() {
+    const m = document.getElementById('mmenu'), b = document.getElementById('hbgBtn');
+    const open = m.classList.toggle('open');
+    b.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  function closeMenu() {
+    document.getElementById('mmenu').classList.remove('open');
+    document.getElementById('hbgBtn').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // Formspree AJAX submit
+  const form = document.getElementById('contact-form');
+  const successBox = document.getElementById('form-success');
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = form.querySelector('button[type=submit]');
+      btn.textContent = 'Wird gesendet …';
+      btn.disabled = true;
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.style.display = 'none';
+          successBox.style.display = 'block';
+        } else {
+          btn.textContent = 'Fehler — bitte erneut versuchen';
+          btn.disabled = false;
+        }
+      } catch(err) {
+        btn.textContent = 'Fehler — bitte per E-Mail kontaktieren';
+        btn.disabled = false;
+      }
+    });
+  }
+
+  function openImpressum(section) {
+    const page = document.getElementById('impressum-page');
+    document.getElementById('imp-main').style.display = section === 'datenschutz' ? 'none' : 'block';
+    document.getElementById('imp-datenschutz').style.display = section === 'datenschutz' ? 'block' : 'none';
+    document.getElementById('imp-title').textContent = section === 'datenschutz' ? 'Datenschutz' : 'Impressum';
+    page.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeImpressum() {
+    document.getElementById('impressum-page').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if(e.key==='Escape') closeImpressum(); });
+</script>
+<script src="https://visual-feedback-tool.vercel.app/api/embed.js?key=3d1b3cb26e7e52347690a5348e94a491c2b71b858fdd1a18"></script>
+</body>
+</html>
